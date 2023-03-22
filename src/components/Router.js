@@ -12,10 +12,7 @@ import WriteSuccess from "../routes/WriteSuccess";
 const AppRouter = ({isLoggedIn, userObj}) => {
   return (
     <Router>
-      {isLoggedIn && <Navigation />}
       <Switch>
-        {isLoggedIn ? (
-          <>
             <Route exact path="/home2">
               <Home2 userObj={userObj}/>
             </Route>
@@ -31,21 +28,6 @@ const AppRouter = ({isLoggedIn, userObj}) => {
             <Route exact path="/profile">
               <Profile />
             </Route>
-          </>
-        ) : (
-          <>
-            <Route exact path="/">
-              <Start />
-            </Route>
-            <Route exact path="/login">
-              <Auth />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-          </>
-        )}
-        {/* <Redirect from="*" to="/"/> */}
       </Switch>
     </Router>
   );
