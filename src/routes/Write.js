@@ -8,7 +8,7 @@ import { RedButton } from "./styles/buttonstyle";
 import Letter from '../assets/Letter.svg';
 import { useHistory } from 'react-router-dom';
 
-const Write = ({ userObj }) => {
+const Write = () => {
     const [nweet, setNweet] = useState("");
     const [nweets, setNweets] = useState([]);
     const [attachment, setAttachment] = useState("");
@@ -30,15 +30,15 @@ const Write = ({ userObj }) => {
         let attachmentUrl = "";
         if (attachment !== "") {
             // file 
-            const attRef = storageService.ref().child(`${userObj.uid}/${uuidv4()}`);
+        /*  const attRef = storageService.ref().child(`${userObj.uid}/${uuidv4()}`);
             const response = await attRef.putString(attachment, "data_url");
-            attachmentUrl = await response.ref.getDownloadURL();
+            attachmentUrl = await response.ref.getDownloadURL();*/
         }
         // text by db
         await dbService.collection("nweets").add({
         text: nweet,
         createdAt: Date.now(),
-        creatorId: userObj.uid,
+        // creatorId: userObj.uid,
         attachmentUrl
         });
 

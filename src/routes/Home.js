@@ -13,7 +13,7 @@ import { RedButton } from "./styles/buttonstyle";
 import Modal from '../components/Modal/Modal';
 import { CardLayout, MessageCard } from "../components/Modal/styles";
 
-const Home = ({ userObj }) => {
+const Home = () => {
     const [nweet, setNweet] = useState("");
     const [nweets, setNweets] = useState([]);
     const [attachment, setAttachment] = useState("");
@@ -59,7 +59,6 @@ const Home = ({ userObj }) => {
                                 <Nweet 
                                   key={nweet.id} 
                                   nweetObj={nweet}
-                                  isOwner={nweet.creatorId === userObj.uid}
                                 />
                             </MessageCard>
                             ))}
