@@ -3,12 +3,16 @@ import Home from "routes/Home";
 import Profile from "routes/Profile"
 import Write from "../routes/Write";
 import Home2 from "../routes/Home2";
+import AdminPage from "../routes/AdminPage";
 import WriteSuccess from "../routes/WriteSuccess";
 
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
+        <Route exact path="/admin">
+          <AdminPage />
+        </Route>
         <Route exact path="/home2">
           <Home2 />
         </Route>
