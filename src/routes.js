@@ -1,11 +1,4 @@
 import Dashboard from "./components/Dashboard/views/Dashboard.js";
-import UserProfile from "./components/Dashboard/views/UserProfile.js";
-import TableList from "./components/Dashboard/views/TableList.js";
-import Typography from "./components/Dashboard/views/Typography.js";
-import Icons from "./components/Dashboard/views/Icons.js";
-import Maps from "./components/Dashboard/views/Maps.js";
-import Notifications from "./components/Dashboard/views/Notifications.js";
-import Upgrade from "./components/Dashboard/views/Upgrade.js";
 
 const dashboardRoutes = [
   // {

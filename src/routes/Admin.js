@@ -4,7 +4,6 @@ import { useLocation, Route, Switch } from "react-router-dom";
 import AdminNavbar from "../components/Dashboard/navbars/AdminNavbar.js";
 import Footer from "../components/Dashboard/Footer/Footer.js";
 import Sidebar from "../components/Dashboard/sidebar/Sidebar.js";
-import FixedPlugin from "../components/Dashboard/FixedPlugin/FixedPlugin.js";
 
 import routes from "../routes.js";
 
