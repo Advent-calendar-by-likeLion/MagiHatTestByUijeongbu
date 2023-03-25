@@ -2,12 +2,13 @@ import { useEffect } from "react";
 import styled, { createGlobalStyle } from 'styled-components';
 import reset from "styled-reset"
 
+//background-color: #F5F5F5;
 export const MediaDiv = styled.div`
     margin: 0px auto;
     min-height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     margin: 0 auto;
-    background-color: #F5F5F5;
+    background-color: #df485dd1;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {

@@ -23,10 +23,11 @@ export const TitleDiv = styled.div`
 
     color: #000000;
 `
+//background-color: #F5F5F5;
 export const InputStyle = styled.input`
     width: 305px;
     height: 45px;
-    background-color: #F5F5F5;
+    background-color: #df485dd1;
     color:  #000000;
 
     border-color: transparent;
