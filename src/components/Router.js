@@ -20,6 +20,9 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
@@ -27,9 +30,6 @@ const AppRouter = () => {
         </Route>
         <Route exact path="/home2">
           <Home2 />
-        </Route>
-        <Route exact path="/home">
-          <Home />
         </Route>
         <Route exact path="/write">
           <Write />
