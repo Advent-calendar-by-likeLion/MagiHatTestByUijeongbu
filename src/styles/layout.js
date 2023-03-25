@@ -7,7 +7,7 @@ export const MediaDiv = styled.div`
     min-height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     margin: 0 auto;
-    background-color: #FCF4E9;
+    background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {
