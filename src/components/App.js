@@ -21,7 +21,7 @@ export default App;
 
 const MainContainer = styled.div`
     background-color: whitesmoke ;
-    width: 80%;
+    width: 90%;
     height: 80%;
     text-align: center ;
     border-radius: 20px;
