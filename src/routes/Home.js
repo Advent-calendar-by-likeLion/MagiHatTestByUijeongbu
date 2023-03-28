@@ -6,8 +6,8 @@ import { RedButton } from "./styles/buttonstyle";
 
 const Home = () => {
     const history = useHistory();
-    const toWrite = () => {
-        history.push("/write");
+    const toQNA = () => {
+        history.push("/QNA");
     }
 
   return (

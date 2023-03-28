@@ -15,6 +15,7 @@ import "../components/assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "../routes/Admin.js";
+import QNA from "routes/QNA";
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,9 @@ const AppRouter = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/QNA">
+          <QNA />
         </Route>
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
