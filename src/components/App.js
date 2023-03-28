@@ -8,7 +8,7 @@ function App() {
     <>
     <GlobalStyle/>
       <MediaDiv>
-        <MainContainer className="mx-auto mt-5 py-5 px-3">
+        <MainContainer>
           <AppRouter/>
         </MainContainer>
       </MediaDiv>
