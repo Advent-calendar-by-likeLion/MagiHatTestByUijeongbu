@@ -5,7 +5,7 @@ import {RedButton} from "./styles/buttonstyle";
 
 const Home = () => {
     const history = useHistory();
-    const toQNA = () => {
+    const toQestion = () => {
         history.push("/question/1");
     }
 
@@ -14,7 +14,7 @@ const Home = () => {
           <BackgroundImg>
             <HomeMent1>나에게 어울리는 문화도시 의정부 사업은?</HomeMent1>
             <MainCharacterImg className="col-lg-8 col-12 mx-auto" src={MainCharacter}/>
-            <ButtonWrapper onClick={toQNA}>찾으러 가기</ButtonWrapper>
+            <ButtonWrapper onClick={toQestion}>찾으러 가기</ButtonWrapper>
           </BackgroundImg>
         </>
     )
@@ -38,7 +38,6 @@ const ButtonWrapper = styled.div `
   text-align: center;
   border: 2px solid black;
   height: 54px;
-
   font-size: 20px;
 
 `;

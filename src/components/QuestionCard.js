@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 // import Wrapper from '../common/Wrapper';
-import {Link, useParams, withRouter} from 'react-router-dom';
+import {Link, useHistory, useParams, withRouter} from 'react-router-dom';
 // import Typography from '@material-ui/core/Typography';
 import quiz from './assets/data/question';
 import score from './assets/data/score';
@@ -26,13 +26,20 @@ const QuestionCard = ({match}) => {
     const [curQuiz, setQuiz] = useState({});
     const [id, setId] = useState(0);
     const [member, setMember] = useState('');
+    const history = useHistory();
+
+    const toNextPage = (idx) => {
+        history.push("/question/" + idx);
+    }
     useEffect(() => {
         const num = parseInt(match.params.id);
         if (quiz) {
             setQuiz(quiz[num - 1]); // 렌더링 시 질문 설정 (현재 주소 파라미터에서 질문 번호 가져온다.
             setId(num + 1);
         }
-    }, []);
+    }, [match]);
+
+    
 
     const getScore = (arr) => {
         let scoreNum = 5;
@@ -63,13 +70,14 @@ const QuestionCard = ({match}) => {
     };
 
     return (
+      <QeustionWrapper>
         <>
             <QTop>
                 <ProgressCnt>
                     <ProgressCur> {
                         match.params.id
                     } </ProgressCur>
-                    <ProgressEnd>/{5} </ProgressEnd>
+                    <ProgressEnd>/{12} </ProgressEnd>
                 </ProgressCnt>
                 <br/>
                 <h1> {
@@ -78,23 +86,23 @@ const QuestionCard = ({match}) => {
             </QTop>
 
             {
-            match.params.id < 10 && 
-                <Question>
-                    <br/> {}
+            match.params.id < 13 && 
+                <>
+                    <br/>
                     { curQuiz.answer && curQuiz.answer.map((item, index) => (
                         <>
-                            <div>
-                                <Link to={`/question/${id}`} key={index}>
-                                    <Button>zz</Button>
-                                    {/* <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} onClick={() => getScore(item.name)}>{item.text} </Button>  */} </Link>
-                            </div>
+                            {/*index == 0 ? <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : <BlueButton>{item.text}</BlueButton>*/
+                          <StyledLink to={`/question/${id}`} key={index} >
+                              {index == 0 ? <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : <BlueButton>{item.text}</BlueButton>} 
+                          </StyledLink>
+
+                            }
                         </>
                     ))
-                } </Question>
+                } </>
         }
             {
-            match.params.id == 10 && <Question>
+            match.params.id == 13 && <Question>
                 <br/> {curQuiz.answer && curQuiz.answer.map((item, index) => (
                     <Link to={`/result/${member}`} key={index}>
                         {/* <Button className={classes.button} 
@@ -103,13 +111,17 @@ const QuestionCard = ({match}) => {
                 ))
             } </Question>
         } </>
+        </QeustionWrapper>
     );
 };
 
 export default withRouter(QuestionCard);
 
+const StyledLink = styled(Link)`
+width: 100%;
+`;
+
 const QTop = styled.div `
-height: 20vh;
 padding: 2rem;
 `
 
@@ -137,3 +149,25 @@ const QeustionWrapper = styled.div `
   justify-content: center;
   position: relative;
 `;
+
+const GreenButton = styled.button `
+  border-radius: 6px;
+  background-color: #56B381;
+  color: #fff;
+  text-align: center;
+  border: 2px solid black;
+  height: 54px;
+  font-size: 14px;
+  width: 90%;
+`;
+const BlueButton = styled.button `
+  border-radius: 6px;
+  background-color: #5A66FF;
+  color: #fff;
+  text-align: center;
+  border: 2px solid black;
+  height: 54px;
+  font-size: 14px;
+  width: 90%;
+`;
+
