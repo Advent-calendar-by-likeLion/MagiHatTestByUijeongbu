@@ -15,6 +15,7 @@ const Home = () => {
           <HomeMent1>나에게 어울리는 문화도시 의정부 사업은?</HomeMent1>
           <MainCharacterImg className="col-lg-5 col-8 mx-auto " src={MainCharacter} />
           <RedButton className="mt-5" onClick={toQNA}>찾으러 가기</RedButton>
+          <ButtonWrapper onClick={toQNA}>찾으러 가기</ButtonWrapper>
       </BackgroundImg>
   )
 }
@@ -38,3 +39,16 @@ const HomeMent1 = styled.div`
 const MainCharacterImg = styled.img`
     margin-top: 36px;
 `
+
+const ButtonWrapper = styled.div`
+  border-radius: 6px;
+  background-color: #56B381;
+  padding: 18px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid black;
+  height: 54px;
+
+  font-size: 20px;
+
+`;
