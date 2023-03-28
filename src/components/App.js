@@ -1,25 +1,25 @@
 import AppRouter from "components/Router";
-import { GlobalStyle, MediaDiv } from "../styles/layout";
+import {GlobalStyle, MediaDiv} from "../styles/layout";
 import styled from "styled-components";
 
 function App() {
 
-  return (
-    <>
-    <GlobalStyle/>
-      <MediaDiv>
-        <MainContainer>
-          <AppRouter/>
-        </MainContainer>
-      </MediaDiv>
-    </>
-  )
+    return (
+        <>
+            <GlobalStyle/>
+            <MediaDiv>
+                <MainContainer>
+                        <AppRouter/>
+                </MainContainer>
+            </MediaDiv>
+        </>
+    )
 }
 
 export default App;
 
 
-const MainContainer = styled.div`
+const MainContainer = styled.div `
     background-color: whitesmoke ;
     width: 90%;
     height: 80%;
@@ -34,3 +34,4 @@ const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
 `
+

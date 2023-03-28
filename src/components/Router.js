@@ -15,7 +15,7 @@ import "../components/assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "../routes/Admin.js";
-import QNA from "routes/QNA";
+import Question from "routes/Question";
 
 const AppRouter = () => {
   return (
@@ -24,25 +24,11 @@ const AppRouter = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/QNA">
-          <QNA />
-        </Route>
+        <Route component={Question} path='/question/:id'  />
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Redirect from="/" to="/admin/dashboard" />
-        </Route>
-        <Route exact path="/home2">
-          <Home2 />
-        </Route>
-        <Route exact path="/write">
-          <Write />
-        </Route>
-        <Route exact path="/writesuccess">
-          <WriteSuccess />
-        </Route>
-        <Route exact path="/profile">
-          <Profile />
         </Route>
       </Switch>
     </Router>
