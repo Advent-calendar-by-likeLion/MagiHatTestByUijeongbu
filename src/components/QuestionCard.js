@@ -6,7 +6,6 @@ import quiz from './assets/data/question';
 import score from './assets/data/score';
 // import Button from '../common/Button';
 import styled from 'styled-components';
-import {Button} from 'react-bootstrap';
 
 import HomeIcon from "./assets/svg/Home.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
@@ -82,14 +81,9 @@ const QuestionCard = ({match}) => {
           <Header>
             <img src={HomeIcon} onClick={onClick} />
             <img src={HomeIcon} onClick={onClick} />
-            {/* <img src={Share2Icon} /> */}
           </Header>
           <Wrapper>
               <QTop>
-                  <ProgressCnt>
-
-                  </ProgressCnt>
-                  <br/>
                   <QuestionFont>
                     {curQuiz.question}
                   </QuestionFont>
@@ -119,41 +113,6 @@ const QuestionCard = ({match}) => {
                       ))
                 } </>
               }
-
-            {/* <Question>가장 생각나는 문장</Question>
-            <Answer>“ 괜찮아. 두 배로 여행하면 돼. - 쉬운 천국“</Answer>
-
-            <LineImg src={Line}></LineImg>
-
-            <Question>나에게 영향을 준 세명</Question>
-            <Answer>
-              <AnswerWrapper>
-                <img src={AnswerImg} />
-                <span>이무개씨</span>
-              </AnswerWrapper>
-              &nbsp;
-              <AnswerWrapper>
-                <img src={AnswerImg} />
-                <span>이무개씨</span>
-              </AnswerWrapper>
-              &nbsp;
-              <AnswerWrapper>
-                <img src={AnswerImg} />
-                <span>이무개씨</span>
-              </AnswerWrapper>
-            </Answer>
-
-            <LineImg src={Line}></LineImg>
-
-            <Question>가장 많이 연락한 사람</Question>
-            <Answer>
-              <AnswerWrapper>
-                <img src={AnswerImg} />
-                <span>이무개씨</span>
-              </AnswerWrapper>
-            </Answer>
-
-            <LineImg src={Line}></LineImg> */}
           </ContentWrapper>
           
 
