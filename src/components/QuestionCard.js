@@ -99,22 +99,23 @@ const QuestionCard = ({match}) => {
               </QTop>
 
           <ContentWrapper>
-        <AnswerSentenceWrapper>
-              <AnswerImg src={ProgressBg}/>
-              <TimeTitleLayout>
-                <ProgressTxt> {match.params.id}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
-              </TimeTitleLayout>
-        </AnswerSentenceWrapper>
+            <AnswerSentenceWrapper>
+                  <AnswerImg src={ProgressBg}/>
+                  <TimeTitleLayout>
+                    <ProgressTxt> {match.params.id}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
+                  </TimeTitleLayout>
+            </AnswerSentenceWrapper>
           { // question page 1~10
               match.params.id < 13 && 
                   <>
+                      <br/>
                       <br/>
                       { curQuiz.answer && curQuiz.answer.map((item, index) => (
                           <> 
                               {
                               <StyledLink to={`/question/${id}`} key={index} >
                                   {index == 0 ? 
-                                    <PurpleButton onClick={getScore(item.name)} className='mb-3'>{item.text}</PurpleButton> : 
+                                    <PurpleButton onClick={getScore(item.name)} className='mb-4'>{item.text}</PurpleButton> : 
                                     <BlueButton>{item.text}</BlueButton>} 
                               </StyledLink>
                               }
