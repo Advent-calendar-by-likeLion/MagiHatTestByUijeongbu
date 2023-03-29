@@ -62,7 +62,7 @@ const ResultCard = ({ match }) => {
                   <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
                 </SuggestSubWrapper>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
+                  <SuggestImg src={suggestImg[resultData[0].suggest[1]]}/>
                   <div style={{fontSize:"22px"}}>문화도시 콜로키움</div>
                   <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
                 </SuggestSubWrapper>
