@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 // import Wrapper from '../common/Wrapper';
 import {Link, useHistory, useParams, withRouter} from 'react-router-dom';
 // import Typography from '@material-ui/core/Typography';
-import quiz from './assets/data/question';
+import quiz from './assets/data/questionData';
 import score from './assets/data/score';
 // import Button from '../common/Button';
 import styled from 'styled-components';
