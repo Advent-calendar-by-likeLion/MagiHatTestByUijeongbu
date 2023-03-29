@@ -191,7 +191,8 @@ const ResultContent = styled.span `
   margin-bottom: 10px;
   font-size: 16px;
   text-align: center;
-  `
+  line-height: 143.9%;
+`
   
 const SubjectTxt = styled.span `
   margin-top: 10px;
