@@ -4,6 +4,9 @@ import {useHistory} from 'react-router-dom';
 
 import HomeIcon from "./assets/svg/Home.svg";
 import EyeIcon from "./assets/svg/Eye.svg";
+import StarIcon from "./assets/svg/Star.svg";
+import CaptureIcon from "./assets/svg/CaptureIcon.svg";
+import ShareIcon from "./assets/svg/ShareIcon.svg";
 
 import resultData from './assets/data/resultData';
 
@@ -41,7 +44,7 @@ const ResultCard = ({ match }) => {
           </Header>
           <Wrapper>
             <QTop>
-              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[0].subject}}>
+              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[2].subject}}>
               </QuestionFont>
             </QTop>
           </Wrapper>
@@ -49,7 +52,7 @@ const ResultCard = ({ match }) => {
           <Wrapper>
             <BusinessIcon><img src={resultImg[match.params.id]}/></BusinessIcon>
             <ResultWrapper>
-              <ResultContent dangerouslySetInnerHTML={{__html: resultData[0].content}}/>
+              <ResultContent dangerouslySetInnerHTML={{__html: resultData[2].content}}/>
             </ResultWrapper>
 
             <SuggestWrapper>
@@ -69,10 +72,32 @@ const ResultCard = ({ match }) => {
                   <div style={{fontSize:"12px"}}>{resultData[resultData[0].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
+
+            <div style={{marginTop:"60px"}}>
+              <img src={StarIcon}/> <br/>
+              <SubjectTxt>결과 이미지 캡쳐/공유하기</SubjectTxt>
+            </div>
+
+            <CaptureShareDiv>
+              <br/>
+              <br/>
+              <CaptureShareImg src={CaptureIcon}/> 
+              <br/>
+              <br/>
+              <CaptureShareImg src={ShareIcon}/>
+            </CaptureShareDiv>
+
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+          <Button style={{backgroundColor:"#B180E0"}}>모든 결과 유형 보기</Button>
+              <br/>
+          <Button style={{backgroundColor:"#FF88B6"}}>문화도시 의정부 인스타그램 둘러보기</Button>
+          <Button style={{backgroundColor:"#56B381"}}>문화도시 의정부 네이버 블로그 둘러보기</Button>
+          <Button style={{backgroundColor:"#5A66FF"}}>문화도시 의정부 네이버 카페 둘러보기</Button>
             
           </Wrapper>
-
-
       </>
         )
 }
@@ -156,8 +181,6 @@ const SuggestImg = styled.img`
 `;
 
 // result content
-
-
 const ResultWrapper = styled.div`
   width: 100%;
   background-repeat: no-repeat;
@@ -180,7 +203,26 @@ const ResultContent = styled.span `
   text-align: center;
   `
   
-  const SubjectTxt = styled.span `
+const SubjectTxt = styled.span `
   margin-top: 10px;
   font-size: 20px;
 `
+
+const CaptureShareDiv = styled.div `
+
+`
+
+const CaptureShareImg = styled.img `
+
+`
+
+const Button = styled.button `
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid black;
+  height: 54px;
+  font-size: 16px;
+  width: 90%;
+  margin: 10px;
+`;
