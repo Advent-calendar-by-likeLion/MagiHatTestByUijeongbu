@@ -33,6 +33,9 @@ const suggestImg = new Array(
 
 const ResultCard = ({ match }) => {
     const history = useHistory();
+    const result = 2;
+    const firstSuggest = resultData[resultData[result].suggest[0]].subject.replace(/<br>/g, ' ');
+    const secondSuggest = resultData[resultData[result].suggest[1]].subject.replace(/<br>/g, ' ');
     const toHome = () => {
         history.push("/");
     }
@@ -63,14 +66,14 @@ const ResultCard = ({ match }) => {
               <SuggestBox>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
-                  <div style={{fontSize:"22px"}}>{resultData[resultData[2].suggest[0]].subject}</div>
+                  <div style={{fontSize:"22px"}}>{firstSuggest}</div>
                   <div style={{fontSize:"12px"}}>{resultData[resultData[2].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[1]]}/>
-                  <div style={{fontSize:"22px"}}>{resultData[resultData[5].suggest[1]].subject}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[5].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"22px"}}>{secondSuggest}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[2].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
