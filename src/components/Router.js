@@ -1,6 +1,6 @@
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "routes/Home";
-import Analytics from "routes/Analytics";
+import Admin from "../routes/Admin";
 
 // import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -17,9 +17,6 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/analytics">
-          <Analytics />
-        </Route>
         <Route exact path="/">
           <Home />
         </Route>
