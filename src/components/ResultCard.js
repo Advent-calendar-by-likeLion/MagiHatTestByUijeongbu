@@ -62,14 +62,14 @@ const ResultCard = ({ match }) => {
               <SuggestBox>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
-                  <div style={{fontSize:"22px"}}>{resultData[resultData[0].suggest[0]].subject}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[0].suggest[0]].hashtag}</div>
+                  <div style={{fontSize:"22px"}}>{resultData[resultData[2].suggest[0]].subject}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[2].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[1]]}/>
-                  <div style={{fontSize:"22px"}}>{resultData[resultData[0].suggest[1]].subject}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[0].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"22px"}}>{resultData[resultData[5].suggest[1]].subject}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[5].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
