@@ -1,10 +1,5 @@
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "routes/Home";
-import Profile from "routes/Profile"
-import Write from "../routes/Write";
-import Home2 from "../routes/Home2";
-import Admin from "../routes/Admin";
-import WriteSuccess from "../routes/WriteSuccess";
 import Analytics from "routes/Analytics";
 
 // import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
