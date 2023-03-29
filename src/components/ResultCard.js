@@ -15,6 +15,8 @@ import result2 from "./assets/svg/result/2.svg";
 
 import sug1 from "./assets/svg/business/01.svg"
 
+import { Header, Wrapper, Button } from "./layout/CommonLayout";
+
 
 const resultImg = new Array(
   /*0 */   result2, 
@@ -37,7 +39,6 @@ const ResultCard = ({ match }) => {
 
     return (
       <>
-      
           <Header>
             <img src={HomeIcon} onClick={toHome} />
             <img src={HomeIcon} onClick={toHome} />
@@ -104,12 +105,6 @@ const ResultCard = ({ match }) => {
 
 export default ResultCard;
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 15px;
-`;
-
 const QTop = styled.div `
 width: 90%;
 text-align: center;
@@ -125,14 +120,6 @@ const BusinessIcon = styled.div `
   position: relative;
   top:43px;
 `
-// common data
-const Wrapper = styled.div` 
-  display: flex;
-  width: 100%;
-  justify-cotents: center;
-  align-items: center;
-  flex-direction: column;
-`;
 
 const Line = styled.div` 
   width: 80%;
@@ -215,14 +202,3 @@ const CaptureShareDiv = styled.div `
 const CaptureShareImg = styled.img `
 
 `
-
-const Button = styled.button `
-  border-radius: 6px;
-  color: #fff;
-  text-align: center;
-  border: 2px solid black;
-  height: 54px;
-  font-size: 16px;
-  width: 90%;
-  margin: 10px;
-`;

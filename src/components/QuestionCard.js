@@ -11,6 +11,8 @@ import HomeIcon from "./assets/svg/Home.svg";
 import qlogo1 from "./assets/svg/questionLogo/01.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
+import { Header, Wrapper, Button } from "./layout/CommonLayout";
+
 
 // import '../common/Main.css';
 
@@ -30,7 +32,6 @@ const Question = styled.div `
 const Spacer = styled.div `
   height : 4rem;
 `;
-
 
 const QuestionCard = ({match}) => {
     const [curQuiz, setQuiz] = useState({});
@@ -115,8 +116,14 @@ const QuestionCard = ({match}) => {
                               {
                               <StyledLink to={`/question/${id}`} key={index} >
                                   {index == 0 ? 
-                                    <PurpleButton onClick={getScore(item.name)} className='mb-4'>{item.text}</PurpleButton> : 
-                                    <BlueButton>{item.text}</BlueButton>} 
+                                    <Button style={{backgroundColor:"#B180E0"}}
+                                      onClick={getScore(item.name)} className='mb-4'
+                                    >{item.text}</Button>
+                                    : 
+                                    <Button style={{backgroundColor:"#5A66FF"}}
+                                      onClick={getScore(item.name)}
+                                    >{item.text}</Button>
+                                  } 
                               </StyledLink>
                               }
                           </>
@@ -144,23 +151,6 @@ const QuestionCard = ({match}) => {
 };
 
 export default withRouter(QuestionCard);
-
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-  justify-cotents: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-// header
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 15px;
-`;
-
 
 const QTop = styled.div `
 width: 90%;
