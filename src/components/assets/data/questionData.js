@@ -1,4 +1,4 @@
-const question = [
+const questionData = [
     {
         'question': '문화도시 의정부 사업에 참여해 본 적 있어?',
         'answer': [
@@ -158,4 +158,4 @@ const question = [
     
 ]
 
-export default question;
+export default questionData;
