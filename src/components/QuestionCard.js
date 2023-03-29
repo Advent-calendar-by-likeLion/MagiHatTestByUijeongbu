@@ -168,20 +168,15 @@ const QuestionFont = styled.div `
 `
 
 const QTop = styled.div `
-padding: 2rem;
+width: 90%;
+text-align: center;
+
 display: flex;
 flex-direction: column;
 align-items: center;
 `
 
-const ProgressCnt = styled.div `
-  text-align: left;
-
-`
-
-
 // content 
-
 const ContentWrapper = styled.div`
   width: 100%;
   height: 600px;
