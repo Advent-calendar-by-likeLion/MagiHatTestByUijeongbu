@@ -5,7 +5,6 @@ import Write from "../routes/Write";
 import Home2 from "../routes/Home2";
 import Admin from "../routes/Admin";
 import WriteSuccess from "../routes/WriteSuccess";
-import Analytics from "routes/Analytics";
 
 // import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -22,9 +21,6 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/analytics">
-          <Analytics />
-        </Route>
         <Route exact path="/">
           <Home />
         </Route>
