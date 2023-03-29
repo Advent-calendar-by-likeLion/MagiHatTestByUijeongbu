@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import {Button} from 'react-bootstrap';
 
 import HomeIcon from "./assets/svg/Home.svg";
+import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 
 // import '../common/Main.css';
@@ -86,10 +87,7 @@ const QuestionCard = ({match}) => {
           <Wrapper>
               <QTop>
                   <ProgressCnt>
-                      <ProgressCur> {
-                          match.params.id
-                      } </ProgressCur>
-                      <ProgressEnd>/{12} </ProgressEnd>
+
                   </ProgressCnt>
                   <br/>
                   <QuestionFont>
@@ -98,7 +96,12 @@ const QuestionCard = ({match}) => {
               </QTop>
 
           <ContentWrapper>
-
+        <AnswerSentenceWrapper>
+              <AnswerImg src={ProgressBg}/>
+              <TimeTitleLayout>
+                <ProgressTxt> {match.params.id}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
+              </TimeTitleLayout>
+        </AnswerSentenceWrapper>
           { // question page 1~10
               match.params.id < 13 && 
                   <>
@@ -200,15 +203,7 @@ const ProgressCnt = styled.div `
   text-align: left;
 
 `
-const ProgressCur = styled.span `
-  color: #ed6174;
-  font-size: 2.5em;
-  `
 
-const ProgressEnd = styled.span `
-  color: #b4b4b4;
-  font-size: 1.5em;
-`
 
 // content 
 
@@ -228,6 +223,30 @@ const ContentWrapper = styled.div`
   /* justify-content: center; */
   align-items: center;
 `;
+
+const AnswerSentenceWrapper = styled.div`
+  position: relative;
+  bottom: 40px;
+`;
+
+const AnswerImg = styled.img`
+  width: 184.23px;
+  height: 54px;
+`;
+
+const TimeTitleLayout = styled.div`
+  position: absolute;
+  top: 12px;
+  left: 63px;
+`
+
+const ProgressTxt = styled.span `
+  color: #000;
+  font-size: 16px;
+`
+const PgSlash = styled.span `
+  font-size: 12px;
+`
 
 // question
 
