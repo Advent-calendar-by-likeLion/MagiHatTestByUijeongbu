@@ -24,6 +24,9 @@ const AppRouter = () => {
           <Home />
         </Route>
         <Route component={Question} path='/question/:id'  />
+        <Route exact path="/result">
+          <Home />
+        </Route>
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
