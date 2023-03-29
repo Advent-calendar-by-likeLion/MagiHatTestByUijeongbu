@@ -8,10 +8,18 @@ import score from './assets/data/score';
 import styled from 'styled-components';
 
 import HomeIcon from "./assets/svg/Home.svg";
+import busIcon1 from "./assets/svg/business/01.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 
 // import '../common/Main.css';
+
+const busIcon = new Array(
+  /*0 */   busIcon1, 
+  /*1 */   busIcon1, 
+  /*2 */   busIcon1,
+  /*3 */   busIcon1,
+)
 
 const Question = styled.div `
   text-align : center;
@@ -84,9 +92,10 @@ const QuestionCard = ({match}) => {
           </Header>
           <Wrapper>
               <QTop>
-                  <QuestionFont>
-                    {curQuiz.question}
-                  </QuestionFont>
+                <QuestionFont>
+                  {curQuiz.question}
+                </QuestionFont>
+                <BusinessIcon><img src={busIcon[match.params.id]}/></BusinessIcon>
               </QTop>
 
           <ContentWrapper>
@@ -105,7 +114,7 @@ const QuestionCard = ({match}) => {
                               {
                               <StyledLink to={`/question/${id}`} key={index} >
                                   {index == 0 ? 
-                                    <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : 
+                                    <PurpleButton onClick={getScore(item.name)} className='mb-3'>{item.text}</PurpleButton> : 
                                     <BlueButton>{item.text}</BlueButton>} 
                               </StyledLink>
                               }
@@ -150,12 +159,18 @@ const Header = styled.div`
   justify-content: space-between;
   padding: 30px 15px;
 `;
+const BusinessIcon = styled.div `
+  margin-top: 40px;  
+`
 const QuestionFont = styled.div `
   font-size: 28px;
 `
 
 const QTop = styled.div `
 padding: 2rem;
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
 const ProgressCnt = styled.div `
@@ -225,14 +240,14 @@ const QeustionWrapper = styled.div `
   position: relative;
 `;
 
-const GreenButton = styled.button `
+const PurpleButton = styled.button `
   border-radius: 6px;
-  background-color: #56B381;
+  background-color: #B180E0;
   color: #fff;
   text-align: center;
   border: 2px solid black;
   height: 54px;
-  font-size: 14px;
+  font-size: 16px;
   width: 90%;
 `;
 const BlueButton = styled.button `
@@ -242,6 +257,6 @@ const BlueButton = styled.button `
   text-align: center;
   border: 2px solid black;
   height: 54px;
-  font-size: 14px;
+  font-size: 16px;
   width: 90%;
 `;
