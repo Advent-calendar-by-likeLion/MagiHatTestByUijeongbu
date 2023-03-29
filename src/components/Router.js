@@ -12,11 +12,15 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "../routes/Admin.js";
 import Question from "routes/Question";
+import Analytics from "routes/Analytics";
 
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
+        <Route exact path="/analytics">
+          <Analytics />
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>
