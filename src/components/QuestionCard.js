@@ -224,6 +224,7 @@ const StyledLink = styled(Link)`
   width: 100%;
   display: flex;  
   justify-content: center;  
+  text-decoration: none;
 `;
 
 const QeustionWrapper = styled.div `
