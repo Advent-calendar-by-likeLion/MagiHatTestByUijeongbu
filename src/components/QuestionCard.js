@@ -186,7 +186,6 @@ const AnswerWrapper = styled.div`
   background-size: contain;
   background: #FFFFFF;
   border: 1px solid #000000;
-  border-radius: 28px;
 
   padding: 20px 15px;
   display: flex;
