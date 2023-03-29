@@ -96,9 +96,10 @@ const QuestionCard = ({match}) => {
                     {curQuiz.question}
                   </QuestionFont>
               </QTop>
-          
 
-              { // question page 1~10
+          <ContentWrapper>
+
+          { // question page 1~10
               match.params.id < 13 && 
                   <>
                       <br/>
@@ -107,14 +108,53 @@ const QuestionCard = ({match}) => {
                               {
                               <StyledLink to={`/question/${id}`} key={index} >
                                   {index == 0 ? 
-                                  <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : 
-                                  <BlueButton>{item.text}</BlueButton>} 
+                                    <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : 
+                                    <BlueButton>{item.text}</BlueButton>} 
                               </StyledLink>
                               }
                           </>
                       ))
                 } </>
               }
+
+            {/* <Question>가장 생각나는 문장</Question>
+            <Answer>“ 괜찮아. 두 배로 여행하면 돼. - 쉬운 천국“</Answer>
+
+            <LineImg src={Line}></LineImg>
+
+            <Question>나에게 영향을 준 세명</Question>
+            <Answer>
+              <AnswerWrapper>
+                <img src={AnswerImg} />
+                <span>이무개씨</span>
+              </AnswerWrapper>
+              &nbsp;
+              <AnswerWrapper>
+                <img src={AnswerImg} />
+                <span>이무개씨</span>
+              </AnswerWrapper>
+              &nbsp;
+              <AnswerWrapper>
+                <img src={AnswerImg} />
+                <span>이무개씨</span>
+              </AnswerWrapper>
+            </Answer>
+
+            <LineImg src={Line}></LineImg>
+
+            <Question>가장 많이 연락한 사람</Question>
+            <Answer>
+              <AnswerWrapper>
+                <img src={AnswerImg} />
+                <span>이무개씨</span>
+              </AnswerWrapper>
+            </Answer>
+
+            <LineImg src={Line}></LineImg> */}
+          </ContentWrapper>
+          
+
+
 
               { // result page
               match.params.id == 13 && <Question>
@@ -170,10 +210,31 @@ const ProgressEnd = styled.span `
   font-size: 1.5em;
 `
 
-// content
+// content 
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 28px;
+
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+`;
+
+// question
 
 const StyledLink = styled(Link)`
   width: 100%;
+  display: flex;  
+  justify-content: center;  
 `;
 
 const QeustionWrapper = styled.div `
