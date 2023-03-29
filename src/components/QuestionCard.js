@@ -183,7 +183,7 @@ const ProgressCnt = styled.div `
 
 const ContentWrapper = styled.div`
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
