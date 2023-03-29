@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import {useHistory} from 'react-router-dom';
 
 import HomeIcon from "./assets/svg/Home.svg";
+import EyeIcon from "./assets/svg/Eye.svg";
 
 import resultData from './assets/data/resultData';
 
 import result2 from "./assets/svg/result/2.svg";
+
+
+import sug1 from "./assets/svg/business/01.svg"
 
 
 const resultImg = new Array(
@@ -14,6 +18,12 @@ const resultImg = new Array(
   /*1 */   result2, 
   /*2 */   result2,
   /*3 */   result2,
+)
+const suggestImg = new Array(
+  /*0 */   sug1, 
+  /*1 */   sug1, 
+  /*2 */   sug1,
+  /*3 */   sug1,
 )
 
 const ResultCard = ({ match }) => {
@@ -30,18 +40,37 @@ const ResultCard = ({ match }) => {
             <img src={HomeIcon} onClick={toHome} />
           </Header>
           <Wrapper>
-              <QTop>
-                <QuestionFont dangerouslySetInnerHTML={{__html: resultData[0].subject}}>
-                </QuestionFont>
-              </QTop>
-            </Wrapper>
+            <QTop>
+              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[0].subject}}>
+              </QuestionFont>
+            </QTop>
+          </Wrapper>
 
-            <Wrapper>
-              <BusinessIcon><img src={resultImg[match.params.id]}/></BusinessIcon>
-              <ResultWrapper>
-                <ResultContent dangerouslySetInnerHTML={{__html: resultData[0].content}}/>
-              </ResultWrapper>
-            </Wrapper>
+          <Wrapper>
+            <BusinessIcon><img src={resultImg[match.params.id]}/></BusinessIcon>
+            <ResultWrapper>
+              <ResultContent dangerouslySetInnerHTML={{__html: resultData[0].content}}/>
+            </ResultWrapper>
+
+            <SuggestWrapper>
+              <img src={EyeIcon}/>
+              <SubjectTxt>함께 보면 좋은 사업</SubjectTxt>
+              <SuggestBox>
+                <SuggestSubWrapper>
+                  <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
+                  <div style={{fontSize:"22px"}}>문화도시 콜로키움</div>
+                  <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
+                </SuggestSubWrapper>
+                <SuggestSubWrapper>
+                  <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
+                  <div style={{fontSize:"22px"}}>문화도시 콜로키움</div>
+                  <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
+                </SuggestSubWrapper>
+              </SuggestBox>
+            </SuggestWrapper>
+          </Wrapper>
+
+
       </>
         )
 }
@@ -78,7 +107,48 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const SuggestSubWrapper = styled.div` 
+  margin-top: 10%;
+  display: flex;
+  width: 80%;
+  justify-cotents: center;
+  align-items: baseline;
+  flex-direction: column;
+  `;
+
+const SuggestWrapper = styled.div` 
+  margin-top: 10%;
+  display: flex;
+  width: 80%;
+  justify-cotents: center;
+  align-items: baseline;
+  flex-direction: column;
+  `;
+  
+  const SuggestBox = styled.div`
+  margin-top: 10px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 8px;
+`;
+
+const SuggestImg = styled.img`
+  width: 182px;
+  height: 182px;
+`;
+
 // result content
+
 
 const ResultWrapper = styled.div`
   width: 100%;
@@ -97,6 +167,12 @@ const ResultWrapper = styled.div`
 
 const ResultContent = styled.span `
   margin-top: 30px;
+  margin-bottom: 10px;
   font-size: 16px;
   text-align: center;
+  `
+  
+  const SubjectTxt = styled.span `
+  margin-top: 10px;
+  font-size: 20px;
 `
