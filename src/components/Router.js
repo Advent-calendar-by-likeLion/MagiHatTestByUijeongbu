@@ -13,19 +13,23 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import AdminLayout from "../routes/Admin.js";
 import Question from "routes/Question";
 import Analytics from "routes/Analytics";
+import AllBusiness from "routes/AllBusiness";
 
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/analytics">
-          <Analytics />
-        </Route>
         <Route exact path="/">
           <Home />
         </Route>
+        <Route exact path="/analytics">
+          <Analytics />
+        </Route>
         <Route component={Question} path='/question/:id'  />
         <Route component={Result} path='/result/:id'  />
+        <Route exact path="/allbusiness">
+          <AllBusiness />
+        </Route>
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
