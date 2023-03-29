@@ -36,10 +36,12 @@ const ResultCard = ({ match }) => {
               </QTop>
             </Wrapper>
 
-            <ResultWrapper>
-              <ResultContent dangerouslySetInnerHTML={{__html: resultData[0].content}}/>
+            <Wrapper>
               <BusinessIcon><img src={resultImg[match.params.id]}/></BusinessIcon>
-            </ResultWrapper>
+              <ResultWrapper>
+                <ResultContent dangerouslySetInnerHTML={{__html: resultData[0].content}}/>
+              </ResultWrapper>
+            </Wrapper>
       </>
         )
 }
@@ -64,10 +66,9 @@ const QuestionFont = styled.div `
   font-size: 40px;
 `
 const BusinessIcon = styled.div `
-  position: relative;  
-  top: -348px;  
+  position: relative;
+  top:43px;
 `
-
 // common data
 const Wrapper = styled.div` 
   display: flex;
@@ -80,7 +81,6 @@ const Wrapper = styled.div`
 // result content
 
 const ResultWrapper = styled.div`
-  margin-top: 200px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
