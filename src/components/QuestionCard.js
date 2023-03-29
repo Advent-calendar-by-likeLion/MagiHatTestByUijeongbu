@@ -98,13 +98,13 @@ const QuestionCard = ({match}) => {
                 <BusinessIcon><img src={busIcon[match.params.id]}/></BusinessIcon>
               </QTop>
 
-          <ContentWrapper>
-            <AnswerSentenceWrapper>
-                  <AnswerImg src={ProgressBg}/>
-                  <TimeTitleLayout>
+          <AnswerWrapper>
+            <AnswerProgress>
+                  <ProgressImg src={ProgressBg}/>
+                  <ProgressTextDiv>
                     <ProgressTxt> {match.params.id}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
-                  </TimeTitleLayout>
-            </AnswerSentenceWrapper>
+                  </ProgressTextDiv>
+            </AnswerProgress>
           { // question page 1~10
               match.params.id < 13 && 
                   <>
@@ -123,7 +123,7 @@ const QuestionCard = ({match}) => {
                       ))
                 } </>
               }
-          </ContentWrapper>
+          </AnswerWrapper>
           
 
 
@@ -177,7 +177,7 @@ align-items: center;
 `
 
 // content 
-const ContentWrapper = styled.div`
+const AnswerWrapper = styled.div`
   width: 100%;
   height: 600px;
   background-repeat: no-repeat;
@@ -194,17 +194,17 @@ const ContentWrapper = styled.div`
   align-items: center;
 `;
 
-const AnswerSentenceWrapper = styled.div`
+const AnswerProgress = styled.div`
   position: relative;
   bottom: 40px;
 `;
 
-const AnswerImg = styled.img`
+const ProgressImg = styled.img`
   width: 184.23px;
   height: 54px;
 `;
 
-const TimeTitleLayout = styled.div`
+const ProgressTextDiv = styled.div`
   position: absolute;
   top: 12px;
   left: 63px;
@@ -225,16 +225,6 @@ const StyledLink = styled(Link)`
   display: flex;  
   justify-content: center;  
   text-decoration: none;
-`;
-
-const QeustionWrapper = styled.div `
-  display: flex;
-  margin-top: 70px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 `;
 
 const PurpleButton = styled.button `

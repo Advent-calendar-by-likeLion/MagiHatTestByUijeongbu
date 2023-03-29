@@ -26,7 +26,7 @@ const HomeMent1 = styled.div `
   font-size: 24px;
 `
 const MainCharacterImg = styled.img `
-    margin-top: 36px;
+  margin-top: 36px;
 `
 
 const ButtonWrapper = styled.div `
