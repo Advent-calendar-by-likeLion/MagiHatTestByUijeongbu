@@ -55,19 +55,21 @@ const ResultCard = ({ match }) => {
             <SuggestWrapper>
               <img src={EyeIcon}/>
               <SubjectTxt>함께 보면 좋은 사업</SubjectTxt>
+            </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
                   <div style={{fontSize:"22px"}}>문화도시 콜로키움</div>
                   <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
                 </SuggestSubWrapper>
+                <Line/>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[0].suggest[1]]}/>
                   <div style={{fontSize:"22px"}}>문화도시 콜로키움</div>
                   <div style={{fontSize:"12px"}}>#문화도시의정부 #입문 #강의형</div>
                 </SuggestSubWrapper>
               </SuggestBox>
-            </SuggestWrapper>
+            
           </Wrapper>
 
 
@@ -107,12 +109,17 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const Line = styled.div` 
+  width: 80%;
+  height: 1px;
+  border: 1px solid #000000;
+  margin : 35px;
+`
 const SuggestSubWrapper = styled.div` 
-  margin-top: 10%;
   display: flex;
   width: 80%;
   justify-cotents: center;
-  align-items: baseline;
+  align-items: center;
   flex-direction: column;
   `;
 
@@ -126,25 +133,26 @@ const SuggestWrapper = styled.div`
   `;
   
   const SuggestBox = styled.div`
-  margin-top: 10px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  background: #FFFFFF;
-  border: 1px solid #000000;
+    margin-top: 10px;
+    width: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background: #FFFFFF;
+    border: 1px solid #000000;
 
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  border-radius: 8px;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 8px;
 `;
 
 const SuggestImg = styled.img`
   width: 182px;
   height: 182px;
+  margin: 10px;
 `;
 
 // result content
