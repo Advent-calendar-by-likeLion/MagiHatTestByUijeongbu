@@ -8,17 +8,17 @@ import score from './assets/data/score';
 import styled from 'styled-components';
 
 import HomeIcon from "./assets/svg/Home.svg";
-import busIcon1 from "./assets/svg/business/01.svg";
+import qlogo1 from "./assets/svg/questionLogo/01.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 
 // import '../common/Main.css';
 
-const busIcon = new Array(
-  /*0 */   busIcon1, 
-  /*1 */   busIcon1, 
-  /*2 */   busIcon1,
-  /*3 */   busIcon1,
+const qLogo = new Array(
+  /*0 */   qlogo1, 
+  /*1 */   qlogo1, 
+  /*2 */   qlogo1,
+  /*3 */   qlogo1,
 )
 
 const Question = styled.div `
@@ -95,7 +95,7 @@ const QuestionCard = ({match}) => {
                 <QuestionFont>
                   {curQuiz.question}
                 </QuestionFont>
-                <BusinessIcon><img src={busIcon[match.params.id]}/></BusinessIcon>
+                <BusinessIcon><img src={qLogo[match.params.id]}/></BusinessIcon>
               </QTop>
 
           <AnswerWrapper>
@@ -211,7 +211,6 @@ const ProgressTextDiv = styled.div`
 `
 
 const ProgressTxt = styled.span `
-  color: #000;
   font-size: 16px;
 `
 const PgSlash = styled.span `
