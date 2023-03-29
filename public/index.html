@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- GA meta start -->
+    <meta name="google-signin-client_id" content="343214386674-t80hrc5e84pe1h0d3ad3a7kstts5hd1h.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/analytics.readonly">
+    <!-- GA meta end -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -26,7 +30,61 @@
     -->
     <title>React App</title>
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHCQSS3CVF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SHCQSS3CVF');
+  </script>
+
   <body>
+    <!-- google analytics start -->
+    <script>
+      // Replace with your view ID.
+      var VIEW_ID = '287549146';
+
+      // Query the API and print the results to the page.
+      function queryReports() {
+        gapi.client.request({
+          path: '/v4/reports:batchGet',
+          root: 'https://analyticsreporting.googleapis.com/',
+          method: 'POST',
+          body: {
+            reportRequests: [
+              {
+                viewId: VIEW_ID,
+                dateRanges: [
+                  {
+                    startDate: '7daysAgo',
+                    endDate: 'today'
+                  }
+                ],
+                metrics: [
+                  {
+                    expression: 'ga:sessions'
+                  }
+                ]
+              }
+            ]
+          }
+        }).then(displayResults, console.error.bind(console));
+      }
+
+      function displayResults(response) {
+        var formattedJson = JSON.stringify(response.result, null, 2);
+        document.getElementById('query-output').value = formattedJson;
+      }
+    </script>
+
+    <!-- Load the JavaScript API client and Sign-in library. -->
+    <script src="https://apis.google.com/js/client:platform.js"></script>
+    <!-- google analytics end -->
+
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
