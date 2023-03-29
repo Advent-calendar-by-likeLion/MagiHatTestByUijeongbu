@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import MainCharacter from '../assets/uijeongbu/MainCharacter.svg';
 import {useHistory} from 'react-router-dom';
-import {RedButton} from "./styles/buttonstyle";
 
 const Home = () => {
     const history = useHistory();

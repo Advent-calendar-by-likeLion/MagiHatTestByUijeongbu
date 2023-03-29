@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import reset from "styled-reset"
 
 //background-color: #F5F5F5;
-    export const MediaDiv = styled.div`
+export const MediaDiv = styled.div`
     margin: 0px auto;
     min-height: calc(var(--vh, 1vh) * 100);
     width: 768px;
@@ -12,7 +12,7 @@ import reset from "styled-reset"
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 768px) {
-    width: 100%;
+        width: 100%;
     }
 `;
 

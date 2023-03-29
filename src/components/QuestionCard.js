@@ -7,7 +7,9 @@ import score from './assets/data/score';
 // import Button from '../common/Button';
 import styled from 'styled-components';
 import {Button} from 'react-bootstrap';
-import Wrapper from './layout/Wrapper';
+
+import HomeIcon from "./assets/svg/Home.svg";
+
 
 // import '../common/Main.css';
 
@@ -31,6 +33,10 @@ const QuestionCard = ({match}) => {
     const toNextPage = (idx) => {
         history.push("/question/" + idx);
     }
+
+    const onClick = () => {
+      history("home");
+    };
     useEffect(() => {
         const num = parseInt(match.params.id);
         if (quiz) {
@@ -70,56 +76,81 @@ const QuestionCard = ({match}) => {
     };
 
     return (
-      <QeustionWrapper>
+        
         <>
-            <QTop>
-                <ProgressCnt>
-                    <ProgressCur> {
-                        match.params.id
-                    } </ProgressCur>
-                    <ProgressEnd>/{12} </ProgressEnd>
-                </ProgressCnt>
-                <br/>
-                <h1> {
-                    curQuiz.question
-                } </h1>
-            </QTop>
+          <Header>
+            <img src={HomeIcon} onClick={onClick} />
+            <img src={HomeIcon} onClick={onClick} />
+            {/* <img src={Share2Icon} /> */}
+          </Header>
+          <Wrapper>
+              <QTop>
+                  <ProgressCnt>
+                      <ProgressCur> {
+                          match.params.id
+                      } </ProgressCur>
+                      <ProgressEnd>/{12} </ProgressEnd>
+                  </ProgressCnt>
+                  <br/>
+                  <QuestionFont>
+                    {curQuiz.question}
+                  </QuestionFont>
+              </QTop>
+          
 
-            {
-            match.params.id < 13 && 
-                <>
-                    <br/>
-                    { curQuiz.answer && curQuiz.answer.map((item, index) => (
-                        <>
-                            {/*index == 0 ? <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : <BlueButton>{item.text}</BlueButton>*/
-                          <StyledLink to={`/question/${id}`} key={index} >
-                              {index == 0 ? <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : <BlueButton>{item.text}</BlueButton>} 
-                          </StyledLink>
-
-                            }
-                        </>
-                    ))
+              { // question page 1~10
+              match.params.id < 13 && 
+                  <>
+                      <br/>
+                      { curQuiz.answer && curQuiz.answer.map((item, index) => (
+                          <> 
+                              {
+                              <StyledLink to={`/question/${id}`} key={index} >
+                                  {index == 0 ? 
+                                  <GreenButton onClick={getScore(item.name)} className='mb-3'>{item.text}</GreenButton> : 
+                                  <BlueButton>{item.text}</BlueButton>} 
+                              </StyledLink>
+                              }
+                          </>
+                      ))
                 } </>
-        }
-            {
-            match.params.id == 13 && <Question>
-                <br/> {curQuiz.answer && curQuiz.answer.map((item, index) => (
-                    <Link to={`/result/${member}`} key={index}>
-                        {/* <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} 
-                    onClick={() => getScore(item.name)}>{item.text}</Button>  */} </Link>
-                ))
-            } </Question>
-        } </>
-        </QeustionWrapper>
+              }
+
+              { // result page
+              match.params.id == 13 && <Question>
+                  <br/> {curQuiz.answer && curQuiz.answer.map((item, index) => (
+                      <Link to={`/result/${member}`} key={index}>
+                          {/* <Button className={classes.button} 
+                      weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} 
+                      onClick={() => getScore(item.name)}>{item.text}</Button>  */} </Link>
+                      ))
+              } </Question>
+          } 
+          </Wrapper>
+          </>
     );
 };
 
 export default withRouter(QuestionCard);
 
-const StyledLink = styled(Link)`
-width: 100%;
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-cotents: center;
+  align-items: center;
+  flex-direction: column;
 `;
+
+// header
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 15px;
+`;
+const QuestionFont = styled.div `
+  font-size: 28px;
+`
 
 const QTop = styled.div `
 padding: 2rem;
@@ -139,6 +170,11 @@ const ProgressEnd = styled.span `
   font-size: 1.5em;
 `
 
+// content
+
+const StyledLink = styled(Link)`
+  width: 100%;
+`;
 
 const QeustionWrapper = styled.div `
   display: flex;
@@ -170,4 +206,3 @@ const BlueButton = styled.button `
   font-size: 14px;
   width: 90%;
 `;
-

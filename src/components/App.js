@@ -8,9 +8,7 @@ function App() {
         <>
             <GlobalStyle/>
             <MediaDiv>
-                <MainContainer>
                         <AppRouter/>
-                </MainContainer>
             </MediaDiv>
         </>
     )
