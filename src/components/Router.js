@@ -1,7 +1,8 @@
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "routes/Home";
+import Analytics from "routes/Analytics";
+import Result from "routes/Result";
 import Admin from "../routes/Admin";
-
 // import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,9 +22,7 @@ const AppRouter = () => {
           <Home />
         </Route>
         <Route component={Question} path='/question/:id'  />
-        <Route exact path="/result">
-          <Home />
-        </Route>
+        <Route component={Result} path='/result/:id'  />
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />

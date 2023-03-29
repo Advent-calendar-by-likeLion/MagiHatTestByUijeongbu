@@ -160,12 +160,7 @@ const Header = styled.div`
   justify-content: space-between;
   padding: 30px 15px;
 `;
-const BusinessIcon = styled.div `
-  margin-top: 40px;  
-`
-const QuestionFont = styled.div `
-  font-size: 28px;
-`
+
 
 const QTop = styled.div `
 width: 90%;
@@ -174,6 +169,12 @@ text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+`
+const QuestionFont = styled.div `
+  font-size: 28px;
+`
+const BusinessIcon = styled.div `
+  margin-top: 40px;  
 `
 
 // content 
