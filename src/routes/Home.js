@@ -4,15 +4,15 @@ import {useHistory} from 'react-router-dom';
 
 const Home = () => {
     const history = useHistory();
-    const toQestion = () => {
-        history.push("/question/1");
+    const toStory = () => {
+        history.push("/Story");
     }
 
     return (
         <>
           <BackgroundImg>
             <MainBgImg className="col-lg-8 col-12 mx-auto" src={MainBg}/>
-            <ButtonWrapper onClick={toQestion}>TEST 시작하기</ButtonWrapper>
+            <ButtonWrapper onClick={toStory}>TEST 시작하기</ButtonWrapper>
           </BackgroundImg>
         </>
     )
