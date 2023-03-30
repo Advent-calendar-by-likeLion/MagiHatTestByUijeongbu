@@ -14,6 +14,7 @@ import AdminLayout from "../routes/Admin.js";
 import Question from "routes/Question";
 import Analytics from "routes/Analytics";
 import AllBusiness from "routes/AllBusiness";
+import Story from "routes/Story";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,9 @@ const AppRouter = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/story">
+          <Story />
         </Route>
         <Route exact path="/analytics">
           <Analytics />
