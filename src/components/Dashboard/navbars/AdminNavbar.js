@@ -30,28 +30,30 @@ function Header() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <div className="d-flex justify-content-center align-items-center ml-2 ml-lg-0">
-          <Button
+          {/* <Button
             variant="dark"
             className="d-lg-none btn-fill d-flex justify-content-center align-items-center rounded-circle p-2"
             onClick={mobileSidebarToggle}
           >
             <i className="fas fa-ellipsis-v"></i>
-          </Button>
+          </Button> */}
           <Navbar.Brand
             href="#home"
             onClick={(e) => e.preventDefault()}
             className="mr-2"
+            style={{marginLeft: "10px"}}
           >
-            {getBrandText()}
+            {/* {getBrandText()} */}
+            관리자 페이지
           </Navbar.Brand>
         </div>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2">
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2">
           <span className="navbar-toggler-bar burger-lines"></span>
           <span className="navbar-toggler-bar burger-lines"></span>
           <span className="navbar-toggler-bar burger-lines"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="nav mr-auto" navbar>
+        </Navbar.Toggle> */}
+        <Navbar.Collapse id="basic-navbar-nav" style={{marginLeft: '60px'}}>
+          {/* <Nav className="nav mr-auto" navbar>
             <Nav.Item>
               <Nav.Link
                 data-toggle="dropdown"
@@ -118,7 +120,7 @@ function Header() {
                 <span className="d-lg-block"> Search</span>
               </Nav.Link>
             </Nav.Item>
-          </Nav>
+          </Nav> */}
           <Nav className="ml-auto" navbar>
             <Nav.Item>
               <Nav.Link
