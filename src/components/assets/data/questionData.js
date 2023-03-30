@@ -55,7 +55,7 @@ const questionData = [
         'question': '의정부의 다른 사람들과 함께 일해보고 싶어?',
         'answer': [
             {
-                text: '응! 다양한 사람들을 만나서 네트워킹 하고 싶어',
+                text: '응! 다양한 사람들과 만나서 네트워킹 하고 싶어',
                 name: ['E']
             },
             {
@@ -94,7 +94,7 @@ const questionData = [
         'question': '어떤 업무 스타일을 추구해?',
         'answer': [
             {
-                text: '다른 사람들과 함께 하는 팀 프로젝트가 좋아!',
+                text: '사람들과 함께 하는 팀 프로젝트가 좋아!',
                 name: ['E']
             },
             {
@@ -150,7 +150,7 @@ const questionData = [
                 name: ['ENTP']
             },
             {
-                text: '아니, 공간에 제약없는 자유로운 활동을 원해~',
+                text: '아니, 공간에 제약 없는 자유로운 활동을 원해~',
                 name: ['ENTJ']
             }
         ] 
