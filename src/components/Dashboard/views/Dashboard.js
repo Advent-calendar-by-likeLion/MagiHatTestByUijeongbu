@@ -24,105 +24,100 @@ function Dashboard() {
           <Col lg="3" sm="6">
             <Card className="card-stats">
               <Card.Body>
+                <p className="card-category">누적 방문자수</p>
                 <Row>
-                  <Col xs="5">
+                  <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
+                    <Card.Title as="h4">20</Card.Title>
+                  </div>
+                  {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
                       <i className="nc-icon nc-chart text-warning"></i>
                     </div>
                   </Col>
-                  <Col xs="7">
+                  <Col xs="7" style={{margin: 'auto', height: '50px'}}>
                     <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <p className="card-category">누적 방문자수</p>
+                      <Card.Title as="h4">20</Card.Title>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Card.Body>
-              <Card.Footer>
+              {/* <Card.Footer>
                 <hr></hr>
                 <div className="stats">
                   <i className="fas fa-redo mr-1"></i>
                   Update Now
                 </div>
-              </Card.Footer>
+              </Card.Footer> */}
             </Card>
           </Col>
           <Col lg="3" sm="6">
             <Card className="card-stats">
               <Card.Body>
+                <p className="card-category">총 페이지 전환수</p>
                 <Row>
-                  <Col xs="5">
+                  <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
+                    <Card.Title as="h4">200000</Card.Title>
+                  </div>
+                  {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
                       <i className="nc-icon nc-light-3 text-success"></i>
                     </div>
                   </Col>
-                  <Col xs="7">
+                  <Col xs="7" style={{margin: 'auto'}}>
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                      <p className="card-category">총 페이지 전환수</p>
+                      <Card.Title as="h4">200000</Card.Title>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Card.Body>
-              <Card.Footer>
-                <hr></hr>
-                <div className="stats">
-                  <i className="far fa-calendar-alt mr-1"></i>
-                  Last day
-                </div>
-              </Card.Footer>
             </Card>
           </Col>
           <Col lg="3" sm="6">
             <Card className="card-stats">
               <Card.Body>
+                <p className="card-category">공유버튼 클릭수</p>
                 <Row>
-                  <Col xs="5">
+                  <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
+                    <Card.Title as="h4">0</Card.Title>
+                  </div>
+                  {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
                       <i className="nc-icon nc-vector text-danger"></i>
                     </div>
                   </Col>
-                  <Col xs="7">
+                  <Col xs="7" style={{margin: 'auto'}}>
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
-                      <Card.Title as="h4">23</Card.Title>
+                      <p className="card-category">공유버튼 클릭수</p>
+                      <Card.Title as="h4">0</Card.Title>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Card.Body>
-              <Card.Footer>
-                <hr></hr>
-                <div className="stats">
-                  <i className="far fa-clock-o mr-1"></i>
-                  In the last hour
-                </div>
-              </Card.Footer>
             </Card>
           </Col>
           <Col lg="3" sm="6">
             <Card className="card-stats">
               <Card.Body>
+                <p className="card-category">이벤트배너 클릭수</p>
                 <Row>
-                  <Col xs="5">
+                  <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
+                    <Card.Title as="h4">0</Card.Title>
+                  </div>
+                  {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
                       <i className="nc-icon nc-favourite-28 text-primary"></i>
                     </div>
                   </Col>
-                  <Col xs="7">
+                  <Col xs="7" style={{margin: 'auto'}}>
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
-                      <Card.Title as="h4">+45K</Card.Title>
+                      <p className="card-category">이벤트배너 클릭수</p>
+                      <Card.Title as="h4">0</Card.Title>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Card.Body>
-              <Card.Footer>
-                <hr></hr>
-                <div className="stats">
-                  <i className="fas fa-redo mr-1"></i>
-                  Update now
-                </div>
-              </Card.Footer>
             </Card>
           </Col>
         </Row>
