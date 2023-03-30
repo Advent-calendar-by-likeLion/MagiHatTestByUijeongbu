@@ -46,7 +46,7 @@ function Admin() {
   return (
     <>
       <div className="wrapper">
-        <Sidebar color={color} routes={routes} />
+        {/* <Sidebar color={color} routes={routes} /> */}
         <div className="main-panel" ref={mainPanel}>
           <AdminNavbar />
           <div className="content">
