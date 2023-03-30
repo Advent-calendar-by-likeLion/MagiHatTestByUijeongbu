@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import ChartistGraph from "react-chartist";
 // react-bootstrap components
 import {
@@ -17,6 +18,50 @@ import {
 } from "react-bootstrap";
 
 function Dashboard() {
+  const [data, setData] = React.useState([]);
+  const [totalUser, setTotalUser] = React.useState(0);
+  const [pageViews, setPageViews] = React.useState(0);
+  const [shareClick, setShareClick] = React.useState(0);
+  const [banelClick, setBanelClick] = React.useState(0);
+
+  async function Axios() {
+    try {
+      //응답 성공
+      const response = await axios.post(
+        "https://accounts.google.com/o/oauth2/token",
+        {
+          //보내고자 하는 데이터
+          client_id: "343214386674-t80hrc5e84pe1h0d3ad3a7kstts5hd1h.apps.googleusercontent.com",
+          client_secret: "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",
+          refresh_token: "1//04aUHTKIkDEMfCgYIARAAGAQSNwF-L9IrTM89LkPaRMP0h685gxkjhgRKSovlvTBAWgEivz1Bb0zNkhaaYQZZH0y4b3MhSCRqloo",
+          grant_type: "refresh_token",
+        }
+      );
+      const Access_Token = response.data.access_token;
+      const url =
+        "https://www.googleapis.com/analytics/v3/data/ga?access_token=" +
+        Access_Token +
+        "&ids=ga%3A287549146&dimensions=ga%3Adate&metrics=ga%3Ausers%2Cga%3AnewUsers%2Cga%3Asessions%2Cga%3Apageviews&start-date=2023-03-29&end-date=today";
+      const res = await fetch(url);
+      const DATA = await res.json();
+      
+      return DATA;
+    } catch (error) {
+      //응답 실패
+      console.error(error);
+    }
+  };
+
+  React.useEffect(() => {
+    const response = Axios();
+    response.then((result) => {
+      const analyticsData = result.totalsForAllResults;
+      setTotalUser(analyticsData['ga:users']);
+      setPageViews(analyticsData['ga:pageviews']);
+    })
+  }, []);
+
+
   return (
     <>
       <Container fluid>
@@ -27,7 +72,7 @@ function Dashboard() {
                 <p className="card-category">누적 방문자수</p>
                 <Row>
                   <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
-                    <Card.Title as="h4">20</Card.Title>
+                    <Card.Title as="h4">{totalUser}</Card.Title>
                   </div>
                   {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
@@ -57,7 +102,7 @@ function Dashboard() {
                 <p className="card-category">총 페이지 전환수</p>
                 <Row>
                   <div className="numbers" style={{height: '50px', marginTop: '20px'}}>
-                    <Card.Title as="h4">200000</Card.Title>
+                    <Card.Title as="h4">{pageViews}</Card.Title>
                   </div>
                   {/* <Col xs="5">
                     <div className="icon-big text-center icon-warning">
