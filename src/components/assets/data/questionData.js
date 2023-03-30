@@ -4,11 +4,11 @@ const questionData = [
         'answer': [
             {
                 text: '이번이 처음이야! 입문 단계라고 할 수 있지~',
-                name: ['J']
+                mbtiResult: 'J'
             },
             {
                 text: '참여해 본 적 있고, 심화 과정에 관심이 있어!',
-                name: ['P']
+                mbtiResult: 'P'
             }
         ] 
     },
@@ -17,11 +17,11 @@ const questionData = [
         'answer': [
             {
                 text: '예술, 문화기획에 관심이 있어',
-                name: ['F']
+                mbtiResult: 'F'
             },
             {
                 text: '연구, 정책에 관심이 있어',
-                name: ['T']
+                mbtiResult: 'T'
             }
         ] 
     },
@@ -30,11 +30,11 @@ const questionData = [
         'answer': [
             {
                 text: '응! 두근두근~ 설레!',
-                name: ['E']
+                mbtiResult: 'E'
             },
             {
                 text: '흠.. 난 아직 마음의 준비가..',
-                name: ['I']
+                mbtiResult: 'I'
             }
         ] 
     },
@@ -43,11 +43,11 @@ const questionData = [
         'answer': [
             {
                 text: '다양한 체험과 경험을 할 수 있는 사업',
-                name: ['J']
+                mbtiResult: 'J'
             },
             {
                 text: '기존에 하던 활동을 심화할 수 있는 사업',
-                name: ['P']
+                mbtiResult: 'P'
             }
         ] 
     },
@@ -56,11 +56,11 @@ const questionData = [
         'answer': [
             {
                 text: '응! 다양한 사람들과 만나서 네트워킹 하고 싶어',
-                name: ['E']
+                mbtiResult: 'E'
             },
             {
                 text: '음.. 나는 내 역량 강화에 더 힘쓰고 싶어!',
-                name: ['I']
+                mbtiResult: 'I'
             }
         ] 
     },
@@ -69,11 +69,11 @@ const questionData = [
         'answer': [
             {
                 text: '3명 정도 도란도란 얘기 나눌 수 있을 정도!',
-                name: ['S']
+                mbtiResult: 'S'
             },
             {
                 text: '무슨 소리! 왁자지껄 많으면 많을수록 좋아~',
-                name: ['N']
+                mbtiResult: 'N'
             }
         ] 
     },
@@ -82,11 +82,11 @@ const questionData = [
         'answer': [
             {
                 text: '상상력으로 새로운 창작물을 만드는 일',
-                name: ['F']
+                mbtiResult: 'F'
             },
             {
                 text: '기존의 자료를 바탕으로 분석하는 일',
-                name: ['T']
+                mbtiResult: 'T'
             }
         ] 
     },
@@ -95,11 +95,11 @@ const questionData = [
         'answer': [
             {
                 text: '사람들과 함께 하는 팀 프로젝트가 좋아!',
-                name: ['E']
+                mbtiResult: 'E'
             },
             {
                 text: '혼자 하는 개인 프로젝트가 좋아~',
-                name: ['I']
+                mbtiResult: 'I'
             }
         ] 
     },
@@ -108,11 +108,11 @@ const questionData = [
         'answer': [
             {
                 text: '응! 의정부 지역 이슈를 탐구하고 싶어',
-                name: ['T']
+                mbtiResult: 'T'
             },
             {
                 text: '아직 의정부에 대해 잘 몰라',
-                name: ['F']
+                mbtiResult: 'F'
             }
         ] 
     },
@@ -121,11 +121,11 @@ const questionData = [
         'answer': [
             {
                 text: '응, 나는 내 분야의 전문가야',
-                name: ['P']
+                mbtiResult: 'P'
             },
             {
                 text: '아니, 나는 전문가는 아니야',
-                name: ['J']
+                mbtiResult: 'J'
             }
         ] 
     },
@@ -134,11 +134,11 @@ const questionData = [
         'answer': [
             {
                 text: '응, 청년이야',
-                name: ['ESTP']
+                mbtiResult: 'ESTP'
             },
             {
                 text: '청년은 아니야',
-                name: ['ESFP']
+                mbtiResult: 'ESFP'
             }
         ] 
     },
@@ -147,11 +147,11 @@ const questionData = [
         'answer': [
             {
                 text: '응, 내 공간을 운영하고 있고 활성화를 원해!',
-                name: ['ENTP']
+                mbtiResult: 'ENTP'
             },
             {
                 text: '아니, 공간에 제약 없는 자유로운 활동을 원해~',
-                name: ['ENTJ']
+                mbtiResult: 'ENTJ'
             }
         ] 
     },
