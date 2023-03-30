@@ -167,6 +167,72 @@ function Dashboard() {
           </Col>
         </Row>
         <Row>
+          <Card>
+              <Card.Header>
+                <Card.Title as="h4">사업 추천 결과 통계</Card.Title>
+              </Card.Header>
+              <Card.Body>
+                <div className="ct-chart" id="chartHours">
+                  <ChartistGraph
+                    data={{
+                      labels: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"],
+                      series: [
+                        [1, 20, 10, 30, 10, 40, 50, 20, 30, 50, 30, 10, 40, 50, 80, 20],
+                      ],
+                    }}
+                    type="Bar"
+                    options={{
+                      low: 0,
+                      high: 300,
+                      showArea: false,
+                      height: "300px",
+                      axisX: {
+                        showGrid: false,
+                      },
+                      lineSmooth: true,
+                      showLine: true,
+                      showPoint: true,
+                      fullWidth: true,
+                      chartPadding: {
+                        right: 50,
+                      },
+                    }}
+                    responsiveOptions={[
+                      [
+                        "screen and (max-width: 640px)",
+                        {
+                          axisX: {
+                            labelInterpolationFnc: function (value) {
+                              return value[0];
+                            },
+                          },
+                        },
+                      ],
+                    ]}
+                  />
+                </div>
+              </Card.Body>
+              <Card.Footer>
+                <p>A: 문화도시 콜리키움</p>
+                <p>B: 333 문화살롱</p>
+                <p>C: 횡단자 캠프</p>
+                <p>D: 협력활동가 네트워크</p>
+                <p>E: 시민문화활동가 지원</p>
+                <p>F: 문화도시 에디터</p>
+                <p>G: 문화자치학교-문화자치 정책마켓-협치워크샵 꿍짝꿍짝</p>
+                <p>H: 문화시민 동네연구</p>
+                <p>I: 경기북부 작은연구</p>
+                <p>J: 백만원실험실</p>
+                <p>K: 문화도시 실험실</p>
+                <p>L: U+ 스팟 꼭! 꼭!</p>
+                <p>M: 이달의 예술가</p>
+                <p>N: 예술가의 예술</p>
+                <p>O: 영감모임</p>
+                <p>P: 의정부 특화콘텐츠 아이디어 공모</p>
+              </Card.Footer>
+            </Card>
+        </Row>
+        {/* <Row>
           <Col md="8">
             <Card>
               <Card.Header>
@@ -671,7 +737,7 @@ function Dashboard() {
               </Card.Footer>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </>
   );
