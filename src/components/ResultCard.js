@@ -122,15 +122,15 @@ const ResultCard = ({ match }) => {
           </Header>
           <Wrapper>
             <QTop>
-              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[2].subject}}>
+              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[mbtiMatch[match.params.id]].subject}}>
               </QuestionFont>
             </QTop>
           </Wrapper>
 
           <Wrapper>
-            <BusinessIcon><img src={resultImg[2]}/></BusinessIcon>
+            <BusinessIcon><img src={resultImg[mbtiMatch[match.params.id]]}/></BusinessIcon>
             <ResultWrapper>
-              <ResultContent dangerouslySetInnerHTML={{__html: resultData[2].content}}/>
+              <ResultContent dangerouslySetInnerHTML={{__html: resultData[mbtiMatch[match.params.id]].content}}/>
             </ResultWrapper>
 
             <SuggestWrapper>
@@ -139,15 +139,15 @@ const ResultCard = ({ match }) => {
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[0].suggest[0]]}/>
+                  <SuggestImg src={suggestImg[resultData[mbtiMatch[match.params.id]].suggest[0]]}/>
                   <div style={{fontSize:"22px"}}>{firstSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[2].suggest[0]].hashtag}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[mbtiMatch[match.params.id]].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[0].suggest[1]]}/>
+                  <SuggestImg src={suggestImg[resultData[mbtiMatch[match.params.id]].suggest[1]]}/>
                   <div style={{fontSize:"22px"}}>{secondSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[2].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[mbtiMatch[match.params.id]].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
