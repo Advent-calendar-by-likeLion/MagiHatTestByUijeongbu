@@ -10,7 +10,7 @@ import ShareIcon from "./assets/svg/ShareIcon.svg";
 
 import resultData from './assets/data/resultData';
 
-import result2 from "./assets/svg/result/2.svg";
+import result02 from "./assets/svg/result/02.svg";
 
 
 import sug1 from "./assets/svg/business/01.svg"
@@ -19,10 +19,10 @@ import { Header, Wrapper, Button } from "./layout/CommonLayout";
 
 
 const resultImg = new Array(
-  /*0 */   result2, 
-  /*1 */   result2, 
-  /*2 */   result2,
-  /*3 */   result2,
+  /*0 */   result02, 
+  /*1 */   result02, 
+  /*2 */   result02,
+  /*3 */   result02,
 )
 const suggestImg = new Array(
   /*0 */   sug1, 
