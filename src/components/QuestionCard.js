@@ -17,6 +17,7 @@ import qlogo10 from "./assets/svg/questionLogo/10.svg";
 import qlogo11 from "./assets/svg/questionLogo/11.svg";
 import qlogo12 from "./assets/svg/questionLogo/12.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
+import Happy from "./assets/svg/loadingChar/4.Happy.svg";
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 
@@ -178,13 +179,14 @@ const QuestionCard = ({match}) => {
       </>
     )}
     {loading && (
-        <div >
-            <img
-                src={ProgressBg}
-                alt="loadingImg"
-            />
-            <div ></div>
-        </div>
+            <>
+            <LoadingWrapper>
+              <LoadingImg className=''
+                  src={Happy}
+                  alt="loadingImg"
+              />
+            </LoadingWrapper>
+            </>
     )}
 
     </>
@@ -289,4 +291,18 @@ const BlueButton = styled.button `
   height: 54px;
   font-size: 16px;
   width: 90%;
+`;
+
+const LoadingWrapper = styled.div ` 
+    background-color: #B180E0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+`;
+
+const LoadingImg = styled.img`
+  margin-top:50%;
+  width: 50%;
+  height: 50%;
 `;
