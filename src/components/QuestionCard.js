@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import {Link, useHistory, useParams, withRouter} from 'react-router-dom';
 // import Typography from '@material-ui/core/Typography';
 import quiz from './assets/data/questionData';
-import score from './assets/data/score';
 // import Button from '../common/Button';
 import styled from 'styled-components';
 
@@ -12,10 +11,6 @@ import qlogo1 from "./assets/svg/questionLogo/01.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
-import { ButtonLayout } from 'routes/styles/style';
-
-
-// import '../common/Main.css';
 
 const qLogo = new Array(
   /*0 */   qlogo1, 
@@ -24,35 +19,18 @@ const qLogo = new Array(
   /*3 */   qlogo1,
 )
 
-const Question = styled.div `
-  text-align : center;
-  margin : 0;
-  padding : 0;
-`;
-
-const Spacer = styled.div `
-  height : 4rem;
-`;
 
 const QuestionCard = ({match}) => {
     const [curQuiz, setQuiz] = useState({});
-    const [id, setId] = useState(0);
-    const [member, setMember] = useState('');
     const history = useHistory();
     const [loading, setLoading] = useState(false);
 
-    const toNextPage = (idx) => {
-        history.push("/question/" + idx);
+    const toHome = () => {
+        history.push("/");
     }
-
-    const onClick = () => {
-      history("home");
-    };
-
     const mbtiChecker = () => {
       setLoading(true);
       let map = {};
-      let result = [];
       let mbtiResult = [4];
       let flagNO11ESFP = false;
       let flagNO12ENTJ = false;
@@ -96,6 +74,7 @@ const QuestionCard = ({match}) => {
         history.push(`/result/${finalMbti}`);
       }, 3000);
   };
+
   const [currentSlide, setCurrentSlide] = useState(1);
   const TOTAL_SLIDES = 12;
   
@@ -131,13 +110,13 @@ const QuestionCard = ({match}) => {
     {!loading && (
       <>
         <Header>
-          <img src={HomeIcon} onClick={onClick} />
+          <img src={HomeIcon} onClick={toHome} />
           {/* <img src={HomeIcon} onClick={onClick} /> */}
         </Header>
         <Wrapper>
               <QTop>
                 <QuestionFont dangerouslySetInnerHTML={{__html: curQuiz.question}}/>
-                <BusinessIcon><img src={qLogo[match.params.id]}/></BusinessIcon>
+                <BusinessIcon><img src={qLogo[currentSlide]}/></BusinessIcon>
               </QTop>
 
           <AnswerWrapper>
@@ -148,13 +127,13 @@ const QuestionCard = ({match}) => {
                   </ProgressTextDiv>
             </AnswerProgress>
           { // question page 1~10
-              match.params.id < 12 && 
+              currentSlide < 13 && 
                   <>
                       <AnswerButtonLayout>
                         { curQuiz.answer && curQuiz.answer.map((item, index) => (
                             <> 
                                 {
-                                <StyledLink to={`/question/${id}`} key={index} >
+                                <StyledLink to={`/question`} key={index} >
                                     {index == 0 ? 
                                       <Button style={{backgroundColor:"#B180E0"}}
                                         onClick={nextSlideFir} className='mb-4'
