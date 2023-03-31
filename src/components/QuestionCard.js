@@ -41,6 +41,8 @@ const QuestionCard = ({match}) => {
     const [curQuiz, setQuiz] = useState({});
     const history = useHistory();
     const [loading, setLoading] = useState(false);
+    const [flagNO11ESFP, setFlagNO11ESFP] = useState(false);
+    const [flagNO12ENTJ, setFlagNO12ENTJ] = useState(false);
 
     const toHome = () => {
         history.push("/");
@@ -49,8 +51,6 @@ const QuestionCard = ({match}) => {
       setLoading(true);
       let map = {};
       let mbtiResult = [4];
-      let flagNO11ESFP = false;
-      let flagNO12ENTJ = false;
       for (let i = 0; i < mbti.length; i++) {
           if (mbti[i] in map) {
               map[mbti[i]] += 1;
@@ -58,6 +58,8 @@ const QuestionCard = ({match}) => {
               map[mbti[i]] = 1;
           }
       }
+      console.log(mbti);
+
       for (let count in map) {
           //console.log(map)
           
@@ -71,11 +73,8 @@ const QuestionCard = ({match}) => {
               } else if (count === ("J") || count === ("P")) {
                 mbtiResult[3] = count;
             }
-            console.log(mbtiResult);
           }
 
-          if (count === ("NO11ESFP")) flagNO11ESFP = true;
-          if (count === ("NO12ENTJ")) flagNO12ENTJ = true;
         }
 
         let finalMbti = mbtiResult.join('');
@@ -108,13 +107,22 @@ const QuestionCard = ({match}) => {
     const [num, setNum] = useState(0);
 
     const nextSlideFir = () => {
-      setMbti(mbti + quiz[num].answer[0].name);
+      if (quiz[num].answer[0].name[0] === "YES11ESTP" || quiz[num].answer[0].name[0] === "YES12ENTP") {
+      } else {
+        setMbti(mbti + quiz[num].answer[0].name);
+      }
       setNum(num + 1);
       setQuiz(quiz[num + 1]);
       setCurrentSlide(currentSlide + 1);
     };
     const nextSlideSec = () => {
-      setMbti(mbti + quiz[num].answer[1].name);
+      if (quiz[num].answer[1].name[0] === "NO11ESFP" ) {
+        setFlagNO11ESFP(true)
+      } else if (quiz[num].answer[1].name[0] === "NO12ENTJ" ) {
+        setFlagNO12ENTJ(true)
+      } else {
+        setMbti(mbti + quiz[num].answer[1].name);
+      }
       setNum(num + 1);
       setQuiz(quiz[num + 1]);
       setCurrentSlide(currentSlide + 1);
