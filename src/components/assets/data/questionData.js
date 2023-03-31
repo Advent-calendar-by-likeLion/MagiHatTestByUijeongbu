@@ -160,14 +160,14 @@ const questionData = [
         ] 
     },
     {
-        'question': ``,
+        'question': `1`,
         'answer': [
             {
-                text: '응, 내 공간을 운영하고 있고 활성화를 원해!',
+                text: '응, 원해!',
                 name: ['YES12ENTP']
             },
             {
-                text: '아니, 공간에 제약 없는 자유로운 활동을 원해~',
+                text: '아니, 공~',
                 name: ['NO12ENTJ']
             }
         ] 
