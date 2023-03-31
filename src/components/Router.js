@@ -14,6 +14,7 @@ import AdminLayout from "../routes/Admin.js";
 import Question from "routes/Question";
 import AllBusiness from "routes/AllBusiness";
 import Story from "routes/Story";
+import CharChoice from '../routes/CharChoice';
 
 const AppRouter = () => {
   return (
@@ -24,6 +25,9 @@ const AppRouter = () => {
         </Route>
         <Route exact path="/story">
           <Story />
+        </Route>
+        <Route exact path="/charchoice">
+          <CharChoice />
         </Route>
         <Route component={Question} path='/question'  />
         <Route component={Result} path='/result/:id'  />
