@@ -153,7 +153,7 @@ const QuestionCard = ({match}) => {
         <div >
             <img
                 src={ProgressBg}
-                alt="e-ticket"
+                alt="loadingImg"
             />
             <div ></div>
         </div>
