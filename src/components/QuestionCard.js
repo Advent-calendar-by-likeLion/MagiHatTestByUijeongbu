@@ -89,13 +89,11 @@ const QuestionCard = ({match}) => {
         <>
           <Header>
             <img src={HomeIcon} onClick={onClick} />
-            <img src={HomeIcon} onClick={onClick} />
+            {/* <img src={HomeIcon} onClick={onClick} /> */}
           </Header>
           <Wrapper>
               <QTop>
-                <QuestionFont>
-                  {curQuiz.question}
-                </QuestionFont>
+                <QuestionFont dangerouslySetInnerHTML={{__html: curQuiz.question}}></QuestionFont>
                 <BusinessIcon><img src={qLogo[match.params.id]}/></BusinessIcon>
               </QTop>
 
@@ -117,11 +115,11 @@ const QuestionCard = ({match}) => {
                               <StyledLink to={`/question/${id}`} key={index} >
                                   {index == 0 ? 
                                     <Button style={{backgroundColor:"#B180E0"}}
-                                      onClick={getScore(item.name)} className='mb-4'
+                                      onClick={toNextPage} className='mb-4'
                                     >{item.text}</Button>
                                     : 
                                     <Button style={{backgroundColor:"#5A66FF"}}
-                                      onClick={getScore(item.name)}
+                                      onClick={toNextPage}
                                     >{item.text}</Button>
                                   } 
                               </StyledLink>
@@ -162,6 +160,11 @@ align-items: center;
 `
 const QuestionFont = styled.div `
   font-size: 28px;
+  font-family: Gmarket Sans;
+  line-height: 40.71px;
+  text-align: center;
+  font-weight: 300;
+  color: #000000;
 `
 const BusinessIcon = styled.div `
   margin-top: 40px;  

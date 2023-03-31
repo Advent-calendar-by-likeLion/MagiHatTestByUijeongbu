@@ -1,6 +1,10 @@
+function toBolder(text) {
+    return "<span style='font-weight: 400'>" + text +"</span>";
+}
+
 const questionData = [
     {
-        'question': '문화도시 의정부 사업에 참여해 본 적 있어?',
+        'question': `문화도시 의정부 사업에<br> ${toBolder("참여해 본 적")} 있어?`,
         'answer': [
             {
                 text: '이번이 처음이야! 입문 단계라고 할 수 있지~',
@@ -13,7 +17,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '어떤 분야에 관심이 있어?',
+        'question': `${toBolder("어떤 분야")}에<br> 관심이 있어?`,
         'answer': [
             {
                 text: '예술, 문화기획에 관심이 있어',
@@ -26,7 +30,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '새로운 동료를 만날 준비가 되어 있어?',
+        'question': `${toBolder("새로운 동료")}를<br> ${toBolder("만날 준비")}가 되어 있어?`,
         'answer': [
             {
                 text: '응! 두근두근~ 설레!',
@@ -39,7 +43,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '문화도시 의정부에서 어떤 사업에 참여하고 싶어?',
+        'question': `문화도시 의정부에서<br> ${toBolder("어떤 사업")}에 참여하고 싶어?`,
         'answer': [
             {
                 text: '다양한 체험과 경험을 할 수 있는 사업',
@@ -52,7 +56,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '의정부의 다른 사람들과 함께 일해보고 싶어?',
+        'question': `의정부의 ${toBolder("다른 사람들과<br> 함께")} 일해보고 싶어?`,
         'answer': [
             {
                 text: '응! 다양한 사람들과 만나서 네트워킹 하고 싶어',
@@ -65,7 +69,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '모임의 규모는 어땠으면 좋겠어?',
+        'question': `${toBolder("모임의 규모")}는<br> 어땠으면 좋겠어?`,
         'answer': [
             {
                 text: '3명 정도 도란도란 얘기 나눌 수 있을 정도!',
@@ -78,7 +82,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '어떤 일을 할 때 더 즐거워?',
+        'question': `${toBolder("어떤 일")}을 할 때<br> 더 즐거워?`,
         'answer': [
             {
                 text: '상상력으로 새로운 창작물을 만드는 일',
@@ -91,7 +95,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '어떤 업무 스타일을 추구해?',
+        'question': `어떤 ${toBolder("업무 스타일")}을<br> 추구해?`,
         'answer': [
             {
                 text: '사람들과 함께 하는 팀 프로젝트가 좋아!',
@@ -104,7 +108,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '지역 이슈에 관심이 있어?',
+        'question': `${toBolder("지역 이슈")}에<br> 관심이 있어?`,
         'answer': [
             {
                 text: '응! 의정부 지역 이슈를 탐구하고 싶어',
@@ -117,7 +121,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '깊고 전문적인 지식을 가진 분야가 있어?',
+        'question': `${toBolder("깊고 전문적인 지식")}을 가진<br> 분야가 있어?`,
         'answer': [
             {
                 text: '응, 나는 내 분야의 전문가야',
@@ -130,7 +134,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '의정부에서 살거나 활동하는 청년이야? - 「청년기본법」에 따라 19세 이상 34세 이하인 사람',
+        'question': `의정부에서 살거나<br> 활동하는 ${toBolder("청년")}이야?`,
         'answer': [
             {
                 text: '응, 청년이야',
@@ -143,7 +147,7 @@ const questionData = [
         ] 
     },
     {
-        'question': '의정부에서 공간을 운영하고 있어?',
+        'question': `의정부에서<br> ${toBolder("공간을 운영")}하고 있어?`,
         'answer': [
             {
                 text: '응, 내 공간을 운영하고 있고 활성화를 원해!',
