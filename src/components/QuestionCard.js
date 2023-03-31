@@ -203,6 +203,8 @@ const QuestionFont = styled.div `
 const BusinessIcon = styled.div `
   margin-top: 40px;  
   margin-bottom: 30px;
+  width: 120px;
+  height: 120px;
 `
 
 // content 
