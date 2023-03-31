@@ -1,15 +1,18 @@
 import AppRouter from "components/Router";
 import {GlobalStyle, MediaDiv} from "../styles/layout";
 import styled from "styled-components";
+import { RecoilRoot } from "recoil";
 
 function App() {
 
     return (
         <>
-            <GlobalStyle/>
+        <RecoilRoot>
+        <GlobalStyle/>
             <MediaDiv>
-                        <AppRouter/>
+                <AppRouter/>
             </MediaDiv>
+        </RecoilRoot>
         </>
     )
 }

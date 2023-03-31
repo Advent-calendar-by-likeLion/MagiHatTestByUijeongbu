@@ -32,6 +32,8 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "^4.0.3",
     "recharts": "^2.5.0",
+    "recoil": "^0.7.7",
+    "recoil-persist": "^4.2.0",
     "sass": "^1.60.0",
     "simplebar-react": "^3.2.2",
     "styled-components": "^5.3.6",
