@@ -114,6 +114,36 @@ const ResultCard = ({ match }) => {
         history.push("/");
     }
 
+    const toAllBusinessPage = () => {
+      history.push("/allbusiness");
+    }
+
+    const toInstagramPage = () => {
+      window.open("https://www.instagram.com/ccity_ujb/");
+    }
+
+    const toNaverBlogPage = () => {
+      window.open("https://blog.naver.com/ccity_ujb");
+    }
+
+    const toNaverCafeaPage = () => {
+      window.open("https://cafe.naver.com/ccityujb");
+    }
+
+    function copyUrl() {
+      var url = ''; 
+      var textarea = document.createElement("textarea");
+      
+      document.body.appendChild(textarea);
+      url = window.document.location.href;
+      textarea.value = url;
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+
+      alert("링크 복사가 완료되었습니다. 원하는 곳에 공유하세요!")
+    }
+
     return (
       <>
           <Header>
@@ -162,18 +192,18 @@ const ResultCard = ({ match }) => {
               <CaptureShareImg src={CaptureIcon}/> 
               <br/>
               <br/>
-              <CaptureShareImg src={ShareIcon}/>
+              <a onClick={copyUrl}><CaptureShareImg src={ShareIcon}/></a>
             </CaptureShareDiv>
 
               <br/>
               <br/>
               <br/>
               <br/>
-          <Button style={{backgroundColor:"#B180E0"}}>모든 사업 유형 보기</Button>
+          <Button style={{backgroundColor:"#B180E0"}} onClick={toAllBusinessPage}>모든 사업 유형 보기</Button>
               <br/>
-          <Button style={{backgroundColor:"#FF88B6"}}>문화도시 의정부 인스타그램 둘러보기</Button>
-          <Button style={{backgroundColor:"#56B381"}}>문화도시 의정부 네이버 블로그 둘러보기</Button>
-          <Button style={{backgroundColor:"#5A66FF"}}>문화도시 의정부 네이버 카페 둘러보기</Button>
+          <Button style={{backgroundColor:"#FF88B6"}} onClick={toInstagramPage}>문화도시 의정부 인스타그램 둘러보기</Button>
+          <Button style={{backgroundColor:"#56B381"}} onClick={toNaverBlogPage}>문화도시 의정부 네이버 블로그 둘러보기</Button>
+          <Button style={{backgroundColor:"#5A66FF"}} onClick={toNaverCafeaPage}>문화도시 의정부 네이버 카페 둘러보기</Button>
             
           </Wrapper>
       </>
