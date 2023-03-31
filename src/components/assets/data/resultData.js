@@ -9,6 +9,7 @@ const resultData = [
     },
     // [1] 문화도시 콜로키움
     {
+        'mbti': "INTJ",
         'subject': "문화도시<br>콜로키움",
         'hashtag' : "#문화도시의정부 #입문 #강의형",
         'suggest': [7, 4],
@@ -16,6 +17,7 @@ const resultData = [
     },
     // [2] 333문화살롱
     {
+        'mbti': "ESTJ",
         'subject': "333<br>문화살롱",
         'hashtag' : "#누구나 #3명 #소규모모임지원",
         'suggest': [4, 7],  
@@ -23,6 +25,7 @@ const resultData = [
     },
     // [3] 횡단자캠프
     {
+        'mbti': "ESFP",
         'subject': "횡단자<br>캠프",
         'hashtag' : "#지역문화활동가 #역량강화 #생각확장",
         'suggest': [11, 4],
@@ -30,6 +33,7 @@ const resultData = [
     },
     // [4] 협력활동가 네트워크
     {
+        'mbti': "ENTJ",
         'subject': "협력활동가<br>네트워크",
         'hashtag' : "#나만의그룹을 #만들어봐 #네트워킹",
         'suggest': [10, 2],
@@ -37,6 +41,7 @@ const resultData = [
     },
     // [5] 시민문화활동가 지원
     {
+        'mbti': "ESTP",
         'subject': "시민문화활동가<br>지원",
         'hashtag' : "#청년 #인턴십 #코디네이터",
         'suggest': [7, 8],
@@ -44,6 +49,7 @@ const resultData = [
     },
     // [6] 문화도시 에디터
     {
+        'mbti': "ENFP",
         'subject': "문화도시<br>에디터",
         'hashtag' : "#취재 #아카이빙 #전담에디터",
         'suggest': [11, 3],        
@@ -51,6 +57,7 @@ const resultData = [
     },
     // [7] 문화자치학교-문화자치 정책마켓-협치워크샵 꿍짝꿍짝
     {
+        'mbti': "INTP",
         'subject': "문화자치학교<br>-문화자치 정책 마켓<br>-협치워크샵 꿍짝꿍짝",
         'hashtag' : "#시민이 #만드는 #정책제안서",
         'suggest': [6, 8],
@@ -58,6 +65,7 @@ const resultData = [
     },
     // [8] 문화시민 동네연구
     {
+        'mbti': "ISTJ",
         'subject': "문화시민<br>동네연구",
         'hashtag' : "#시민대상 #연구지원 #지역이슈발굴",
         'suggest': [1, 16],
@@ -65,6 +73,7 @@ const resultData = [
     },
     // [9] 경기북부 작은연구
     {
+        'mbti': "ISTP",
         'subject': "경기북부<br>작은연구",
         'hashtag' : "#연구자대상 #연구지원 #지역이슈발굴",
         'suggest': [5, 7],
@@ -72,6 +81,7 @@ const resultData = [
     },
     // [10] 백만원실험실
     {
+        'mbti': "ENFJ",
         'subject': "백만원<br>실험실",
         'hashtag' : "#동네에서 #재밌는시도를 #해보자",
         'suggest': [15, 4],
@@ -79,6 +89,7 @@ const resultData = [
     },
     // [11] 문화도시 실험실
     {
+        'mbti': "INFP",
         'subject': "문화도시<br>실험실",
         'hashtag' : "#지역문화실험 #확장 #심화",
         'suggest': [3, 4], 
@@ -86,6 +97,7 @@ const resultData = [
     },
     // [12] U+ 스팟 꼭! 꼭!
     {
+        'mbti': "ENTP",
         'subject': "U+ 스팟<br>꼭! 꼭!",
         'hashtag' : "#공간운영자 #문화공유공간 #네트워킹",
         'suggest': [4, 11],
@@ -93,6 +105,7 @@ const resultData = [
     },
     // [13] 이달의 예술가
     {
+        'mbti': "ISFP",
         'subject': "이달의<br>예술가",
         'hashtag' : "#예술가 #홍보브랜딩 #통합지원",
         'suggest': [6, 3],
@@ -100,6 +113,7 @@ const resultData = [
     },
     // [14] 예술가의 예술
     {
+        'mbti': "ISFJ",
         'subject': "예술가의<br>예술",
         'hashtag' : "#예술가 #창작지원",
         'suggest': [13, 3],  
@@ -107,6 +121,7 @@ const resultData = [
     },
     // [15] 영감모임
     {
+        'mbti': "ESFJ",
         'subject': "영감모임",
         'hashtag' : "#예술가 #네트워킹 #인사이트",
         'suggest': [4, 2],
@@ -114,6 +129,7 @@ const resultData = [
     },
     // [16] 의정부 특화콘텐츠 아이디어 공모
     {
+        'mbti': "INFJ",
         'subject': "지역특화콘텐츠<br>아이디어 공모전",
         'hashtag' : "#기발한 #아이디어를 #보여줘",
         'suggest': [10, 3],
