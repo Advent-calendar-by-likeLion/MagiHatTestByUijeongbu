@@ -23,7 +23,6 @@ height: 54px;
 font-size: 16px;
 width: 95%;
 margin: 10px;
-font-family: 'S-Core Dream-5Medium';
 font-weight: 500;
 font-style: normal;
 padding-top: 5px;

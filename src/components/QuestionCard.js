@@ -175,7 +175,6 @@ align-items: center;
 `
 const QuestionFont = styled.div `
   font-size: 28px;
-  font-family: Gmarket Sans;
   line-height: 40.71px;
   text-align: center;
   font-weight: 300;
