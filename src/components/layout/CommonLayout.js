@@ -18,9 +18,14 @@ export const Button = styled.button `
 border-radius: 6px;
 color: #fff;
 text-align: center;
-border: 2px solid black;
+border: 1px solid black;
 height: 54px;
 font-size: 16px;
-width: 90%;
+width: 95%;
 margin: 10px;
+font-family: 'S-Core Dream-5Medium';
+font-weight: 500;
+font-style: normal;
+padding-top: 5px;
+box-shadow: 0 4px 4px -4px black;
 `;

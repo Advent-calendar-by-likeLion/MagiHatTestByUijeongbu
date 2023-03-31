@@ -12,6 +12,7 @@ import qlogo1 from "./assets/svg/questionLogo/01.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
+import { ButtonLayout } from 'routes/styles/style';
 
 
 // import '../common/Main.css';
@@ -107,26 +108,26 @@ const QuestionCard = ({match}) => {
           { // question page 1~10
               match.params.id < 13 && 
                   <>
-                      <br/>
-                      <br/>
-                      { curQuiz.answer && curQuiz.answer.map((item, index) => (
-                          <> 
-                              {
-                              <StyledLink to={`/question/${id}`} key={index} >
-                                  {index == 0 ? 
-                                    <Button style={{backgroundColor:"#B180E0"}}
-                                      onClick={toNextPage} className='mb-4'
-                                    >{item.text}</Button>
-                                    : 
-                                    <Button style={{backgroundColor:"#5A66FF"}}
-                                      onClick={toNextPage}
-                                    >{item.text}</Button>
-                                  } 
-                              </StyledLink>
-                              }
-                          </>
-                      ))
-                } </>
+                      <AnswerButtonLayout>
+                        { curQuiz.answer && curQuiz.answer.map((item, index) => (
+                            <> 
+                                {
+                                <StyledLink to={`/question/${id}`} key={index} >
+                                    {index == 0 ? 
+                                      <Button style={{backgroundColor:"#B180E0"}}
+                                        onClick={toNextPage} className='mb-4'
+                                      >{item.text}</Button>
+                                      : 
+                                      <Button style={{backgroundColor:"#5A66FF"}}
+                                        onClick={toNextPage}
+                                      >{item.text}</Button>
+                                    } 
+                                </StyledLink>
+                                }
+                            </>
+                        ))}
+                      </AnswerButtonLayout>
+                </>
               }
           </AnswerWrapper>
           
@@ -168,6 +169,7 @@ const QuestionFont = styled.div `
 `
 const BusinessIcon = styled.div `
   margin-top: 40px;  
+  margin-bottom: 30px;
 `
 
 // content 
@@ -179,6 +181,7 @@ const AnswerWrapper = styled.div`
   background-size: contain;
   background: #FFFFFF;
   border: 1px solid #000000;
+  border-radius: 28px;
 
   padding: 20px 15px;
   display: flex;
@@ -217,6 +220,11 @@ const StyledLink = styled(Link)`
   display: flex;  
   justify-content: center;  
   text-decoration: none;
+`;
+
+const AnswerButtonLayout = styled.div `
+  width:100%;
+  height: 501px;
 `;
 
 const PurpleButton = styled.button `
