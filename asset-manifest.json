@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MagiHatTestByUijeongbu/static/css/main.0bd01aa2.chunk.css",
-    "main.js": "/MagiHatTestByUijeongbu/static/js/main.41df33b6.chunk.js",
-    "main.js.map": "/MagiHatTestByUijeongbu/static/js/main.41df33b6.chunk.js.map",
+    "main.js": "/MagiHatTestByUijeongbu/static/js/main.1c45fe5a.chunk.js",
+    "main.js.map": "/MagiHatTestByUijeongbu/static/js/main.1c45fe5a.chunk.js.map",
     "runtime-main.js": "/MagiHatTestByUijeongbu/static/js/runtime-main.e9c5c8a1.js",
     "runtime-main.js.map": "/MagiHatTestByUijeongbu/static/js/runtime-main.e9c5c8a1.js.map",
     "static/css/2.f4d70965.chunk.css": "/MagiHatTestByUijeongbu/static/css/2.f4d70965.chunk.css",
@@ -23,7 +23,7 @@
     "static/media/Star.5f321539.svg": "/MagiHatTestByUijeongbu/static/media/Star.5f321539.svg",
     "static/media/StoryBg.96050a8d.svg": "/MagiHatTestByUijeongbu/static/media/StoryBg.96050a8d.svg",
     "static/media/all.min.css": "/MagiHatTestByUijeongbu/static/media/fa-solid-900.eeccf4f6.woff",
-    "static/media/mainBg.7e0182c7.svg": "/MagiHatTestByUijeongbu/static/media/mainBg.7e0182c7.svg",
+    "static/media/mainBg.0bc542f8.svg": "/MagiHatTestByUijeongbu/static/media/mainBg.0bc542f8.svg",
     "static/media/light-bootstrap-dashboard-react.scss": "/MagiHatTestByUijeongbu/static/media/nucleo-icons.a30d0b02.ttf",
     "static/media/sidebar-3.9992d0ce.jpg": "/MagiHatTestByUijeongbu/static/media/sidebar-3.9992d0ce.jpg"
   },
@@ -32,6 +32,6 @@
     "static/css/2.f4d70965.chunk.css",
     "static/js/2.a165ed58.chunk.js",
     "static/css/main.0bd01aa2.chunk.css",
-    "static/js/main.41df33b6.chunk.js"
+    "static/js/main.1c45fe5a.chunk.js"
   ]
 }
