@@ -5,15 +5,35 @@ import styled from 'styled-components';
 
 import HomeIcon from "./assets/svg/Home.svg";
 import qlogo1 from "./assets/svg/questionLogo/01.svg";
+import qlogo2 from "./assets/svg/questionLogo/02.svg";
+import qlogo3 from "./assets/svg/questionLogo/03.svg";
+import qlogo4 from "./assets/svg/questionLogo/04.svg";
+import qlogo5 from "./assets/svg/questionLogo/05.svg";
+import qlogo6 from "./assets/svg/questionLogo/06.svg";
+import qlogo7 from "./assets/svg/questionLogo/07.svg";
+import qlogo8 from "./assets/svg/questionLogo/08.svg";
+import qlogo9 from "./assets/svg/questionLogo/09.svg";
+import qlogo10 from "./assets/svg/questionLogo/10.svg";
+import qlogo11 from "./assets/svg/questionLogo/11.svg";
+import qlogo12 from "./assets/svg/questionLogo/12.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 
 const qLogo = new Array(
-  /*0 */   qlogo1, 
-  /*1 */   qlogo1, 
-  /*2 */   qlogo1,
-  /*3 */   qlogo1,
+    qlogo1, // index 0
+    qlogo1,
+    qlogo2,
+    qlogo3,
+    qlogo4,
+    qlogo5,
+    qlogo6,
+    qlogo7,
+    qlogo8,
+    qlogo9,
+    qlogo10,
+    qlogo11,
+    qlogo12,
 )
 
 
