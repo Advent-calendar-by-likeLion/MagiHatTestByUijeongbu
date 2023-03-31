@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom';
 const Story = () => {
     const history = useHistory();
     const toQestion = () => {
-        history.push("/question/1");
+        history.push("/question");
     }
 
     return (
