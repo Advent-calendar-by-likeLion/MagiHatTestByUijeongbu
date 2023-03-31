@@ -47,43 +47,69 @@ const QuestionCard = ({match}) => {
     const onClick = () => {
       history("home");
     };
-    useEffect(() => {
-        const num = parseInt(match.params.id);
-        if (quiz) {
-            setQuiz(quiz[num - 1]); // 렌더링 시 질문 설정 (현재 주소 파라미터에서 질문 번호 가져온다.
-            setId(num + 1);
-        }
-    }, [match]);
 
-    
-
-    const getScore = (arr) => {
-        let scoreNum = 5;
-        arr.map((name => {
-            score[0][name] = + score[0][name] + scoreNum; // score value가 NaN이라 형변환 해줌
-            scoreNum -= 1;
-            if (score[0][name] > + score[1].maxScore) {
-                score[1].maxScore = score[0][name];
-                score[1].maxOmg = name;
+    const mbtiChecker = () => {
+      //setLoading(true);
+      let map = {};
+      let result = [];
+      let mbitResult = [4];
+      for (let i = 0; i < mbti.length; i++) {
+          if (mbti[i] in map) {
+              map[mbti[i]] += 1;
+          } else {
+              map[mbti[i]] = 1;
+          }
+      }
+      for (let count in map) {
+          //console.log(map)
+          
+          if  (count === ("S") || count === ("N")) {
+              mbitResult[1] = count;
+            } else if (map[count] >= 2) {
+              if (count === ("E") || count === ("I")) {
+                mbitResult[0] = count;
+              } else if (count === ("T") || count === ("F")) {
+                mbitResult[2] = count;
+              } else if (count === ("J") || count === ("P")) {
+                mbitResult[3] = count;
             }
-        }));
+            console.log(mbitResult);
+          }
+        }
+          
+          setTimeout(() => {
+          history.push(`/result/${mbitResult.join('')}`);
+      }, 3000);
+  };
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const TOTAL_SLIDES = 10;
+  
+  useEffect(() => {
+    setQuiz(quiz[num]);
+  }, []);
 
-        if (score[1].maxOmg === '유아') {
-            setMember('yooa');
-        } else if (score[1].maxOmg === '효정') {
-            setMember('hyojeong');
-        } else if (score[1].maxOmg === '지호') {
-            setMember('jiho');
-        } else if (score[1].maxOmg === '미미') {
-            setMember('mimi');
-        } else if (score[1].maxOmg === '비니') {
-            setMember('binie');
-        } else if (score[1].maxOmg === '아린') {
-            setMember('arin');
-        } else if (score[1].maxOmg === '승희') {
-            setMember('seunghee');
-        } // 주소 지정에 필요
+  useEffect(() => {
+      currentSlide > TOTAL_SLIDES && mbtiChecker();
+  }, [currentSlide]);
+
+
+    const [mbti, setMbti] = useState([]);
+    const [num, setNum] = useState(0);
+
+    const nextSlideFir = () => {
+      setMbti(mbti + quiz[num].answer[0].name);
+      setNum(num + 1);
+      setQuiz(quiz[num + 1]);
+      setCurrentSlide(currentSlide + 1);
+      //slideRef.current.style.transform += 'translateX(-100vw)';
     };
+    const nextSlideSec = () => {
+      setMbti(mbti + quiz[num].answer[1].name);
+      setNum(num + 1);
+      setQuiz(quiz[num + 1]);
+      setCurrentSlide(currentSlide + 1);
+      //slideRef.current.style.transform += 'translateX(-100vw)';
+  };
 
     return (
         
@@ -102,7 +128,7 @@ const QuestionCard = ({match}) => {
             <AnswerProgress>
                   <ProgressImg src={ProgressBg}/>
                   <ProgressTextDiv>
-                    <ProgressTxt> {match.params.id}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
+                    <ProgressTxt> {num + 1}<PgSlash>ㅤ/ㅤ</PgSlash>{12} </ProgressTxt>
                   </ProgressTextDiv>
             </AnswerProgress>
           { // question page 1~10
@@ -115,11 +141,11 @@ const QuestionCard = ({match}) => {
                                 <StyledLink to={`/question/${id}`} key={index} >
                                     {index == 0 ? 
                                       <Button style={{backgroundColor:"#B180E0"}}
-                                        onClick={toNextPage} className='mb-4'
+                                        onClick={nextSlideFir} className='mb-4'
                                       >{item.text}</Button>
                                       : 
                                       <Button style={{backgroundColor:"#5A66FF"}}
-                                        onClick={toNextPage}
+                                        onClick={nextSlideSec}
                                       >{item.text}</Button>
                                     } 
                                 </StyledLink>
