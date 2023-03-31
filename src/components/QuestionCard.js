@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
-// import Wrapper from '../common/Wrapper';
-import {Link, useHistory, useParams, withRouter} from 'react-router-dom';
-// import Typography from '@material-ui/core/Typography';
+import {Link, useHistory, withRouter} from 'react-router-dom';
 import quiz from './assets/data/questionData';
-// import Button from '../common/Button';
 import styled from 'styled-components';
 
 import HomeIcon from "./assets/svg/Home.svg";
@@ -95,14 +92,12 @@ const QuestionCard = ({match}) => {
       setNum(num + 1);
       setQuiz(quiz[num + 1]);
       setCurrentSlide(currentSlide + 1);
-      //slideRef.current.style.transform += 'translateX(-100vw)';
     };
     const nextSlideSec = () => {
       setMbti(mbti + quiz[num].answer[1].name);
       setNum(num + 1);
       setQuiz(quiz[num + 1]);
       setCurrentSlide(currentSlide + 1);
-      //slideRef.current.style.transform += 'translateX(-100vw)';
   };
 
     return (
@@ -111,7 +106,6 @@ const QuestionCard = ({match}) => {
       <>
         <Header>
           <img src={HomeIcon} onClick={toHome} />
-          {/* <img src={HomeIcon} onClick={onClick} /> */}
         </Header>
         <Wrapper>
               <QTop>
