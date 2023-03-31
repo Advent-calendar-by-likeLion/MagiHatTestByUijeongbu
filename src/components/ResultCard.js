@@ -17,6 +17,24 @@ import sug1 from "./assets/svg/business/01.svg"
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 
+const mbtiMatch = {
+  "INTJ" : 1, // 문화도시 콜로키움
+  "ESTJ" : 2, // 333문화쌀롱
+  "ESFP" : 3, // 횡단자캠프
+  "ENTJ" : 4, // 협력활동가 네트워크
+  "ESTP" : 5, // 시민문화활동가 지원
+  "ENFP" : 6, // 문화도시 실험실
+  "INTP" : 7, // 문화자치학교
+  "ISTJ" : 8, // 문화시민 동네연구
+  "ISTP" : 9, // 경기북부 작은연구
+  "ENFJ" : 10, // 백만원 실험실
+  "INFP" : 11, // 문화도시 에디터
+  "ENTP" : 12, // U+ 스팟 꼭! 꼭!
+  "ISFP" : 13, // 이달의 예술가
+  "ISFJ" : 14, // 예술가의 예술
+  "ESFJ" : 15, // 영감모임
+  "INFJ" : 16, // 아이디어 공모
+}
 
 const resultImg = new Array(
   /*0 */   result02, 
