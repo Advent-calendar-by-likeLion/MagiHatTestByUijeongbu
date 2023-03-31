@@ -39,6 +39,7 @@ const QuestionCard = ({match}) => {
     const [id, setId] = useState(0);
     const [member, setMember] = useState('');
     const history = useHistory();
+    const [loading, setLoading] = useState(false);
 
     const toNextPage = (idx) => {
         history.push("/question/" + idx);
@@ -49,10 +50,12 @@ const QuestionCard = ({match}) => {
     };
 
     const mbtiChecker = () => {
-      //setLoading(true);
+      setLoading(true);
       let map = {};
       let result = [];
-      let mbitResult = [4];
+      let mbtiResult = [4];
+      let flagNO11ESFP = false;
+      let flagNO12ENTJ = false;
       for (let i = 0; i < mbti.length; i++) {
           if (mbti[i] in map) {
               map[mbti[i]] += 1;
@@ -64,25 +67,37 @@ const QuestionCard = ({match}) => {
           //console.log(map)
           
           if  (count === ("S") || count === ("N")) {
-              mbitResult[1] = count;
+              mbtiResult[1] = count;
             } else if (map[count] >= 2) {
               if (count === ("E") || count === ("I")) {
-                mbitResult[0] = count;
+                mbtiResult[0] = count;
               } else if (count === ("T") || count === ("F")) {
-                mbitResult[2] = count;
+                mbtiResult[2] = count;
               } else if (count === ("J") || count === ("P")) {
-                mbitResult[3] = count;
+                mbtiResult[3] = count;
             }
-            console.log(mbitResult);
+            console.log(mbtiResult);
           }
+
+          if (count === ("NO11ESFP")) flagNO11ESFP = true;
+          if (count === ("NO12ENTJ")) flagNO12ENTJ = true;
+        }
+
+        let finalMbti = mbtiResult.join('');
+        if (flagNO11ESFP && finalMbti === "ESTP") {
+          finalMbti = "ESFP";
+        }
+        
+        if (flagNO12ENTJ && finalMbti === "ENTP") {
+          finalMbti = "ENTJ";
         }
           
-          setTimeout(() => {
-          history.push(`/result/${mbitResult.join('')}`);
+        setTimeout(() => {
+        history.push(`/result/${finalMbti}`);
       }, 3000);
   };
   const [currentSlide, setCurrentSlide] = useState(1);
-  const TOTAL_SLIDES = 10;
+  const TOTAL_SLIDES = 12;
   
   useEffect(() => {
     setQuiz(quiz[num]);
@@ -112,15 +127,16 @@ const QuestionCard = ({match}) => {
   };
 
     return (
-        
-        <>
-          <Header>
-            <img src={HomeIcon} onClick={onClick} />
-            {/* <img src={HomeIcon} onClick={onClick} /> */}
-          </Header>
-          <Wrapper>
+    <>
+    {!loading && (
+      <>
+        <Header>
+          <img src={HomeIcon} onClick={onClick} />
+          {/* <img src={HomeIcon} onClick={onClick} /> */}
+        </Header>
+        <Wrapper>
               <QTop>
-                <QuestionFont dangerouslySetInnerHTML={{__html: curQuiz.question}}></QuestionFont>
+                <QuestionFont dangerouslySetInnerHTML={{__html: curQuiz.question}}/>
                 <BusinessIcon><img src={qLogo[match.params.id]}/></BusinessIcon>
               </QTop>
 
@@ -132,7 +148,7 @@ const QuestionCard = ({match}) => {
                   </ProgressTextDiv>
             </AnswerProgress>
           { // question page 1~10
-              match.params.id < 13 && 
+              match.params.id < 12 && 
                   <>
                       <AnswerButtonLayout>
                         { curQuiz.answer && curQuiz.answer.map((item, index) => (
@@ -156,23 +172,22 @@ const QuestionCard = ({match}) => {
                 </>
               }
           </AnswerWrapper>
-          
+        
+        </Wrapper>
+      </>
+    )}
+    {loading && (
+        <div >
+            <img
+                src={ProgressBg}
+                alt="e-ticket"
+            />
+            <div ></div>
+        </div>
+    )}
 
-
-
-              { // result page
-              match.params.id == 13 && <Question>
-                  <br/> {curQuiz.answer && curQuiz.answer.map((item, index) => (
-                      <Link to={`/result/${member}`} key={index}>
-                          {/* <Button className={classes.button} 
-                      weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} 
-                      onClick={() => getScore(item.name)}>{item.text}</Button>  */} </Link>
-                      ))
-              } </Question>
-          } 
-          </Wrapper>
-          </>
-    );
+    </>
+  );
 };
 
 export default withRouter(QuestionCard);

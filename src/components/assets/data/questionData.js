@@ -138,11 +138,11 @@ const questionData = [
         'answer': [
             {
                 text: '응, 청년이야',
-                name: ['ESTP']
+                name: ['YES11ESTP']
             },
             {
                 text: '청년은 아니야',
-                name: ['ESFP']
+                name: ['NO11ESFP']
             }
         ] 
     },
@@ -151,11 +151,24 @@ const questionData = [
         'answer': [
             {
                 text: '응, 내 공간을 운영하고 있고 활성화를 원해!',
-                name: ['ENTP']
+                name: ['YES12ENTP']
             },
             {
                 text: '아니, 공간에 제약 없는 자유로운 활동을 원해~',
-                name: ['ENTJ']
+                name: ['NO12ENTJ']
+            }
+        ] 
+    },
+    {
+        'question': ``,
+        'answer': [
+            {
+                text: '응, 내 공간을 운영하고 있고 활성화를 원해!',
+                name: ['YES12ENTP']
+            },
+            {
+                text: '아니, 공간에 제약 없는 자유로운 활동을 원해~',
+                name: ['NO12ENTJ']
             }
         ] 
     },
