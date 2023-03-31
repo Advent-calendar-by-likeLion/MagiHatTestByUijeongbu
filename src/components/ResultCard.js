@@ -10,10 +10,39 @@ import ShareIcon from "./assets/svg/ShareIcon.svg";
 
 import resultData from './assets/data/resultData';
 
-import result02 from "./assets/svg/result/02.svg";
+import result01 from "./assets/svg/result/01.svg"
+import result02 from "./assets/svg/result/02.svg"
+import result03 from "./assets/svg/result/03.svg"
+import result04 from "./assets/svg/result/04.svg"
+import result05 from "./assets/svg/result/05.svg"
+import result06 from "./assets/svg/result/06.svg"
+import result07 from "./assets/svg/result/07.svg"
+import result08 from "./assets/svg/result/08.svg"
+import result09 from "./assets/svg/result/09.svg"
+import result10 from "./assets/svg/result/10.svg"
+import result11 from "./assets/svg/result/11.svg"
+import result12 from "./assets/svg/result/12.svg"
+import result13 from "./assets/svg/result/13.svg"
+import result14 from "./assets/svg/result/14.svg"
+import result15 from "./assets/svg/result/15.svg"
+import result16 from "./assets/svg/result/16.svg"
 
-
-import sug1 from "./assets/svg/business/01.svg"
+import suggest01 from "./assets/svg/business/01.svg"
+import suggest02 from "./assets/svg/business/02.svg"
+import suggest03 from "./assets/svg/business/03.svg"
+import suggest04 from "./assets/svg/business/04.svg"
+import suggest05 from "./assets/svg/business/05.svg"
+import suggest06 from "./assets/svg/business/06.svg"
+import suggest07 from "./assets/svg/business/07.svg"
+import suggest08 from "./assets/svg/business/08.svg"
+import suggest09 from "./assets/svg/business/09.svg"
+import suggest10 from "./assets/svg/business/10.svg"
+import suggest11 from "./assets/svg/business/11.svg"
+import suggest12 from "./assets/svg/business/12.svg"
+import suggest13 from "./assets/svg/business/13.svg"
+import suggest14 from "./assets/svg/business/14.svg"
+import suggest15 from "./assets/svg/business/15.svg"
+import suggest16 from "./assets/svg/business/16.svg"
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 
@@ -37,16 +66,43 @@ const mbtiMatch = {
 }
 
 const resultImg = new Array(
-  /*0 */   result02, 
-  /*1 */   result02, 
-  /*2 */   result02,
-  /*3 */   result02,
+    result01, //index 0
+    result01,
+    result02,
+    result03,
+    result04,
+    result05,
+    result06,
+    result07,
+    result08,
+    result09,
+    result10,
+    result11,
+    result12,
+    result13,
+    result14,
+    result15,
+    result16,
 )
+
 const suggestImg = new Array(
-  /*0 */   sug1, 
-  /*1 */   sug1, 
-  /*2 */   sug1,
-  /*3 */   sug1,
+    suggest01, //index 0
+    suggest01,
+    suggest02,
+    suggest03,
+    suggest04,
+    suggest05,
+    suggest06,
+    suggest07,
+    suggest08,
+    suggest09,
+    suggest10,
+    suggest11,
+    suggest12,
+    suggest13,
+    suggest14,
+    suggest15,
+    suggest16,
 )
 
 const ResultCard = ({ match }) => {
@@ -72,7 +128,7 @@ const ResultCard = ({ match }) => {
           </Wrapper>
 
           <Wrapper>
-            <BusinessIcon><img src={resultImg[match.params.id]}/></BusinessIcon>
+            <BusinessIcon><img src={resultImg[2]}/></BusinessIcon>
             <ResultWrapper>
               <ResultContent dangerouslySetInnerHTML={{__html: resultData[2].content}}/>
             </ResultWrapper>
