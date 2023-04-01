@@ -144,6 +144,10 @@ const ResultCard = ({ match }) => {
       alert("링크 복사가 완료되었습니다. 원하는 곳에 공유하세요!")
     }
 
+    function shareToKakao() {
+      alert("카카오톡 공유하기 입니다.");
+    }
+
     return (
       <>
           <Header>
@@ -187,14 +191,18 @@ const ResultCard = ({ match }) => {
             </div>
 
             <CaptureShareDiv>
-              <br/>
-              <br/>
+              <br/><br/>
               <CaptureShareImg src={CaptureIcon}/> 
-              <br/>
-              <br/>
+              <br/><br/>
               <a onClick={copyUrl}><CaptureShareImg src={ShareIcon}/></a>
+              <br/><br/>
             </CaptureShareDiv>
-
+            {/* 카카오톡 공유 기능 테스트를 위한 임시 버튼입니다. 디자인 적용전 */}
+              <br/><br/>
+              <p>카카오톡 공유 테스트용 임시 버튼</p>
+              <br/>
+              <a onClick={shareToKakao}><CaptureShareImg src={ShareIcon}/></a>
+            {/* 카카오톡 공유 기능 테스트를 위한 임시 버튼입니다. 디자인 적용전 */}
               <br/>
               <br/>
               <br/>
