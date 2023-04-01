@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import Respect from '../assets/uijeongbu/character/respect.svg'
 import Dream from '../assets/uijeongbu/character/dream.svg'
@@ -12,8 +12,12 @@ import { userState } from '../recoil/CharState';
 import { charArray2, charArray4 } from 'recoil/charArray';
 import { charArray3, charArray1 } from '../recoil/charArray';
 import { useEffect } from 'react';
+import Loading from 'components/Loading';
 
 const CharChoice = () => {
+
+    const [loading, setLoading] = useState(false);
+
     const history = useHistory();
     const [char, setChar] = useRecoilState(userState);
 
@@ -51,11 +55,20 @@ const CharChoice = () => {
     }
 
     const charclick = () => {
-        history.push('/question/1');
+        setLoading(true);
+        
+
+        setTimeout(() => {
+            history.push('/question');
+        }, 3000);
+
+        
     }
 
     return (
     <>
+    {!loading && (
+      <>
         <Header>
             <img src={backIcon} onClick={onClick} />
         </Header>
@@ -113,9 +126,17 @@ const CharChoice = () => {
                         </div>
                         </>
                     }
-                {/* </div> */}
             </div>
         </div>
+    </>
+    )}
+
+    {loading && (
+    <>
+        <Loading/>
+    </>
+    )}
+
     </>
     )
 }
