@@ -166,7 +166,7 @@ const ResultCard = ({ match }) => {
           content: {
             title: "마법모자 테스트",
             description: "의정부 사업추천을 위한 성향 검사",
-            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/main/src/components/assets/img/ShareImage.png",
+            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/main/src/components/assets/img/share-test.png",
             link: {
               mobileWebUrl: url,
               webUrl: url
