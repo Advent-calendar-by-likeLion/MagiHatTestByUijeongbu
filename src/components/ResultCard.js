@@ -244,22 +244,17 @@ const ResultCard = ({ match }) => {
 
             <div style={{marginTop:"60px"}}>
               <img src={StarIcon}/> <br/>
-              <SubjectTxt>결과 이미지 캡쳐/공유하기</SubjectTxt>
+              <SubjectTxt>결과 공유하기</SubjectTxt>
             </div>
 
             <CaptureShareDiv>
+              {/* <br/><br/>
+              <CaptureShareImg src={CaptureIcon}/>  */}
               <br/><br/>
-              <CaptureShareImg src={CaptureIcon}/> 
-              <br/><br/>
+              <a onClick={shareToKakao} style={{marginRight:"10px"}}><CaptureShareImg src={CaptureIcon}/></a> {/* 여기에 카카오 공유하기 버튼 디자인 넣기 */}
               <a onClick={copyUrl}><CaptureShareImg src={ShareIcon}/></a>
               <br/><br/>
             </CaptureShareDiv>
-            {/* 카카오톡 공유 기능 테스트를 위한 임시 버튼입니다. 디자인 적용전 */}
-              <br/><br/>
-              <p>카카오톡 공유 테스트용 임시 버튼</p>
-              <br/>
-              <a onClick={shareToKakao}><CaptureShareImg src={ShareIcon}/></a>
-            {/* 카카오톡 공유 기능 테스트를 위한 임시 버튼입니다. 디자인 적용전 */}
               <br/>
               <br/>
               <br/>
