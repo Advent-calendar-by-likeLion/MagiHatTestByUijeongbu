@@ -157,7 +157,7 @@ const ResultCard = ({ match }) => {
             </QTop>
           </Wrapper>
 
-          <Wrapper>
+          <Wrapper className='pb-5'>
             <BusinessIcon><img src={resultImg[mbtiMatch[match.params.id]]}/></BusinessIcon>
             <ResultWrapper>
               <ResultContent dangerouslySetInnerHTML={{__html: resultData[mbtiMatch[match.params.id]].content}}/>
