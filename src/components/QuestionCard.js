@@ -24,7 +24,7 @@ import Happy from '../assets/uijeongbu/character/happy.svg'
 import Expansion from '../assets/uijeongbu/character/expansion.svg'
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
-import Loading from './Loading';
+import Loading2 from './Loading2';
 import { useRecoilState } from 'recoil';
 import { userState } from '../recoil/CharState';
 
@@ -200,7 +200,7 @@ const QuestionCard = ({match}) => {
     )}
     {loading && (
             <>
-              <Loading/>
+              <Loading2/>
             </>
     )}
 
