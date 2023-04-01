@@ -115,7 +115,7 @@ const suggestImg = new Array(
 
 const ResultCard = ({ match }) => {
     const history = useHistory();
-    const result = 2;
+    const result = mbtiMatch[match.params.id];
     const firstSuggest = resultData[resultData[result].suggest[0]].subject.replace(/<br>/g, ' ');
     const secondSuggest = resultData[resultData[result].suggest[1]].subject.replace(/<br>/g, ' ');
     const [char, setChar] = useRecoilState(userState);
@@ -213,15 +213,15 @@ const ResultCard = ({ match }) => {
           </Header>
           <Wrapper>
             <QTop>
-              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[mbtiMatch[match.params.id]].subject}}>
+              <QuestionFont dangerouslySetInnerHTML={{__html: resultData[result].subject}}>
               </QuestionFont>
             </QTop>
           </Wrapper>
 
           <Wrapper className='pb-5'>
-            <BusinessIcon><img src={resultImg[mbtiMatch[match.params.id]]}/></BusinessIcon>
+            <BusinessIcon><img src={resultImg[result]}/></BusinessIcon>
             <ResultWrapper>
-              <ResultContent dangerouslySetInnerHTML={{__html: resultData[mbtiMatch[match.params.id]].content}}/>
+              <ResultContent dangerouslySetInnerHTML={{__html: resultData[result].content}}/>
             </ResultWrapper>
 
             <SuggestWrapper>
@@ -230,15 +230,15 @@ const ResultCard = ({ match }) => {
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[mbtiMatch[match.params.id]].suggest[0]]}/>
+                  <SuggestImg src={suggestImg[resultData[result].suggest[0]]}/>
                   <div style={{fontSize:"22px"}}>{firstSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[mbtiMatch[match.params.id]].suggest[0]].hashtag}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[result].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[mbtiMatch[match.params.id]].suggest[1]]}/>
+                  <SuggestImg src={suggestImg[resultData[result].suggest[1]]}/>
                   <div style={{fontSize:"22px"}}>{secondSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[mbtiMatch[match.params.id]].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"12px"}}>{resultData[resultData[result].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
@@ -281,7 +281,7 @@ flex-direction: column;
 align-items: center;
 `
 const QuestionFont = styled.div `
-  font-size: 37px;
+  font-size: 32px;
 `
 const BusinessIcon = styled.div `
   position: relative;
