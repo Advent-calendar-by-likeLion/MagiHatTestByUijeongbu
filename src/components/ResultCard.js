@@ -174,8 +174,8 @@ const ResultCard = ({ match }) => {
           objectType: "feed",
           content: {
             title: "마법모자 테스트",
-            description: "의정부 사업추천을 위한 성향 검사",
-            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/main/src/components/assets/img/share-test.png",
+            description: "2023 문화도시 의정부 사업 추천 성향 검사",
+            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/8b36da21e1bdd5fd056e2ad88d86d5a2b215ea4e/src/components/assets/img/share-test.png",
             link: {
               mobileWebUrl: url,
               webUrl: url
