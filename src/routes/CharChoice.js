@@ -90,8 +90,8 @@ const CharChoice = () => {
                             <img src={Dream} alt='상상이' onClick={onDream} style={{opacity: '80%'}}></img>
                             <img src={Expansion} alt='성장이' onClick={onExpansion} style={{opacity: '80%'}}></img>
                             <img src={Happy} alt='행복이' onClick={onHappy} style={{opacity: '80%'}}></img>
-                            <ButtonWrapper style={{margin: '0 auto'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </div>
+                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </>
                         : 
                         char[0] == "상상이" ?
@@ -101,8 +101,8 @@ const CharChoice = () => {
                             <img src={Respect} alt='존중이' onClick={onRespect} style={{opacity: '80%'}}></img>
                             <img src={Expansion} alt='성장이' onClick={onExpansion} style={{opacity: '80%'}}></img>
                             <img src={Happy} alt='행복이' onClick={onHappy} style={{opacity: '80%'}}></img>
-                            <ButtonWrapper style={{margin: '0 auto'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </div>
+                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </>
                         :
                         char[0] == "성장이" ?
@@ -112,8 +112,8 @@ const CharChoice = () => {
                             <img src={Respect} alt='존중이' onClick={onRespect} style={{opacity: '80%'}}></img>
                             <img src={Dream} alt='상상이' onClick={onDream} style={{opacity: '80%'}}></img>
                             <img src={Happy} alt='행복이' onClick={onHappy} style={{opacity: '80%'}}></img>
-                            <ButtonWrapper style={{margin: '0 auto'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </div>
+                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </>
                         :
                         <>
@@ -122,8 +122,8 @@ const CharChoice = () => {
                             <img src={Respect} alt='존중이' onClick={onRespect} style={{opacity: '80%'}}></img>
                             <img src={Dream} alt='상상이' onClick={onDream} style={{opacity: '80%'}}></img>
                             <img src={Expansion} alt='성장이' onClick={onExpansion} style={{opacity: '80%'}}></img>
-                            <ButtonWrapper style={{margin: '0 auto'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </div>
+                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>선택하기</ButtonWrapper>
                         </>
                     }
             </div>
@@ -153,9 +153,6 @@ const ButtonWrapper = styled.div `
   height: 54px;
   width: 358px;
   font-size: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: 75%;
-  position: absolute;
 `;
 
 const TextDiv = styled.div`
