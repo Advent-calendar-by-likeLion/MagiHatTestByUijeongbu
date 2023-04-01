@@ -263,6 +263,8 @@ const ResultCard = ({ match }) => {
               <br/>
               <br/>
           <Button style={{backgroundColor:"#B180E0"}} onClick={toAllBusinessPage}>모든 사업 유형 보기</Button>
+          <Button style={{backgroundColor:"#B180E0", marginTop:'15px'}} onClick={toHome}>테스트하러 가기</Button>
+              <br/>
               <br/>
           <Button style={{backgroundColor:"#FF88B6"}} onClick={toInstagramPage}>문화도시 의정부 인스타그램 둘러보기</Button>
           <Button style={{backgroundColor:"#56B381"}} onClick={toNaverBlogPage}>문화도시 의정부 네이버 블로그 둘러보기</Button>
