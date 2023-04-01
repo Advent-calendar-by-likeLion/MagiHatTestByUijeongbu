@@ -60,7 +60,7 @@ const CharChoice = () => {
 
         setTimeout(() => {
             history.push('/question');
-        }, 3000);
+        }, 800);
 
         
     }
