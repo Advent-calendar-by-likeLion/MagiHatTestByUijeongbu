@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import {useHistory} from 'react-router-dom';
+import { useEffect } from 'react';
 
 import HomeIcon from "./assets/svg/Home.svg";
 import EyeIcon from "./assets/svg/Eye.svg";
@@ -144,8 +145,44 @@ const ResultCard = ({ match }) => {
       alert("링크 복사가 완료되었습니다. 원하는 곳에 공유하세요!")
     }
 
+    useEffect(() => {
+      const script = document.createElement("script");
+      script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+      script.async = true;
+      document.body.appendChild(script);
+      return () => document.body.removeChild(script);
+    }, []);
+
     function shareToKakao() {
-      alert("카카오톡 공유하기 입니다.");
+      if (window.Kakao) {
+        const url = window.document.location.href;
+        const kakao = window.Kakao;
+        if (!kakao.isInitialized()) {
+          kakao.init("838f36a0158a761f70cce49490bd20b7");
+        }
+    
+        kakao.Share.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "마법모자 테스트",
+            description: "의정부 사업추천을 위한 성향 검사",
+            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/main/src/components/assets/img/ShareImage.png",
+            link: {
+              mobileWebUrl: url,
+              webUrl: url
+            }
+          },
+          buttons: [
+            {
+              title: "결과보러 가기",
+              link: {
+                mobileWebUrl: url,
+                webUrl: url
+              }
+            }
+          ]
+        });
+      }
     }
 
     return (
