@@ -224,6 +224,7 @@ const QuestionFont = styled.div `
   text-align: center;
   font-weight: 300;
   color: #000000;
+  font-family: "Gmarket Sans";
 `
 const BusinessIcon = styled.div `
   margin-top: 40px;  
