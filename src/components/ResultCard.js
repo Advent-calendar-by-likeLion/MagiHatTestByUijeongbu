@@ -129,6 +129,14 @@ const ResultCard = ({ match }) => {
       history.push("/allbusiness");
     }
 
+    const onBusinessLink = () => {
+      history.push(`/result/${resultData[resultData[result].suggest[0]].mbti}`)
+    }
+
+    const onBusinessLink2 = () => {
+      history.push(`/result/${resultData[resultData[result].suggest[1]].mbti}`)
+    }
+
     const toInstagramPage = () => {
       window.open("https://www.instagram.com/ccity_ujb/");
     }
@@ -234,13 +242,13 @@ const ResultCard = ({ match }) => {
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[result].suggest[0]]}/>
+                  <SuggestImg onClick={onBusinessLink} src={suggestImg[resultData[result].suggest[0]]}/>
                   <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: firstSuggest.subject}}></div>
                   <div style={{fontSize:"12px", marginTop:"10px"}}>{resultData[resultData[result].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
-                  <SuggestImg src={suggestImg[resultData[result].suggest[1]]}/>
+                  <SuggestImg onClick={onBusinessLink2} src={suggestImg[resultData[result].suggest[1]]}/>
                   <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: secondSuggest.subject}}></div>
                   <div style={{fontSize:"12px",  marginTop:"10px"}}>{resultData[resultData[result].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
