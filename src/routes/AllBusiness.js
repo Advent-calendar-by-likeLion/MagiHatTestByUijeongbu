@@ -19,7 +19,7 @@ const suggestImg = new Array(
 const AllBusiness = ({}) =>{
     const history = useHistory();
     const toHome = () => {
-        history.push("/");
+        history.goBack();
     }
 
     return(
