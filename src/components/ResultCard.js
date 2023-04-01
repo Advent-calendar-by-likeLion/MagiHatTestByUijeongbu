@@ -221,7 +221,7 @@ flex-direction: column;
 align-items: center;
 `
 const QuestionFont = styled.div `
-  font-size: 40px;
+  font-size: 37px;
 `
 const BusinessIcon = styled.div `
   position: relative;
