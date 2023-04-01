@@ -101,16 +101,16 @@ const AllBusiness = ({match}) =>{
           }
         </Header>
         <Wrapper>
-            <div style={{fontSize:"40px"}}>의정부 사업 유형 목록</div>
+            <div style={{fontSize:"32px"}}>의정부 사업 유형 목록</div>
             {
                 resultData.map((data, idx) => (
                     idx != 0 ?
                         <SuggestBox>
                             <SuggestSubWrapper onClick={(e) => {onBusinessLink(data, e)}}>
                                 <SuggestImg src={suggestImg[idx]}/>
-                                <div style={{fontSize:"22px"}}>{data.subject.replace(/<br>/g, ' ')}</div>
+                                <div style={{fontSize:"20px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
                                 <br/>
-                                <div style={{fontSize:"22px", textAlign: "center"}}>{data.hashtag}</div>
+                                <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
                             </SuggestSubWrapper>
                         </SuggestBox>
                     :
