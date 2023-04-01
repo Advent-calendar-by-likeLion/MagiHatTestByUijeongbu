@@ -222,6 +222,9 @@ const ResultCard = ({ match }) => {
             <BusinessIcon><img src={resultImg[result]}/></BusinessIcon>
             <ResultWrapper>
               <ResultContent dangerouslySetInnerHTML={{__html: resultData[result].content}}/>
+              <br/>
+              <u style={{fontWeight:"bold"}}>진행 일정</u>
+              <Schedule dangerouslySetInnerHTML={{__html: resultData[result].schedule}}/>
             </ResultWrapper>
 
             <SuggestWrapper>
@@ -374,4 +377,8 @@ const CaptureShareImg = styled.img `
 const TopChar = styled.img`
   width: 38px;
   margin-right: 10px;
+`
+
+const Schedule = styled.div`
+  margin-top: 10px;
 `
