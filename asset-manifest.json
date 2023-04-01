@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.05c09d9a.chunk.css",
-    "main.js": "/static/js/main.8b29bc3b.chunk.js",
-    "main.js.map": "/static/js/main.8b29bc3b.chunk.js.map",
+    "main.js": "/static/js/main.d2a69994.chunk.js",
+    "main.js.map": "/static/js/main.d2a69994.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.157499b8.js",
     "runtime-main.js.map": "/static/js/runtime-main.157499b8.js.map",
     "static/css/2.e65fd78c.chunk.css": "/static/css/2.e65fd78c.chunk.css",
-    "static/js/2.19c68555.chunk.js": "/static/js/2.19c68555.chunk.js",
-    "static/js/2.19c68555.chunk.js.map": "/static/js/2.19c68555.chunk.js.map",
+    "static/js/2.6419d245.chunk.js": "/static/js/2.6419d245.chunk.js",
+    "static/js/2.6419d245.chunk.js.map": "/static/js/2.6419d245.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e65fd78c.chunk.css.map": "/static/css/2.e65fd78c.chunk.css.map",
     "static/css/main.05c09d9a.chunk.css.map": "/static/css/main.05c09d9a.chunk.css.map",
-    "static/js/2.19c68555.chunk.js.LICENSE.txt": "/static/js/2.19c68555.chunk.js.LICENSE.txt",
+    "static/js/2.6419d245.chunk.js.LICENSE.txt": "/static/js/2.6419d245.chunk.js.LICENSE.txt",
     "static/media/01.05d069cf.svg": "/static/media/01.05d069cf.svg",
     "static/media/01.2a660fd1.svg": "/static/media/01.2a660fd1.svg",
     "static/media/02.240f691d.svg": "/static/media/02.240f691d.svg",
@@ -44,18 +44,19 @@
     "static/media/2.Respect.462f798f.svg": "/static/media/2.Respect.462f798f.svg",
     "static/media/3.Expansion.5b776347.svg": "/static/media/3.Expansion.5b776347.svg",
     "static/media/4.Happy.3e7f2e41.svg": "/static/media/4.Happy.3e7f2e41.svg",
+    "static/media/AdminLogo.37a30e72.svg": "/static/media/AdminLogo.37a30e72.svg",
     "static/media/CaptureIcon.ec28c3f8.svg": "/static/media/CaptureIcon.ec28c3f8.svg",
     "static/media/Eye.c865187c.svg": "/static/media/Eye.c865187c.svg",
     "static/media/Home.b25be537.svg": "/static/media/Home.b25be537.svg",
     "static/media/ProgressBg.2b2dad5c.svg": "/static/media/ProgressBg.2b2dad5c.svg",
     "static/media/ShareIcon.039ea8c0.svg": "/static/media/ShareIcon.039ea8c0.svg",
     "static/media/Star.5f321539.svg": "/static/media/Star.5f321539.svg",
-    "static/media/StoryBg.96050a8d.svg": "/static/media/StoryBg.96050a8d.svg",
+    "static/media/StoryBg.b241c6b6.svg": "/static/media/StoryBg.b241c6b6.svg",
     "static/media/dream.84010e6b.svg": "/static/media/dream.84010e6b.svg",
     "static/media/expansion.1a1ce77d.svg": "/static/media/expansion.1a1ce77d.svg",
     "static/media/all.min.css": "/static/media/fa-solid-900.eeccf4f6.woff",
     "static/media/happy.93b75362.svg": "/static/media/happy.93b75362.svg",
-    "static/media/mainBg.0bc542f8.svg": "/static/media/mainBg.0bc542f8.svg",
+    "static/media/mainBg.c59108be.svg": "/static/media/mainBg.c59108be.svg",
     "static/media/light-bootstrap-dashboard-react.scss": "/static/media/nucleo-icons.a30d0b02.ttf",
     "static/media/respect.1ef2bfa2.svg": "/static/media/respect.1ef2bfa2.svg",
     "static/media/sidebar-3.9992d0ce.jpg": "/static/media/sidebar-3.9992d0ce.jpg"
@@ -63,8 +64,8 @@
   "entrypoints": [
     "static/js/runtime-main.157499b8.js",
     "static/css/2.e65fd78c.chunk.css",
-    "static/js/2.19c68555.chunk.js",
+    "static/js/2.6419d245.chunk.js",
     "static/css/main.05c09d9a.chunk.css",
-    "static/js/main.8b29bc3b.chunk.js"
+    "static/js/main.d2a69994.chunk.js"
   ]
 }
