@@ -25,6 +25,7 @@ width: 95%;
 margin: 10px;
 font-weight: 500;
 font-style: normal;
+font-family: S-Core Dream;
 padding-top: 5px;
 box-shadow: 0 4px 4px -4px black;
 `;
