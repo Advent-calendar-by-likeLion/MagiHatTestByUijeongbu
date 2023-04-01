@@ -8,6 +8,7 @@ import EyeIcon from "./assets/svg/Eye.svg";
 import StarIcon from "./assets/svg/Star.svg";
 import CaptureIcon from "./assets/svg/CaptureIcon.svg";
 import ShareIcon from "./assets/svg/ShareIcon.svg";
+import KakaoShareIcon from "./assets/svg/KakaoShareIcon.svg";
 
 import resultData from './assets/data/resultData';
 
@@ -251,10 +252,9 @@ const ResultCard = ({ match }) => {
             </div>
 
             <CaptureShareDiv>
-              {/* <br/><br/>
-              <CaptureShareImg src={CaptureIcon}/>  */}
               <br/><br/>
-              <a onClick={shareToKakao} style={{marginRight:"10px"}}><CaptureShareImg src={CaptureIcon}/></a> {/* 여기에 카카오 공유하기 버튼 디자인 넣기 */}
+              <a onClick={shareToKakao} style={{marginRight:"10px"}}><CaptureShareImg src={KakaoShareIcon}/></a>
+              <br/><br/>
               <a onClick={copyUrl}><CaptureShareImg src={ShareIcon}/></a>
               <br/><br/>
             </CaptureShareDiv>
@@ -371,7 +371,8 @@ const CaptureShareDiv = styled.div `
 `
 
 const CaptureShareImg = styled.img `
-
+  width: 54px;
+  height: 54px;
 `
 
 const TopChar = styled.img`
