@@ -116,8 +116,8 @@ const suggestImg = new Array(
 const ResultCard = ({ match }) => {
     const history = useHistory();
     const result = mbtiMatch[match.params.id];
-    const firstSuggest = resultData[resultData[result].suggest[0]].subject.replace(/<br>/g, ' ');
-    const secondSuggest = resultData[resultData[result].suggest[1]].subject.replace(/<br>/g, ' ');
+    const firstSuggest = resultData[resultData[result].suggest[0]];
+    const secondSuggest = resultData[resultData[result].suggest[1]];
     const [char, setChar] = useRecoilState(userState);
 
     const toHome = () => {
@@ -231,14 +231,14 @@ const ResultCard = ({ match }) => {
               <SuggestBox>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[result].suggest[0]]}/>
-                  <div style={{fontSize:"22px"}}>{firstSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[result].suggest[0]].hashtag}</div>
+                  <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: firstSuggest.subject}}></div>
+                  <div style={{fontSize:"12px", marginTop:"10px"}}>{resultData[resultData[result].suggest[0]].hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
                   <SuggestImg src={suggestImg[resultData[result].suggest[1]]}/>
-                  <div style={{fontSize:"22px"}}>{secondSuggest}</div>
-                  <div style={{fontSize:"12px"}}>{resultData[resultData[result].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: secondSuggest.subject}}></div>
+                  <div style={{fontSize:"12px",  marginTop:"10px"}}>{resultData[resultData[result].suggest[1]].hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
