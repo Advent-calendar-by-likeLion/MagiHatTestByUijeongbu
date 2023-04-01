@@ -42,7 +42,7 @@ const ButtonWrapper = styled.div `
   width: 358px;
   font-size: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: 75%;
+  top: 80%;
 
   z-index: 1;
   position: absolute;
@@ -57,5 +57,4 @@ const BackgroundImg = styled.div `
   justify-content: space-around;
   text-align: center;
   align-items: center;
-
 `;
