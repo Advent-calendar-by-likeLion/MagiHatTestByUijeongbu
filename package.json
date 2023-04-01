@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ccityujbtest.site",
+  "homepage": "https://advent-calendar-by-likelion.github.io/MagiHatTestByUijeongbu",
   "name": "adventcalendar",
   "version": "0.1.0",
   "private": true,
@@ -44,7 +44,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build && copy CNAME build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
