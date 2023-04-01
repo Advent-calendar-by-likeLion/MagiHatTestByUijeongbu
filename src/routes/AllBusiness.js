@@ -64,7 +64,7 @@ const AllBusiness = ({}) =>{
                         <SuggestBox>
                             <SuggestSubWrapper>
                                 <SuggestImg src={suggestImg[idx]}/>
-                                <div style={{fontSize:"22px"}}>{data.subject.replace('<br>', ' ')}</div>
+                                <div style={{fontSize:"22px"}}>{data.subject.replace(/<br>/g, ' ')}</div>
                                 <br/>
                                 <div style={{fontSize:"22px", textAlign: "center"}}>{data.hashtag}</div>
                             </SuggestSubWrapper>
