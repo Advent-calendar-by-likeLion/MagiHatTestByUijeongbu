@@ -260,8 +260,6 @@ const ResultCard = ({ match }) => {
             </CaptureShareDiv>
               <br/>
               <br/>
-              <br/>
-              <br/>
           <Button style={{backgroundColor:"#B180E0"}} onClick={toAllBusinessPage}>모든 사업 유형 보기</Button>
           <Button style={{backgroundColor:"#B180E0", marginTop:'15px'}} onClick={toHome}>테스트하러 가기</Button>
               <br/>
