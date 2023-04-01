@@ -45,7 +45,14 @@ import suggest14 from "./assets/svg/business/14.svg"
 import suggest15 from "./assets/svg/business/15.svg"
 import suggest16 from "./assets/svg/business/16.svg"
 
+import Respect from '../assets/uijeongbu/character/respect.svg'
+import Dream from '../assets/uijeongbu/character/dream.svg'
+import Happy from '../assets/uijeongbu/character/happy.svg'
+import Expansion from '../assets/uijeongbu/character/expansion.svg'
+
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
+import { useRecoilState } from 'recoil';
+import { userState } from '../recoil/CharState';
 
 const mbtiMatch = {
   "INTJ" : 1, // 문화도시 콜로키움
@@ -111,6 +118,8 @@ const ResultCard = ({ match }) => {
     const result = 2;
     const firstSuggest = resultData[resultData[result].suggest[0]].subject.replace(/<br>/g, ' ');
     const secondSuggest = resultData[resultData[result].suggest[1]].subject.replace(/<br>/g, ' ');
+    const [char, setChar] = useRecoilState(userState);
+
     const toHome = () => {
         history.push("/");
     }
@@ -189,7 +198,18 @@ const ResultCard = ({ match }) => {
       <>
           <Header>
             <img src={HomeIcon} onClick={toHome} />
-            <img src={HomeIcon} onClick={toHome} />
+            {
+            char[0] == "존중이" ?
+            <TopChar src={Respect} alt='상단로고'/>
+            :
+            char[0] == "상상이" ?
+            <TopChar src={Dream} alt='상단로고'/>
+            :
+            char[0] == "성장이" ?
+            <TopChar src={Expansion} alt='상단로고'/>
+            :
+            <TopChar src={Happy} alt='상단로고'/>
+          }
           </Header>
           <Wrapper>
             <QTop>
@@ -354,4 +374,9 @@ const CaptureShareDiv = styled.div `
 
 const CaptureShareImg = styled.img `
 
+`
+
+const TopChar = styled.img`
+  width: 38px;
+  margin-right: 10px;
 `

@@ -18,8 +18,15 @@ import qlogo11 from "./assets/svg/questionLogo/11.svg";
 import qlogo12 from "./assets/svg/questionLogo/12.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
+import Respect from '../assets/uijeongbu/character/respect.svg'
+import Dream from '../assets/uijeongbu/character/dream.svg'
+import Happy from '../assets/uijeongbu/character/happy.svg'
+import Expansion from '../assets/uijeongbu/character/expansion.svg'
+
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 import Loading from './Loading';
+import { useRecoilState } from 'recoil';
+import { userState } from '../recoil/CharState';
 
 const qLogo = new Array(
     qlogo1, // index 0
@@ -44,6 +51,7 @@ const QuestionCard = ({match}) => {
     const [loading, setLoading] = useState(false);
     const [flagNO11ESFP, setFlagNO11ESFP] = useState(false);
     const [flagNO12ENTJ, setFlagNO12ENTJ] = useState(false);
+    const [char, setChar] = useRecoilState(userState);
 
     const toHome = () => {
         history.push("/");
@@ -135,6 +143,18 @@ const QuestionCard = ({match}) => {
       <>
         <Header>
           <img src={HomeIcon} onClick={toHome} />
+          {
+            char[0] == "존중이" ?
+            <TopChar src={Respect} alt='상단로고'/>
+            :
+            char[0] == "상상이" ?
+            <TopChar src={Dream} alt='상단로고'/>
+            :
+            char[0] == "성장이" ?
+            <TopChar src={Expansion} alt='상단로고'/>
+            :
+            <TopChar src={Happy} alt='상단로고'/>
+          }
         </Header>
         <Wrapper>
               <QTop>
@@ -287,3 +307,8 @@ const BlueButton = styled.button `
   font-size: 16px;
   width: 90%;
 `;
+
+const TopChar = styled.img`
+  width: 38px;
+  margin-right: 10px;
+`
