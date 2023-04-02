@@ -78,11 +78,10 @@ const AllBusiness = ({match}) =>{
     // const mbtiid = resultData[mbtiMatch]
     const history = useHistory();
     const resultData2= resultData;
+    resultData2.shift();
 
-    useEffect(() => {
-      const deletedIndex0 = resultData2.splice(0, 1);
+    //   const deletedIndex0 = resultData2.splice(0, 1);
       console.log(resultData2);
-    },[])
 
     const toHome = () => {
         history.goBack();
@@ -109,7 +108,7 @@ const AllBusiness = ({match}) =>{
       )
     }
 
-    const [businessIndex, setBusinessIndex] = useState(1);
+    const [businessIndex, setBusinessIndex] = useState(0);
 
     const settings = {
       infinite: true,
@@ -117,6 +116,7 @@ const AllBusiness = ({match}) =>{
       speed: 300,
       slidesToShow: 3,
       centerMode: true,
+      swipeToSlide: true,
       centerPadding: 0,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
@@ -132,7 +132,7 @@ const AllBusiness = ({match}) =>{
             <TextDivBold style={{fontSize:"30px", fontWeight:'400', fontFamily:'Gmarket Sans', fontStyle:'normal'}}>모두 살펴보기</TextDivBold>
             <TextDiv style={{fontSize:"30px", fontWeight:'300'}}>문화도시 의정부 사업</TextDiv>
             <div style={{maxWidth: '100vw', width: '100%'}}>
-            <Slider style={{alignItem:'center', textAlign:'center', marginTop:'113px'}} {...settings}>
+            <Slider style={{alignItem:'center', textAlign:'center', overflow:'hidden', marginTop:'103px'}} {...settings}>
             {
                 resultData2.map((data, idx) => (
                   <div>
@@ -141,9 +141,19 @@ const AllBusiness = ({match}) =>{
                                 <div style={{fontSize:"20px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
                                 <br/>
                                 <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
+                                {/* <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
+                                <u style={{fontWeight:"bold"}}>진행 일정</u>
+                                <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/> */}
+                                {
+                                  businessIndex == "slide activeSlide" ?
+                                  <>
                                 <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
                                 <u style={{fontWeight:"bold"}}>진행 일정</u>
                                 <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
+                                </>
+                                :
+                                <></>
+                                }
                             </SuggestSubWrapper>
                   </div>
                 ))
@@ -166,7 +176,8 @@ const Line = styled.div`
 `
 const SuggestSubWrapper = styled.div` 
   display: flex;
-  width: 80%;
+  width: 100%;
+  padding-top: 10px;
   justify-cotents: center;
   align-items: center;
   flex-direction: column;
