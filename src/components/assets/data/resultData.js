@@ -1,6 +1,7 @@
 var underline = "style='background: linear-gradient(to top, #FFF58C 50%, transparent 50%)'";
 
 const resultData = [
+    {},
     // [1] 문화도시 콜로키움
     {
         'mbti': "INTJ",
@@ -48,7 +49,7 @@ const resultData = [
     },
     // [6] 문화도시 에디터
     {
-        'mbti': "ENFP",
+        'mbti': "INFP",
         'subject': "문화도시 에디터",
         'hashtag' : "#취재 #아카이빙 #전담에디터",
         'suggest': [11, 3],        
@@ -93,7 +94,7 @@ const resultData = [
     },
     // [11] 문화도시 실험실
     {
-        'mbti': "INFP",
+        'mbti': "ENFP",
         'subject': "문화도시 실험실",
         'hashtag' : "#지역문화실험 #확장 #심화",
         'suggest': [3, 4], 
