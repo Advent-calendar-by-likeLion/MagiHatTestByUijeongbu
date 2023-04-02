@@ -203,8 +203,9 @@ const CharImg = styled.img`
 `
 const TextBox = styled.div`
     background-color: white;
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
     border-radius: 0px 3px 0px;
+    border-collapse: collapse;
     width: fit-content;
     padding: 10px;
     padding-left: 15px;
@@ -221,8 +222,11 @@ const TextBox = styled.div`
 
 const TextBox2 = styled.div`
     background-color: white;
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
     border-radius: 0px 3px 0px;
+    border-collapse: collapse;
+    margin-top: -1px;
+    margin-bottom: -1px;
     width: fit-content;
     padding: 7px;
     padding-left: 16px;
@@ -239,8 +243,9 @@ const TextBox2 = styled.div`
 
 const TextBox3 = styled.div`
     background-color: white;
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
     border-radius: 0px 3px 0px 3px;
+    border-collapse: collapse;
     width: fit-content;
     padding: 7px;
     padding-left: 16px;
