@@ -75,7 +75,7 @@ const mbtiMatch = {
 }
 
 const resultImg = new Array(
-    // result01, //index 0
+    result01, //index 0
     result01,
     result02,
     result03,
@@ -95,7 +95,7 @@ const resultImg = new Array(
 )
 
 const suggestImg = new Array(
-    // suggest01, //index 0
+    suggest01, //index 0
     suggest01,
     suggest02,
     suggest03,

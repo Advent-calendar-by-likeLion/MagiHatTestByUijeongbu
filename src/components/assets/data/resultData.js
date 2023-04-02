@@ -1,13 +1,6 @@
 var underline = "style='background: linear-gradient(to top, #FFF58C 50%, transparent 50%)'";
 
 const resultData = [
-    {
-        'subject': "",
-        'hashtag' : "",
-        'suggest': [0, 0],
-        'content': "",
-        'schedule':``
-    },
     // [1] 문화도시 콜로키움
     {
         'mbti': "INTJ",

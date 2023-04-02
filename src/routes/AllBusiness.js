@@ -34,7 +34,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const suggestImg = new Array(
-  business01, //index 0
   business01,
   business02,
   business03,
