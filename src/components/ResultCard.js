@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import {useHistory} from 'react-router-dom';
 import { useEffect } from 'react';
+import { dbService } from 'fbase';
 
 import HomeIcon from "./assets/svg/Home.svg";
 import EyeIcon from "./assets/svg/Eye.svg";
@@ -148,7 +149,19 @@ const ResultCard = ({ match }) => {
       window.open("https://cafe.naver.com/ccityujb");
     }
 
+    /* 공유 버튼 누를 때 데이터 증가 */
+    const plusShareCount = () => {
+      const doc = dbService.collection("admin-dashboard").doc("data");
+
+      doc.get().then((doc) => {
+        dbService.collection("admin-dashboard").doc("data").update({
+          "share-count" : doc.data()["share-count"] + 1
+        });
+      });
+    }
+
     function copyUrl() {
+      plusShareCount();
       var url = ''; 
       var textarea = document.createElement("textarea");
       
@@ -199,8 +212,10 @@ const ResultCard = ({ match }) => {
             }
           ]
         });
+
+        plusShareCount();
       }
-    }
+    };
 
     return (
       <>
