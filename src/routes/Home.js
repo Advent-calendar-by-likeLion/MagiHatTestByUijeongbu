@@ -43,13 +43,9 @@ const ButtonWrapper = styled.div `
   font-size: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  top: 90%;
+  top: 85%;
   z-index: 1;
   position: absolute;
-
-  @media screen and (max-width: 768px) {
-      top: 80%;
-    }
 `;
 
 
