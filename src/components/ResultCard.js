@@ -48,7 +48,7 @@ import suggest16 from "./assets/svg/business/16.svg"
 
 import insta from '../components/assets/svg/SNS/instagram.svg'
 import blog from '../components/assets/svg/SNS/naverblog.svg'
-import cafe from '../components/assets/svg/SNS/navercafe.svg'
+import cafe from '../components/assets/svg/SNS/cafe.svg'
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 import { useRecoilState } from 'recoil';
