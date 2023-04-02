@@ -78,7 +78,7 @@ const AllBusiness = ({match}) =>{
     // const mbtiid = resultData[mbtiMatch]
     const history = useHistory();
     const resultData2= resultData;
-    resultData2.shift();
+    // resultData2.shift();
 
     //   const deletedIndex0 = resultData2.splice(0, 1);
       console.log(resultData2);
