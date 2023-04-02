@@ -226,7 +226,6 @@ const ResultCard = ({ match }) => {
             <SuggestWrapper>
               <img src={EyeIcon}/>
               <SubjectTxt>함께 보면 좋은 사업</SubjectTxt>
-              <br/>
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
