@@ -277,8 +277,9 @@ const ProgressImg = styled.img`
 
 const ProgressTextDiv = styled.div`
   position: absolute;
-  top: 12px;
-  left: 63px;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -120% );
 `
 
 const ProgressTxt = styled.span `
