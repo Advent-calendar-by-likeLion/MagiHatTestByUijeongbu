@@ -25,7 +25,7 @@ const Story = () => {
         나에게 딱 맞는 문화도시 의정부 사업은 뭘까?
         </StoryText>
             <MainBgImg className="col-lg-8 col-12 mx-auto" src={StoryBg}/>
-            <ButtonWrapper onClick={toQestion}>TEST 시작하기</ButtonWrapper>
+            <ButtonWrapper onClick={toQestion}>캐릭터 선택하기</ButtonWrapper>
         </BackgroundImg>
         </>
     )
