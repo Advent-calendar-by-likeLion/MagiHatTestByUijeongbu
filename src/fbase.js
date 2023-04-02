@@ -5,13 +5,13 @@ import "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD2TnysMrOhkMS17HrGr161wRxSs1gLuAc",
-  authDomain: "adventcalendar-d50fc.firebaseapp.com",
-  projectId: "adventcalendar-d50fc",
-  storageBucket: "adventcalendar-d50fc.appspot.com",
-  messagingSenderId: "983622613978",
-  appId: "1:983622613978:web:85cc4971a5f7feb5241ee3",
-  measurementId: "G-XSVJK6MGJW"
+  apiKey: "AIzaSyClYkVymxbuqfzF8QC9Xn8bzQd3lCo3tCA",
+  authDomain: "uijeongbu.firebaseapp.com",
+  projectId: "uijeongbu",
+  storageBucket: "uijeongbu.appspot.com",
+  messagingSenderId: "343214386674",
+  appId: "1:343214386674:web:88b32613147c1eba764f6b",
+  measurementId: "G-459309FVHJ"
 };
 
 firebase.initializeApp(firebaseConfig);
