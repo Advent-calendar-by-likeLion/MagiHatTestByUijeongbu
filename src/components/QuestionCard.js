@@ -18,10 +18,10 @@ import qlogo11 from "./assets/svg/questionLogo/11.svg";
 import qlogo12 from "./assets/svg/questionLogo/12.svg";
 import ProgressBg from "./assets/svg/ProgressBg.svg";
 
-import Respect from '../assets/uijeongbu/character/respect.svg'
-import Dream from '../assets/uijeongbu/character/dream.svg'
-import Happy from '../assets/uijeongbu/character/happy.svg'
-import Expansion from '../assets/uijeongbu/character/expansion.svg'
+import Respect from '../assets/uijeongbu/character/respectHat.svg'
+import Dream from '../assets/uijeongbu/character/dreamHat.svg'
+import Happy from '../assets/uijeongbu/character/happyHat.svg'
+import Expansion from '../assets/uijeongbu/character/expansionHat.svg'
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 import Loading2 from './Loading2';
