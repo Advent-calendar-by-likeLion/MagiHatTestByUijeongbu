@@ -1,7 +1,6 @@
 var underline = "style='background: linear-gradient(to top, #FFF58C 50%, transparent 50%)'";
 
 const resultData = [
-    {},
     // [1] 문화도시 콜로키움
     {
         'mbti': "INTJ",
@@ -44,7 +43,7 @@ const resultData = [
         'subject': "시민문화활동가 지원",
         'hashtag' : "#청년 #인턴십 #코디네이터",
         'suggest': [7, 8],
-        'content': `시민문화활동가는<br> 의정부 <span ${underline}>청년</span>을 대상으로 하는<br> 청년 인턴십 형태의 <span ${underline}>사업별 코디네이터 양성</span> 프로그램이야.<br><br> 문화도시 의정부 사업에 참여해 봤거나 경험해 본 적 있는 청년들이<br> 직접 사업별 코디네이터가 될 수 있는 기회지!<br><br> <span ${underline}>문화도시 의정부의 사업을 함께 운영해 보고 싶다면,</span><br> 시민문화활동가는 절호의 찬스!`,
+        'content': `시민문화활동가는<br> 의정부 <span ${underline}>청년</span>을 대상으로 하는<br> 청년 인턴십 형태의 <span ${underline}>사업별 코디네이터 양성</span> 사업이야.<br><br> 문화도시 의정부 사업에 참여해 봤거나 경험해 본 적 있는 청년들이<br> 직접 사업별 코디네이터가 될 수 있는 기회지!<br><br> <span ${underline}>문화도시 의정부의 사업을 함께 운영해 보고 싶다면,</span><br> 시민문화활동가는 절호의 찬스!`,
         'schedule':`5월 ~ 12월`
     },
     // [6] 문화도시 에디터
@@ -98,7 +97,7 @@ const resultData = [
         'subject': "문화도시 실험실",
         'hashtag' : "#지역문화실험 #확장 #심화",
         'suggest': [3, 4], 
-        'content': `문화도시 실험실은<br> <span ${underline}>누구나 참여</span>할 수 있어!<br><br> <span ${underline}>지역에서 자리를 잡고</span><br> <span ${underline}>지속적으로 활동</span>하고 싶은 사람이라면 더 좋아.<br><br> 다양한 주제의 <span ${underline}>문화실험 프로젝트</span>를 큰 규모로 할 수 있어서<br> 백만원실험실의 확장판이라고 볼 수 있지.<br><br> 문화실험을 지역의 <span ${underline}>지속 가능한 사업</span>으로<br> 확장시킬 수 있는 기회가 될 거야!`,
+        'content': `문화도시 실험실은<br> 의정부 시민이라면 <span ${underline}>누구나 참여</span>할 수 있어!<br><br> <span ${underline}>지역에서 자리를 잡고</span><br> <span ${underline}>지속적으로 활동</span>하고 싶은 사람이라면 더 좋아.<br><br> 다양한 <span ${underline}>문화실험 프로젝트</span>를 큰 규모로 할 수 있어서<br> 백만원실험실의 확장판이라고 볼 수 있지.<br><br> 문화실험을 지역의 <span ${underline}>지속 가능한 사업</span>으로<br> 확장시킬 수 있는 기회가 될 거야!`,
         'schedule':`4월 ~ 12월`
     },
     // [12] U+ 스팟 꼭! 꼭!
@@ -116,7 +115,7 @@ const resultData = [
         'subject': "이달의 예술가",
         'hashtag' : "#예술가 #홍보브랜딩 #통합지원",
         'suggest': [6, 3],
-        'content': `이달의 예술가는<br> 8명의 예술가를 선발해 개인전/공연/판매/브랜딩 등<br> 통합 지원을 해주는 <span ${underline}>예술가 창작 지원</span> 사업이야.<br><br> <span ${underline}>홍보와 브랜딩</span>에 초점이 맞춰져 있어서<br> <span ${underline}>결과물</span>을 이미 가지고 있는 예술가를 대상으로 하고 있어.<br> <span ${underline}>예술인 등록도 필수</span>야!<br><br> 홍보가 필요해?<br> 그럼 이달의 예술가에 지원해 봐!`,
+        'content': `이달의 예술가는<br> 8명의 예술가를 선발해 전시/공연/판매/브랜딩 등<br> 통합 지원을 해주는 <span ${underline}>예술가 창작 지원</span> 사업이야.<br><br> <span ${underline}>홍보와 브랜딩</span>에 초점이 맞춰져 있어서<br> <span ${underline}>결과물</span>을 이미 가지고 있는 예술가를 대상으로 해.<br> <span ${underline}>예술인 등록도 필수</span>야!<br><br> 홍보가 필요해?<br> 그럼 이달의 예술가에 지원해 봐!`,
         'schedule':`7월 ~ 11월 중`
     },
     // [14] 예술가의 예술
@@ -140,7 +139,7 @@ const resultData = [
     // [16] 의정부 특화콘텐츠 아이디어 공모
     {
         'mbti': "INFJ",
-        'subject': "지역특화콘텐츠<br>아이디어 공모전",
+        'subject': "의정부 특화콘텐츠<br>아이디어 공모전",
         'hashtag' : "#기발한 #아이디어를 #보여줘",
         'suggest': [10, 3],
         'content': `지역과 관련된 아이디어가 있어?<br> <span ${underline}>그럼 의정부 특화콘텐츠 아이디어 공모전</span>에 참가해 봐!<br><br> 결과물이나 활동 없이<br> 오직 계획만 가지고 있어도 참여 가능한,<br> 말 그대로 <span ${underline}>‘아이디어’를 위한</span> 공모전이야.<br><br> 작품, 창업 등 다양한 내용으로 참여할 수 있어.<br> 물론 <span ${underline}>상금</span>도 있다고~!`,
