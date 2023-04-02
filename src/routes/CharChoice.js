@@ -141,7 +141,7 @@ const CharChoice = () => {
                             <CharImg src={Dream} alt='상상이' onClick={onDream} style={{opacity: '70%'}}></CharImg>
                             <CharImg src={Expansion} alt='성장이' onClick={onExpansion} style={{opacity: '70%'}}></CharImg>
                         </div>
-                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>선택하기</ButtonWrapper>
+                        <ButtonWrapper style={{margin: '0 auto', marginTop: '48px'}} onClick={charclick}>마법모자 쓰기</ButtonWrapper>
                         </div>
                         </>
                     }
