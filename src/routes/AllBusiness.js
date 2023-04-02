@@ -4,6 +4,9 @@ import HomeIcon from "../components/assets/svg/Home.svg";
 import EyeIcon from "../components/assets/svg/Eye.svg";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import Slider from "react-slick";
+import { useState, useEffect } from "react";
+import './styles/slide.css'
 
 import resultData from '../components/assets/data/resultData';
 import { useRecoilState } from 'recoil';
@@ -31,6 +34,10 @@ import Dream from '../assets/uijeongbu/character/dream.svg'
 import Happy from '../assets/uijeongbu/character/happy.svg'
 import Expansion from '../assets/uijeongbu/character/expansion.svg'
 
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const suggestImg = new Array(
   business01, //index 0
   business01,
@@ -52,6 +59,7 @@ const suggestImg = new Array(
 )
 
 const mbtiMatch = {
+  "INTJ" : 0, // 문화도시 콜로키움
   "INTJ" : 1, // 문화도시 콜로키움
   "ESTJ" : 2, // 333문화쌀롱
   "ESFP" : 3, // 횡단자캠프
@@ -74,6 +82,13 @@ const AllBusiness = ({match}) =>{
     const [char, setChar] = useRecoilState(userState);
     // const mbtiid = resultData[mbtiMatch]
     const history = useHistory();
+    const resultData2= resultData;
+
+    useEffect(() => {
+      const deletedIndex0 = resultData2.splice(0, 1);
+      console.log(resultData2);
+    },[])
+
     const toHome = () => {
         history.goBack();
     }
@@ -82,6 +97,36 @@ const AllBusiness = ({match}) =>{
       history.push(`/result/${data.mbti}`)
       console.log(data)
     }
+
+    const NextArrow = ({onClick}) => {
+      return (
+        <div className="arrow next" onClick={onClick}>
+          <FaArrowRight/>
+        </div>
+      )
+    }
+
+    const PrevArrow = ({onClick}) => {
+      return (
+        <div className="arrow prev" onClick={onClick}>
+          <FaArrowLeft/>
+        </div>
+      )
+    }
+
+    const [businessIndex, setBusinessIndex] = useState(1);
+
+    const settings = {
+      infinite: true,
+      lazyLoad: true,
+      speed: 300,
+      slidesToShow: 3,
+      centerMode: true,
+      centerPadding: 0,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+      beforeChange: (current, next) => setBusinessIndex(next),
+    };
 
     return(
         <>
@@ -101,22 +146,27 @@ const AllBusiness = ({match}) =>{
           }
         </Header>
         <Wrapper>
-            <div style={{fontSize:"32px"}}>의정부 사업 유형 목록</div>
+            <TextDivBold style={{fontSize:"30px", fontWeight:'400', fontFamily:'Gmarket Sans', fontStyle:'normal'}}>모두 살펴보기</TextDivBold>
+            <TextDiv style={{fontSize:"30px", fontWeight:'300'}}>문화도시 의정부 사업</TextDiv>
+            <div style={{maxWidth: '100vw', width: '100%'}}>
+            <Slider style={{alignItem:'center', textAlign:'center', marginTop:'113px'}} {...settings}>
             {
-                resultData.map((data, idx) => (
-                    idx != 0 ?
-                        <SuggestBox>
-                            <SuggestSubWrapper onClick={(e) => {onBusinessLink(data, e)}}>
+                resultData2.map((data, idx) => (
+                  <div>
+                            <SuggestSubWrapper onClick={(e) => {onBusinessLink(data, e)}} className={idx === businessIndex ? "slide activeSlide" : "slide"}>
                                 <SuggestImg src={suggestImg[idx]}/>
                                 <div style={{fontSize:"20px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
                                 <br/>
                                 <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
+                                <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
+                                <u style={{fontWeight:"bold"}}>진행 일정</u>
+                                <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
                             </SuggestSubWrapper>
-                        </SuggestBox>
-                    :
-                        <></>
+                  </div>
                 ))
             }
+            </Slider>
+            </div>
         </Wrapper>
         </>
     );
@@ -180,4 +230,37 @@ const SubjectTxt = styled.span `
 const TopChar = styled.img`
 width: 38px;
 margin-right: 10px;
+`
+
+const TextDiv = styled.div`
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 135.9%;
+    text-align: center;
+    letter-spacing: -0.04em;
+`
+
+const TextDivBold = styled.div`
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 135.9%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    padding-left: 9px;
+`
+
+const ResultContent = styled.span `
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 143.9%;
+`
+
+const Schedule = styled.div`
+  margin-top: 10px;
 `
