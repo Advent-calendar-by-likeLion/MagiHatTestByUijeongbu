@@ -46,10 +46,9 @@ import suggest14 from "./assets/svg/business/14.svg"
 import suggest15 from "./assets/svg/business/15.svg"
 import suggest16 from "./assets/svg/business/16.svg"
 
-import Respect from '../assets/uijeongbu/character/respect.svg'
-import Dream from '../assets/uijeongbu/character/dream.svg'
-import Happy from '../assets/uijeongbu/character/happy.svg'
-import Expansion from '../assets/uijeongbu/character/expansion.svg'
+import insta from '../components/assets/svg/SNS/instagram.svg'
+import blog from '../components/assets/svg/SNS/naverblog.svg'
+import cafe from '../components/assets/svg/SNS/navercafe.svg'
 
 import { Header, Wrapper, Button } from "./layout/CommonLayout";
 import { useRecoilState } from 'recoil';
@@ -227,6 +226,7 @@ const ResultCard = ({ match }) => {
             <SuggestWrapper>
               <img src={EyeIcon}/>
               <SubjectTxt>함께 보면 좋은 사업</SubjectTxt>
+              <br/>
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
@@ -260,10 +260,18 @@ const ResultCard = ({ match }) => {
           <Button style={{backgroundColor:"#B180E0", marginTop:'15px'}} onClick={toHome}>테스트하러 가기</Button>
               <br/>
               <br/>
-          <Button style={{backgroundColor:"#FF88B6"}} onClick={toInstagramPage}>문화도시 의정부 인스타그램 둘러보기</Button>
-          <Button style={{backgroundColor:"#56B381"}} onClick={toNaverBlogPage}>문화도시 의정부 네이버 블로그 둘러보기</Button>
-          <Button style={{backgroundColor:"#5A66FF"}} onClick={toNaverCafeaPage}>문화도시 의정부 네이버 카페 둘러보기</Button>
-            
+          <Button style={{backgroundColor:"#FF88B6", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toInstagramPage}>
+            <img src={insta} alt='인스타그램' style={{width:'24px', marginRight:'8px', paddingTop:'5px'}}/>
+            <div style={{paddingTop:'10px'}}>문화도시 의정부 인스타그램 둘러보기</div>
+          </Button>
+          <Button style={{backgroundColor:"#56B381", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toNaverBlogPage}>
+            <img src={blog} alt='블로그' style={{width:'30px', marginRight:'8px', paddingTop:'15px'}}/>
+            <div style={{paddingTop:'10px'}}>문화도시 의정부 네이버 블로그 둘러보기</div>
+          </Button>
+          <Button style={{backgroundColor:"#5A66FF", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toNaverCafeaPage}>
+            <img src={cafe} alt='카페' style={{width:'24px', marginRight:'8px', paddingTop:'5px'}}/>
+            <div style={{paddingTop:'10px'}}>문화도시 의정부 네이버 카페 둘러보기</div>
+          </Button>
           </Wrapper>
       </>
         )
@@ -292,6 +300,7 @@ const Line = styled.div`
   height: 1px;
   border: 1px solid #000000;
   margin : 35px;
+  box-shadow: 0 0 0 3px #000000 inset; 
 `
 const SuggestSubWrapper = styled.div` 
   display: flex;
@@ -369,11 +378,6 @@ const CaptureShareDiv = styled.div `
 const CaptureShareImg = styled.img `
   width: 54px;
   height: 54px;
-`
-
-const TopChar = styled.img`
-  width: 38px;
-  margin-right: 10px;
 `
 
 const Schedule = styled.div`
