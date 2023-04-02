@@ -207,18 +207,6 @@ const ResultCard = ({ match }) => {
       <>
           <Header>
             <img src={HomeIcon} onClick={toHome} />
-            {
-            char[0] == "존중이" ?
-            <TopChar src={Respect} alt='상단로고'/>
-            :
-            char[0] == "상상이" ?
-            <TopChar src={Dream} alt='상단로고'/>
-            :
-            char[0] == "성장이" ?
-            <TopChar src={Expansion} alt='상단로고'/>
-            :
-            <TopChar src={Happy} alt='상단로고'/>
-          }
           </Header>
           <Wrapper>
             <QTop>
