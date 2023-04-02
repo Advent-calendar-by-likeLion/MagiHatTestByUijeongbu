@@ -29,11 +29,6 @@ import business14 from "../components/assets/svg/business/14.svg"
 import business15 from "../components/assets/svg/business/15.svg"
 import business16 from "../components/assets/svg/business/16.svg"
 
-import Respect from '../assets/uijeongbu/character/respect.svg'
-import Dream from '../assets/uijeongbu/character/dream.svg'
-import Happy from '../assets/uijeongbu/character/happy.svg'
-import Expansion from '../assets/uijeongbu/character/expansion.svg'
-
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -132,18 +127,6 @@ const AllBusiness = ({match}) =>{
         <>
         <Header>
             <img src={HomeIcon} onClick={toHome} />
-            {
-            char[0] == "존중이" ?
-            <TopChar src={Respect} alt='상단로고'/>
-            :
-            char[0] == "상상이" ?
-            <TopChar src={Dream} alt='상단로고'/>
-            :
-            char[0] == "성장이" ?
-            <TopChar src={Expansion} alt='상단로고'/>
-            :
-            <TopChar src={Happy} alt='상단로고'/>
-          }
         </Header>
         <Wrapper>
             <TextDivBold style={{fontSize:"30px", fontWeight:'400', fontFamily:'Gmarket Sans', fontStyle:'normal'}}>모두 살펴보기</TextDivBold>
