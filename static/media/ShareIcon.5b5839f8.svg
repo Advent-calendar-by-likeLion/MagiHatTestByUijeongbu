@@ -3,11 +3,7 @@
 <circle cx="29" cy="27" r="27" fill="white"/>
 <circle cx="29" cy="27" r="26.5" stroke="black"/>
 </g>
-<path d="M35 37C36.6569 37 38 35.6569 38 34C38 32.3431 36.6569 31 35 31C33.3431 31 32 32.3431 32 34C32 35.6569 33.3431 37 35 37Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23 30C24.6569 30 26 28.6569 26 27C26 25.3431 24.6569 24 23 24C21.3431 24 20 25.3431 20 27C20 28.6569 21.3431 30 23 30Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.5901 28.51L32.4201 32.49" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35 23C36.6569 23 38 21.6569 38 20C38 18.3431 36.6569 17 35 17C33.3431 17 32 18.3431 32 20C32 21.6569 33.3431 23 35 23Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32.4101 21.51L25.5901 25.49" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.1667 27C31.1667 29.3932 29.2266 31.3333 26.8334 31.3333H22.5001C20.1068 31.3333 18.1667 29.3932 18.1667 27C18.1667 24.6067 20.1068 22.6666 22.5001 22.6666H24.6667M26.8334 27C26.8334 24.6067 28.7735 22.6666 31.1667 22.6666H35.5001C37.8933 22.6666 39.8334 24.6067 39.8334 27C39.8334 29.3932 37.8933 31.3333 35.5001 31.3333H33.3334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <filter id="filter0_d_0_1" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
