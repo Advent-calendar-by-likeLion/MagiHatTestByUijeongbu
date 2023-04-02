@@ -19,6 +19,10 @@
     }
 }
 
+.slick-next {
+    right: 0;
+}
+
 .slick-slide {
     margin: 0 auto;
 }
@@ -52,14 +56,17 @@
   cursor: pointer;
   z-index: 10;
   width: 100px;
+  height: 100px;
 }
 
 .arrow svg {
   transition: color 300ms;
+  width: 50px;
+  height: 50px;
 }
 
 .arrow svg:hover {
-  transform: scale(1.5);
+  transform: scale(2.0);
 }
 
 .next {
