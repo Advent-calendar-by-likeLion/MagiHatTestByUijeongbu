@@ -91,39 +91,40 @@ return (
       centeredSlides={true}
       loop={true}
       onRealIndexChange={(swiper)=> setBusinessIndex(swiper.realIndex)}
-      navigation
       pagination={{ clickable: true }}
     >
       {resultData.map((data, idx) => (
           <>
             <SwiperSlide>
                 <SuggestImg src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
+                
                 <BussDiv>
-                  {idx === businessIndex ? 
-                  <>
-                    <br/>
-                    <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
-                    <br/>
-                  </>
-                  :
-                  <></>
-                  }
                   
                   {idx === businessIndex ? 
                   <>
+                  </>
+                  :
+                  <></>
+                }
+                  
+                  {idx === businessIndex ? 
+                  <>
+                    <AnswerWrapper>
+                    <br/>
+                    <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+                    <br/>
                     <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
                     <br/>
                     <br/>
                     <br/>
                     <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
-                    <br/>
-                    <br/>
                     <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
                     <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
+                    </AnswerWrapper>
+                  
                   </>
                   :<></>}
                 </BussDiv>
-                
                 
             </SwiperSlide>
           </>        
@@ -135,16 +136,39 @@ return (
 };
 export default AllBusiness2;
 
+
+const AnswerWrapper = styled.div`
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius:28px;
+
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  top: -88px;
+  z-index: -5;
+
+  padding-top : 25%;
+`;
+
 const BussWrapper = styled.div`
-margin-bottom: 15%;
+margin-bottom: 10%;
 `
 const BussDiv = styled.div`
 position: relative;
 bottom: 0;
 top: 0;
-left: -30%;
+left: -55%;
 right: 0;
-width: 165%;
+width: 210%;
 `;
 const SuggestImg = styled.img`
   width: 100%;
