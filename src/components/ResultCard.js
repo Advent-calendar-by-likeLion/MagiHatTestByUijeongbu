@@ -373,7 +373,7 @@ const ResultWrapper = styled.div`
 `;
 
 const ResultContent = styled.span `
-  margin-top: 30px;
+  margin-top: 56px;
   margin-bottom: 10px;
   font-size: 16px;
   text-align: center;
@@ -396,4 +396,5 @@ const CaptureShareImg = styled.img `
 
 const Schedule = styled.div`
   margin-top: 10px;
+  margin-bottom: 48px;
 `
