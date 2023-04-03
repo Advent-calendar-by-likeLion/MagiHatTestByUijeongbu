@@ -1,5 +1,12 @@
+import styled from 'styled-components';
+import HomeIcon from "../components/assets/svg/Home.svg";
+
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Header, Wrapper, Button } from "../components/layout/CommonLayout";
+
+import ProgressBg from "../components/assets/svg/ProgressBg.svg";
+
 
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
@@ -20,8 +27,10 @@ import business13 from "../components/assets/svg/business/13.svg"
 import business14 from "../components/assets/svg/business/14.svg"
 import business15 from "../components/assets/svg/business/15.svg"
 import business16 from "../components/assets/svg/business/16.svg"
-import styled from 'styled-components';
 import resultData from 'components/assets/data/resultData';
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+
 
 
 const suggestImg = new Array(
@@ -45,33 +54,103 @@ const suggestImg = new Array(
   )
 
 const AllBusiness2 = () => {
+
+
+  const history = useHistory();
+  const toHome = () => {
+    history.goBack();
+}
+const [businessIndex, setBusinessIndex] = useState(0);
+
 return (
+<>
+  <Header>
+    <img src={HomeIcon} onClick={toHome} />
+  </Header>
+
+  {/* text over image */}
+  <TextDivBold style={{fontSize:"30px", fontWeight:'400', fontFamily:'Gmarket Sans', fontStyle:'normal'}}>모두 살펴보기</TextDivBold>
+  <TextDiv style={{fontSize:"30px", fontWeight:'300'}}>문화도시 의정부 사업</TextDiv>
+  <AnswerProgress>
+    <ProgressImg src={ProgressBg}/>
+    <ProgressTextDiv>
+      <ProgressTxt> {businessIndex + 1}<PgSlash>ㅤ/ㅤ</PgSlash>{16} </ProgressTxt>
+    </ProgressTextDiv>
+  </AnswerProgress>
+
+  {/* swiper */}
   <div>
-  <Swiper
-    modules={[Navigation, Pagination]}
-    spaceBetween={40}
-    slidesPerView={2}
-    centeredSlides={true}
-    loop={true}
-    navigation
-    pagination={{ clickable: true }}
-    scrollbar={{ draggable: true }}
-  >
-    {resultData.map((data, idx) => (
-        <SwiperSlide>
-          <SwiperSlide2>
-            <SuggestImg src={suggestImg[idx]}/>
-          </SwiperSlide2>
-        </SwiperSlide>        
-        ))} 
-  </Swiper>
+    <Swiper 
+      modules={[Navigation, Pagination]}
+      spaceBetween={40}
+      slidesPerView={2}
+      centeredSlides={true}
+      loop={true}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+    >
+      {resultData.map((data, idx) => (
+          <>
+            <SwiperSlide>
+                <SuggestImg src={suggestImg[idx]}/>
+                <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+            </SwiperSlide>
+          </>        
+          ))} 
+    </Swiper>
   </div>
+  </>
 );
 };
 export default AllBusiness2;
 
-const SwiperSlide2 = styled.div`
-`
 const SuggestImg = styled.img`
   width: 100%;
+`;
+
+const TextDiv = styled.div`
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 135.9%;
+    text-align: center;
+    letter-spacing: -0.04em;
+`
+
+const TextDivBold = styled.div`
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 135.9%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    padding-left: 9px;
+`
+const AnswerProgress = styled.div`
+  position: relative;
+  align-items: center;
+  text-align: center;
+`;
+
+const PgSlash = styled.span `
+  font-size: 12px;
+`
+
+const ProgressTextDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -120% );
+`
+
+const ProgressTxt = styled.span `
+  font-size: 16px;
+`
+
+const ProgressImg = styled.img`
+  width: 184.23px;
+  height: 54px;
 `;
