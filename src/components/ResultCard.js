@@ -94,7 +94,6 @@ const resultImg = new Array(
 )
 
 const suggestImg = new Array(
-    suggest01, //index 0
     suggest01,
     suggest02,
     suggest03,
@@ -131,12 +130,12 @@ const ResultCard = ({ match }) => {
     }
 
     const onBusinessLink = () => {
-      history.push(`/result/${resultData[resultData[result].suggest[0]].mbti}`)
+      history.push(`/result/${resultData[resultData[result].suggest[0] - 1].mbti}`)
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     const onBusinessLink2 = () => {
-      history.push(`/result/${resultData[resultData[result].suggest[1]].mbti}`)
+      history.push(`/result/${resultData[resultData[result].suggest[1] - 1].mbti}`)
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
