@@ -169,6 +169,7 @@ right: 0;
 width: 210%;
 `;
 const SuggestImg = styled.img`
+width : 100%;
 `;
 
 const TextDiv = styled.div`
