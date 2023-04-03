@@ -96,17 +96,19 @@ return (
       {resultData.map((data, idx) => (
           <>
             <SwiperSlide>
-                <SuggestImg src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
                 
-                <BussDiv>
                   
                   {idx === businessIndex ? 
                   <>
+                    <SuggestImg src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
                   </>
                   :
-                  <></>
+                  <>
+                    <SuggestImg style={{opacity:"50%"}} src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
+                  </>
                 }
                   
+                <BussDiv>
                   {idx === businessIndex ? 
                   <>
                     <AnswerWrapper>
@@ -139,13 +141,13 @@ export default AllBusiness2;
 
 const AnswerWrapper = styled.div`
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   background: #FFFFFF;
   border: 1px solid #000000;
-  border-radius:28px;
+  
 
   padding: 20px 15px;
   display: flex;
@@ -160,7 +162,7 @@ const AnswerWrapper = styled.div`
 `;
 
 const BussWrapper = styled.div`
-margin-bottom: 10%;
+margin-bottom: 1%;
 `
 const BussDiv = styled.div`
 position: relative;
