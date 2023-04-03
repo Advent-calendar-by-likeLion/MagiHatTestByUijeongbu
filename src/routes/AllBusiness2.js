@@ -101,6 +101,7 @@ return (
                 <BussDiv>
                   {idx === businessIndex ? 
                   <>
+                    <br/>
                     <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
                     <br/>
                   </>
@@ -111,7 +112,12 @@ return (
                   {idx === businessIndex ? 
                   <>
                     <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
+                    <br/>
+                    <br/>
+                    <br/>
                     <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
+                    <br/>
+                    <br/>
                     <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
                     <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
                   </>
@@ -165,6 +171,8 @@ const TextDivBold = styled.div`
     padding-left: 9px;
 `
 const AnswerProgress = styled.div`
+  margin-top: 10%;
+  margin-bottom: 5%;
   position: relative;
   align-items: center;
   text-align: center;
@@ -191,8 +199,6 @@ const ProgressImg = styled.img`
 `;
 
 const ResultContent = styled.span `
-  margin-top: 45px;
-  margin-bottom: 10px;
   font-size: 16px;
   text-align: center;
   line-height: 143.9%;
