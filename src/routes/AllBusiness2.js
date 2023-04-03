@@ -86,6 +86,7 @@ return (
       slidesPerView={2}
       centeredSlides={true}
       loop={true}
+      onRealIndexChange={(swiper)=> setBusinessIndex(swiper.realIndex)}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
@@ -94,7 +95,27 @@ return (
           <>
             <SwiperSlide>
                 <SuggestImg src={suggestImg[idx]}/>
-                <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+                <BussDiv>
+                  {idx === businessIndex ? 
+                  <>
+                    <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+                    <br/>
+                  </>
+                  :
+                  <></>
+                  }
+                  
+                  {idx === businessIndex ? 
+                  <>
+                    <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
+                    <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
+                    <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
+                    <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
+                  </>
+                  :<></>}
+                </BussDiv>
+                
+                
             </SwiperSlide>
           </>        
           ))} 
@@ -105,6 +126,9 @@ return (
 };
 export default AllBusiness2;
 
+const BussDiv = styled.div`
+  width: 120%;
+`;
 const SuggestImg = styled.img`
   width: 100%;
 `;
@@ -154,3 +178,15 @@ const ProgressImg = styled.img`
   width: 184.23px;
   height: 54px;
 `;
+
+const ResultContent = styled.span `
+  margin-top: 45px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 143.9%;
+`
+
+const Schedule = styled.div`
+  margin-top: 10px;
+`
