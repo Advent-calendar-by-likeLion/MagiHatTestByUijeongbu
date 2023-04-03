@@ -174,6 +174,7 @@ width: 210%;
 `;
 const SuggestImg = styled.img`
   width: 100%;
+  z-index: 10;
 `;
 
 const TextDiv = styled.div`
