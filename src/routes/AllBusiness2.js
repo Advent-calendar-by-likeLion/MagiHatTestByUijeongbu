@@ -55,11 +55,15 @@ const suggestImg = new Array(
 
 const AllBusiness2 = () => {
 
+  const onBusinessLink = (data) => {
+    history.push(`/result/${data.mbti}`)
+    console.log(data)
+  }
 
   const history = useHistory();
   const toHome = () => {
     history.goBack();
-}
+  }
 const [businessIndex, setBusinessIndex] = useState(0);
 
 return (
@@ -93,7 +97,7 @@ return (
       {resultData.map((data, idx) => (
           <>
             <SwiperSlide>
-                <SuggestImg src={suggestImg[idx]}/>
+                <SuggestImg src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
                 <BussDiv>
                   {idx === businessIndex ? 
                   <>
