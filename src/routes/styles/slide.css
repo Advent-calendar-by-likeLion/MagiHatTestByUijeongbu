@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 768px) {
     .slick-list {
-        right: 38px;
+        right: 40px;
     }
 }
 
@@ -29,12 +29,13 @@
 
 .slick-list {
     margin: 0 -30px;
-    right: 38px;
+    right: 33px;
 }
 
 .slick-track {
     display: flex;
     flex-direction: row;
+
     gap: 80px;
 }
 
@@ -42,12 +43,12 @@
   transform: scale(1.0);
   transition: transform 300ms;
   opacity: 0.5;
-  width: 100px;
 }
 
 .activeSlide {
   transform: scale(1.0);
   opacity: 1;
+  width: 100px;
 }
 
 .arrow {

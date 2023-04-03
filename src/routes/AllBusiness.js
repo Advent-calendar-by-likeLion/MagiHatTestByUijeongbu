@@ -29,11 +29,14 @@ import business14 from "../components/assets/svg/business/14.svg"
 import business15 from "../components/assets/svg/business/15.svg"
 import business16 from "../components/assets/svg/business/16.svg"
 
+import ProgressBg from "../components/assets/svg/ProgressBg.svg";
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const suggestImg = new Array(
+  // business01, //index 0
   business01,
   business02,
   business03,
@@ -53,7 +56,7 @@ const suggestImg = new Array(
 )
 
 const mbtiMatch = {
-  "INTJ" : 0, // 문화도시 콜로키움
+  // "INTJ" : 0, // 문화도시 콜로키움
   "INTJ" : 1, // 문화도시 콜로키움
   "ESTJ" : 2, // 333문화쌀롱
   "ESFP" : 3, // 횡단자캠프
@@ -77,10 +80,6 @@ const AllBusiness = ({match}) =>{
     // const mbtiid = resultData[mbtiMatch]
     const history = useHistory();
     const resultData2= resultData;
-    // resultData2.shift();
-
-    //   const deletedIndex0 = resultData2.splice(0, 1);
-      console.log(resultData2);
 
     const toHome = () => {
         history.goBack();
@@ -116,6 +115,7 @@ const AllBusiness = ({match}) =>{
       slidesToShow: 3,
       centerMode: true,
       swipeToSlide: true,
+      draggable: true,
       centerPadding: 0,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
@@ -130,24 +130,30 @@ const AllBusiness = ({match}) =>{
         <Wrapper>
             <TextDivBold style={{fontSize:"30px", fontWeight:'400', fontFamily:'Gmarket Sans', fontStyle:'normal'}}>모두 살펴보기</TextDivBold>
             <TextDiv style={{fontSize:"30px", fontWeight:'300'}}>문화도시 의정부 사업</TextDiv>
-            <div style={{maxWidth: '100vw', width: '100%'}}>
-            <Slider style={{alignItem:'center', textAlign:'center', overflow:'hidden', marginTop:'103px'}} {...settings}>
+            <div style={{maxWidth: '100vw', width: '100%', marginTop:'46px'}}>
+              <AnswerProgress>
+                <ProgressImg src={ProgressBg}/>
+                <ProgressTextDiv>
+                      <ProgressTxt> {businessIndex + 1}<PgSlash>ㅤ/ㅤ</PgSlash>{16} </ProgressTxt>
+                </ProgressTextDiv>
+              </AnswerProgress>
+            <Slider style={{alignItem:'center', textAlign:'center', overflow:'hidden', zIndex:'1'}} {...settings}>
             {
                 resultData2.map((data, idx) => (
                   <div>
                             <SuggestSubWrapper onClick={(e) => {onBusinessLink(data, e)}} className={idx === businessIndex ? "slide activeSlide" : "slide"}>
                                 <SuggestImg src={suggestImg[idx]}/>
-                                <div style={{fontSize:"20px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
-                                <br/>
-                                <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
                                 {/* <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
                                 <u style={{fontWeight:"bold"}}>진행 일정</u>
                                 <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/> */}
                                 {
-                                  businessIndex == "slide activeSlide" ?
+                                  idx===businessIndex && "slide activeSlide" ?
                                   <>
+                                <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+                                <br/>
+                                <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
                                 <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
-                                <u style={{fontWeight:"bold"}}>진행 일정</u>
+                                <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
                                 <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
                                 </>
                                 :
@@ -158,6 +164,7 @@ const AllBusiness = ({match}) =>{
                 ))
             }
             </Slider>
+            <Square/>
             </div>
         </Wrapper>
         </>
@@ -247,7 +254,7 @@ const TextDivBold = styled.div`
 `
 
 const ResultContent = styled.span `
-  margin-top: 30px;
+  margin-top: 45px;
   margin-bottom: 10px;
   font-size: 16px;
   text-align: center;
@@ -256,4 +263,44 @@ const ResultContent = styled.span `
 
 const Schedule = styled.div`
   margin-top: 10px;
+`
+
+const ProgressImg = styled.img`
+  width: 184.23px;
+  height: 54px;
+`;
+
+const AnswerProgress = styled.div`
+  position: relative;
+  align-items: center;
+  text-align: center;
+`;
+
+const PgSlash = styled.span `
+  font-size: 12px;
+`
+
+const ProgressTextDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -120% );
+`
+
+const ProgressTxt = styled.span `
+  font-size: 16px;
+`
+
+const Square = styled.div`
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate( -50%, -30% );
+
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 28px 28px 0px 0px;
+  z-index: 0;
 `
