@@ -141,7 +141,7 @@ export default AllBusiness2;
 
 const AnswerWrapper = styled.div`
   width: 100%;
-  height: 700px;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -154,7 +154,7 @@ const AnswerWrapper = styled.div`
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  position: relative;
+  margin-bottom: 10%;
 `;
 
 const BussWrapper = styled.div`
