@@ -270,21 +270,21 @@ const ResultCard = ({ match }) => {
             </CaptureShareDiv>
               <br/>
               <br/>
-          <Button style={{backgroundColor:"#B180E0"}} onClick={toAllBusinessPage}>모든 사업 유형 보기</Button>
-          <Button style={{backgroundColor:"#B180E0", marginTop:'15px'}} onClick={toHome}>테스트하러 가기</Button>
+          <Button style={{backgroundColor:"#B180E0", fontFamily: 'S-Core Dream', fontWeight:'500'}} onClick={toAllBusinessPage}>모든 사업 유형 보기</Button>
+          <Button style={{backgroundColor:"#B180E0", marginTop:'15px', fontFamily: 'S-Core Dream', fontWeight:'500'}} onClick={toHome}>테스트하러 가기</Button>
               <br/>
               <br/>
           <Button style={{backgroundColor:"#FF88B6", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toInstagramPage}>
             <img src={insta} alt='인스타그램' style={{width:'24px', marginRight:'8px', paddingTop:'5px'}}/>
-            <div style={{paddingTop:'10px'}}>문화도시 의정부 인스타그램 둘러보기</div>
+            <div style={{paddingTop:'10px', fontFamily: 'S-Core Dream', fontWeight:'500'}}>문화도시 의정부 인스타그램 둘러보기</div>
           </Button>
           <Button style={{backgroundColor:"#56B381", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toNaverBlogPage}>
             <img src={blog} alt='블로그' style={{width:'30px', marginRight:'8px', paddingTop:'15px'}}/>
-            <div style={{paddingTop:'10px'}}>문화도시 의정부 네이버 블로그 둘러보기</div>
+            <div style={{paddingTop:'10px', fontFamily: 'S-Core Dream', fontWeight:'500'}}>문화도시 의정부 네이버 블로그 둘러보기</div>
           </Button>
           <Button style={{backgroundColor:"#5A66FF", paddingBottom:'12px', display:'flex', justifyContent:'center', alignItems:'center'}} onClick={toNaverCafeaPage}>
             <img src={cafe} alt='카페' style={{width:'24px', marginRight:'8px', paddingTop:'5px'}}/>
-            <div style={{paddingTop:'10px'}}>문화도시 의정부 네이버 카페 둘러보기</div>
+            <div style={{paddingTop:'10px', fontFamily: 'S-Core Dream', fontWeight:'500'}}>문화도시 의정부 네이버 카페 둘러보기</div>
           </Button>
           </Wrapper>
       </>

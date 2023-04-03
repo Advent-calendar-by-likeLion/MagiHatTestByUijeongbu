@@ -192,11 +192,11 @@ const QuestionCard = ({match}) => {
                                 {
                                 <StyledLink to={`/question`} key={index} >
                                     {index == 0 ? 
-                                      <Button style={{backgroundColor:"#B180E0"}}
+                                      <Button style={{backgroundColor:"#B180E0", fontFamily: 'S-Core Dream', fontWeight:'500'}}
                                         onClick={nextSlideFir} className='mb-4'
                                       >{item.text}</Button>
                                       : 
-                                      <Button style={{backgroundColor:"#5A66FF"}}
+                                      <Button style={{backgroundColor:"#5A66FF", fontFamily: 'S-Core Dream', fontWeight:'500'}}
                                         onClick={nextSlideSec}
                                       >{item.text}</Button>
                                     } 
@@ -256,7 +256,8 @@ const AnswerWrapper = styled.div`
   background-size: contain;
   background: #FFFFFF;
   border: 1px solid #000000;
-  border-radius: 28px;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
 
   padding: 20px 15px;
   display: flex;
