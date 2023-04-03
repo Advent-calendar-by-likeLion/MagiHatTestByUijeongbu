@@ -119,8 +119,6 @@ const ResultCard = ({ match }) => {
     const result = mbtiMatch[match.params.id];
     const firstSuggest = resultData[resultData[result].suggest[0]];
     const secondSuggest = resultData[resultData[result].suggest[1]];
-    console.log(firstSuggest);
-    console.log(secondSuggest);
     const [char, setChar] = useRecoilState(userState);
 
     const toHome = () => {
