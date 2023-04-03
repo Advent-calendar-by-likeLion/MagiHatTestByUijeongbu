@@ -79,7 +79,7 @@ return (
   </AnswerProgress>
 
   {/* swiper */}
-  <div>
+  <BussWrapper>
     <Swiper 
       modules={[Navigation, Pagination]}
       spaceBetween={40}
@@ -89,7 +89,6 @@ return (
       onRealIndexChange={(swiper)=> setBusinessIndex(swiper.realIndex)}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
     >
       {resultData.map((data, idx) => (
           <>
@@ -120,14 +119,22 @@ return (
           </>        
           ))} 
     </Swiper>
-  </div>
+  </BussWrapper>
   </>
 );
 };
 export default AllBusiness2;
 
+const BussWrapper = styled.div`
+margin-bottom: 15%;
+`
 const BussDiv = styled.div`
-  width: 120%;
+position: relative;
+bottom: 0;
+top: 0;
+left: -30%;
+right: 0;
+width: 165%;
 `;
 const SuggestImg = styled.img`
   width: 100%;

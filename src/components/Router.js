@@ -33,9 +33,6 @@ const AppRouter = () => {
         <Route component={Question} path='/question'  />
         <Route component={Result} path='/result/:id'  />
         <Route exact path="/allbusiness">
-          <AllBusiness />
-        </Route>
-        <Route exact path="/allbusiness2">
           <AllBusiness2 />
         </Route>
         <Route exact path="/admin/dashboard">
