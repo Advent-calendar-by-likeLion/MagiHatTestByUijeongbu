@@ -1,5 +1,6 @@
-import {Navigation, Pagination} from 'swiper';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 
@@ -41,37 +42,36 @@ const suggestImg = new Array(
     business14,
     business15,
     business16,
-)
+  )
 
 const AllBusiness2 = () => {
-    return (
-        <>
-            <Swiper modules={[Navigation, Pagination]}
-                spaceBetween={40}
-                slidesPerView={2}
-                centeredSlides={true}
-                loop={true}
-                navigation
-                pagination={{clickable: true}}
-                scrollbar={{draggable: true}}>
-                {
-                resultData.map((data, idx) => (
-                    <SwiperSlide>
-                        <SwiperSlide2>
-                            <SuggestImg src={
-                                suggestImg[idx]
-                            }/>
-                        </SwiperSlide2>
-                    </SwiperSlide>
-                ))
-            } </Swiper>
-        </>
-    );
+return (
+  <div>
+  <Swiper
+    modules={[Navigation, Pagination]}
+    spaceBetween={40}
+    slidesPerView={2}
+    centeredSlides={true}
+    loop={true}
+    navigation
+    pagination={{ clickable: true }}
+    scrollbar={{ draggable: true }}
+  >
+    {resultData.map((data, idx) => (
+        <SwiperSlide>
+          <SwiperSlide2>
+            <SuggestImg src={suggestImg[idx]}/>
+          </SwiperSlide2>
+        </SwiperSlide>        
+        ))} 
+  </Swiper>
+  </div>
+);
 };
 export default AllBusiness2;
 
-const SwiperSlide2 = styled.div `
+const SwiperSlide2 = styled.div`
 `
-const SuggestImg = styled.img `
+const SuggestImg = styled.img`
   width: 100%;
 `;
