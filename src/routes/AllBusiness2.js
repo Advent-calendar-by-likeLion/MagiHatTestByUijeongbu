@@ -154,7 +154,7 @@ const AnswerWrapper = styled.div`
   align-items: center;
   position: relative;
   top: -88px;
-  z-index: -5;
+  z-index: -100;
 
   padding-top : 25%;
 `;
