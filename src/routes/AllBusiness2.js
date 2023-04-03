@@ -112,16 +112,16 @@ return (
                   {idx === businessIndex ? 
                   <>
                     <AnswerWrapper>
-                    <br/>
-                    <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
-                    <br/>
-                    <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
-                    <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
-                    <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
+                      <br/>
+                      <div style={{fontSize:"26px", textAlign:"center", fontStyle:'normal', fontWeight:500,}} dangerouslySetInnerHTML={{__html: data.subject}}></div>
+                      <br/>
+                      <div style={{fontSize:"12px", textAlign: "center"}}>{data.hashtag}</div>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <ResultContent dangerouslySetInnerHTML={{__html: data.content}}/>
+                      <u style={{fontWeight:"bold", marginTop:'55px'}}>진행 일정</u>
+                      <Schedule dangerouslySetInnerHTML={{__html: data.schedule}}/>
                     </AnswerWrapper>
                   
                   </>
@@ -155,10 +155,6 @@ const AnswerWrapper = styled.div`
   /* justify-content: center; */
   align-items: center;
   position: relative;
-  top: -88px;
-  z-index: -100;
-
-  padding-top : 25%;
 `;
 
 const BussWrapper = styled.div`
@@ -173,8 +169,6 @@ right: 0;
 width: 210%;
 `;
 const SuggestImg = styled.img`
-  width: 100%;
-  z-index: 10;
 `;
 
 const TextDiv = styled.div`
