@@ -221,7 +221,7 @@ const ProgressImg = styled.img`
 `;
 
 const ResultContent = styled.span `
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   line-height: 143.9%;
 `

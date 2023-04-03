@@ -34,7 +34,7 @@ const resultData = [
         'subject': "협력활동가 네트워크",
         'hashtag' : "#나만의 #네트워크를 #만들어봐",
         'suggest': [10, 2],
-        'content': `원하는 활동이 있는데 존재하지 않는다고?<br> <span ${underline}>그럼 직접 만들면 되지!</span><br><br> 협력활동가 네트워크는<br> <span ${underline}>나만의 네트워크를 만들고 싶은 사람들</span>을 위한 사업이야.<br><br> 의정부에서 내가 원하는 그룹을 직접 만들고,<br> 협업활동이나 역량강화 등 필요한 활동을 제안하고<br> <span ${underline}>직접 운영까지 할 수 있어!</span>`,
+        'content': `원하는 활동이 있는데 존재하지 않는다고?<br> <span ${underline}>그럼 직접 만들면 되지!</span><br><br> 협력활동가 네트워크는<br> <span ${underline}>나만의 네트워크를 만들고 싶은 사람들</span>을 <br>네트워킹 지원 사업이야.<br><br> 의정부에서 내가 원하는 그룹을 직접 만들고,<br> 협업활동이나 역량강화 등 필요한 활동을 제안하고<br> <span ${underline}>직접 운영까지 할 수 있어!</span>`,
         'schedule':`5월 ~ 12월`
     },
     // [5] 시민문화활동가 지원
@@ -43,7 +43,7 @@ const resultData = [
         'subject': "시민문화활동가 지원",
         'hashtag' : "#청년 #인턴십 #코디네이터",
         'suggest': [7, 8],
-        'content': `시민문화활동가는<br> 의정부 <span ${underline}>청년</span>을 대상으로 하는<br> 청년 인턴십 형태의 <span ${underline}>사업별 코디네이터 양성</span> 사업이야.<br><br> 문화도시 의정부 사업에 참여해 봤거나 경험해 본 적 있는 청년들이<br> 직접 사업별 코디네이터가 될 수 있는 기회지!<br><br> <span ${underline}>문화도시 의정부의 사업을 함께 운영해 보고 싶다면,</span><br> 시민문화활동가는 절호의 찬스!`,
+        'content': `시민문화활동가는<br> 의정부 <span ${underline}>청년</span>을 대상으로 하는<br> 청년 인턴십 형태의 <span ${underline}>사업별 코디네이터 양성</span> 사업이야.<br><br> 문화도시 의정부 사업에 참여해 봤거나 <br>경험해 본 적 있는 청년들이<br> 직접 사업별 코디네이터가 될 수 있는 기회지!<br><br> <span ${underline}>문화도시 의정부의 사업을 함께 운영해 보고 싶다면,</span><br> 시민문화활동가는 절호의 찬스!`,
         'schedule':`5월 ~ 12월`
     },
     // [6] 문화도시 에디터
@@ -52,7 +52,7 @@ const resultData = [
         'subject': "문화도시 에디터",
         'hashtag' : "#취재 #아카이빙 #전담에디터",
         'suggest': [11, 3],        
-        'content': `문화도시 에디터는<br> 문화도시 의정부에서 하는 사업을 취재해<br> <span ${underline}>아카이빙</span> 하는 역할을 해.<br><br> <span ${underline}>심화과정 에디터 스쿨</span>을 통해 교육을 받을 수 있고,<br> 문화도시 의정부 공식 블로그에 직접 작성한 글을 남길 수 있어.<br><br> 전담 에디터가 되어 사업의 모든 순간을 글과 사진으로 기록하는,<br> <span ${underline}>문화도시 의정부의 눈과 귀야!</span>`,
+        'content': `문화도시 에디터는<br> 문화도시 의정부에서 하는 사업을 취재해<br> <span ${underline}>아카이빙</span> 하는 역할을 해.<br><br> <span ${underline}>심화과정 에디터 스쿨</span>을 통해 교육을 받을 수 있고,<br> 문화도시 의정부 공식 블로그에 <br>직접 작성한 글을 남길 수 있어.<br><br> 전담 에디터가 되어 <br>  사업의 모든 순간을 글과 사진으로 기록하는,<br> <span ${underline}>문화도시 의정부의 눈과 귀야!</span>`,
         'schedule':`5월 ~ 12월`
     },
     // [7] 문화자치학교-문화자치 정책마켓-협치워크샵 꿍짝꿍짝
@@ -61,7 +61,7 @@ const resultData = [
         'subject': "문화자치학교<br>-문화자치 정책 마켓<br>-협치워크샵 꿍짝꿍짝",
         'hashtag' : "#시민이 #만드는 #정책제안서",
         'suggest': [6, 8],
-        'content': `<span ${underline}>내 아이디어가 정책이 되었으면 좋겠다고?</span><br> 그럼 문화자치학교에 지원해 봐!<br><br> 문화자치학교, 문화자치 정책마켓, 협치워크샵 꿍짝꿍짝은<br> 하나의 흐름으로 이어져 있어.<br><br> 이 프로세스를 따라가면 역량 강화 교육과 워크숍을 통해<br> <span ${underline}>직접 정책을 제안</span>할 수 있지!`,
+        'content': `<span ${underline}>내 아이디어가 정책이 되었으면 좋겠다고?</span><br> 그럼 문화자치학교에 지원해 봐!<br><br> 문화자치학교, 문화자치 정책마켓, <br>협치워크샵 꿍짝꿍짝은<br> 하나의 흐름으로 이어져 있어.<br><br> 이 프로세스를 따라가면 역량 강화 교육과<br> 워크숍을 통해 <span ${underline}>직접 정책을 제안</span>할 수 있지!`,
         'schedule':`<div><div>• 문화자치학교: 5월 ~ 8월 중</div><div style='margin-left: 18px; margin-top:2px'>토요일 14:00~17:00 / 6회차</div></div><div style='margin-top:8px;'>• 문화자치 정책마켓: 8월 26일</div><div style='margin-top:8px;'>• 협치워크샵 꿍짝꿍짝: 8월 ~ 11월</div>`
     },
     // [8] 문화시민 동네연구
@@ -88,7 +88,7 @@ const resultData = [
         'subject': "백만원 실험실",
         'hashtag' : "#동네에서 #재밌는시도를 #해보자",
         'suggest': [15, 4],
-        'content': `백만원실험실은<br> 의정부 시민이라면 <span ${underline}>누구나 참여</span>할 수 있어.<br> 문화도시 의정부의 꽃이라고 할 수 있지!<br><br> 내가 주체가 되어 <span ${underline}>직접 프로젝트를 기획</span>하고 모집해 진행할 수 있어.<br> 활동을 위한 100만원도 지원받을 수 있고!<br><br> 다양한 주제가 가능해서 <span ${underline}>재밌는 시도</span>를 할 수 있는<br> 가능성이 활짝 열린 프로그램이야.`,
+        'content': `백만원실험실은<br> 의정부 시민이라면 <span ${underline}>누구나 참여</span>할 수 있어.<br> 문화도시 의정부의 꽃이라고 할 수 있지!<br><br> 내가 주체가 되어 <br><span ${underline}>직접 프로젝트를 기획</span>하고 진행할 수 있어.<br> 활동을 위한 100만원도 지원받을 수 있고!<br><br> 다양한 주제가 가능해서 <span ${underline}>재밌는 시도</span>를 할 수 있는<br> 가능성이 활짝 열린 프로그램이야.`,
         'schedule':`4월 ~ 12월`
     },
     // [11] 문화도시 실험실
@@ -106,7 +106,7 @@ const resultData = [
         'subject': "U+ 스팟 꼭! 꼭!",
         'hashtag' : "#공간운영자 #문화공유공간 #네트워킹",
         'suggest': [4, 11],
-        'content': `U+ 스팟 꼭! 꼭!은 <span ${underline}>공간 운영자</span>를 대상으로 한<br> <span ${underline}>문화공유공간 활성화</span> 지원 사업이야.<br><br> 다른 공간 운영자를 만나서 <span ${underline}>교류</span>하고 싶거나,<br> 공간에서 프로그램을 <span ${underline}>기획</span>하고 싶은 사람에게 맞춤 지원을 해주지!<br><br> 내 공간을 문화공유공간으로<br> <span ${underline}>확장</span>시키고 사람들에게 큰 도움이 될 거야.`,
+        'content': `U+ 스팟 꼭! 꼭!은<br> <span ${underline}>공간 운영자</span>를 대상으로 한<br> <span ${underline}>문화공유공간 활성화</span> 지원 사업이야.<br><br> 다른 공간 운영자를 만나서 <span ${underline}>교류</span>하고 싶거나,<br> 공간에서 프로그램을 <span ${underline}>기획</span>하고 싶은 사람에게 <br>맞춤 지원을 해주지!<br><br> 내 공간을 문화공유공간으로<br> <span ${underline}>확장</span>시키고 사람들에게 큰 도움이 될 거야.`,
         'schedule':`5월 ~ 11월 중`
     },
     // [13] 이달의 예술가
@@ -124,7 +124,7 @@ const resultData = [
         'subject': "예술가의 예술",
         'hashtag' : "#예술가 #창작지원",
         'suggest': [13, 3],  
-        'content': `예술가의 예술은<br> <span ${underline}>예술인 등록</span>이 되어 있는 예술가의<br> 순수 <span ${underline}>‘창작’</span> 활동을 지원해 주는 사업이야.<br><br> 예술가가 오로지 예술 활동을 위한<br> <span ${underline}>예술 작업에 집중</span>할 수 있도록 지원하고 있어!<br><br> 그래서 결과물이 없어도 참여할 수 있지만,<br> 사업에 참여한 후에는 창작일지와 창작 결과물을 꼭 제출해야 해.`,
+        'content': `예술가의 예술은<br> <span ${underline}>예술인 등록</span>이 되어 있는 예술가의<br> 순수 <span ${underline}>‘창작’</span> 활동을 지원해 주는 사업이야.<br><br> 예술가가 오로지 예술 활동을 위한<br> <span ${underline}>예술 작업에 집중</span>할 수 있도록 지원하고 있어!<br><br> 그래서 결과물이 없어도 참여할 수 있지만,<br> 사업에 참여한 후에는 창작일지와<br> 창작 결과물을 꼭 제출해야 해.`,
         'schedule':`7월 ~ 11월 중`
     },
     // [15] 영감모임
@@ -133,7 +133,7 @@ const resultData = [
         'subject': "영감모임",
         'hashtag' : "#예술가 #네트워킹 #인사이트",
         'suggest': [4, 2],
-        'content': `영감모임은<br> 예술가들이 모여 서로 <span ${underline}>영감을 주고받을 수 있는</span> 모임이야!<br><br> 서로의 <span ${underline}>인사이트</span>를 주고받으며<br> 기존의 자신의 예술 환경에서 벗어나 <span ${underline}>새로운 자극</span>을 받을 수 있지.<br><br> <span ${underline}>다른 예술가들과 네트워킹</span>을 하고 싶다면<br> 영감모임에 꼭 지원해 봐~!`,
+        'content': `영감모임은<br> 예술가들이 모여 서로 <span ${underline}>영감을 주고받을 수 있는</span> 모임이야!<br><br> 서로의 <span ${underline}>인사이트</span>를 주고받으며<br> 기존의 자신의 예술 환경에서 벗어나 <span ${underline}><br>새로운 자극</span>을 받을 수 있지.<br><br> <span ${underline}>다른 예술가들과 네트워킹</span>을 하고 싶다면<br> 영감모임에 꼭 지원해 봐~!`,
         'schedule':`4월 ~ 11월 중`
     },
     // [16] 의정부 특화콘텐츠 아이디어 공모
@@ -142,7 +142,7 @@ const resultData = [
         'subject': "의정부 특화콘텐츠<br>아이디어 공모전",
         'hashtag' : "#기발한 #아이디어를 #보여줘",
         'suggest': [10, 3],
-        'content': `지역과 관련된 아이디어가 있어?<br> <span ${underline}>그럼 의정부 특화콘텐츠 아이디어 공모전</span>에 참가해 봐!<br><br> 결과물이나 활동 없이<br> 오직 계획만 가지고 있어도 참여 가능한,<br> 말 그대로 <span ${underline}>‘아이디어’를 위한</span> 공모전이야.<br><br> 작품, 창업 등 다양한 내용으로 참여할 수 있어.<br> 물론 <span ${underline}>상금</span>도 있다고~!`,
+        'content': `지역과 관련된 아이디어가 있어?<br> <span ${underline}>그럼 의정부 특화콘텐츠 아이디어 공모전</span>에 <br>참가해 봐!<br><br> 결과물이나 활동 없이<br> 오직 계획만 가지고 있어도 참여 가능한,<br> 말 그대로 <span ${underline}>‘아이디어’를 위한</span> 공모전이야.<br><br> 작품, 창업 등 다양한 내용으로 참여할 수 있어.<br> 물론 <span ${underline}>상금</span>도 있다고~!`,
         'schedule':`4월 ~ 10월 중`
     },
 ]
