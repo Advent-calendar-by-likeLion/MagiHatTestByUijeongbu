@@ -104,7 +104,7 @@ return (
                   </>
                   :
                   <>
-                    <SuggestImg style={{opacity:"50%"}} src={suggestImg[idx]} onClick={(e) => {onBusinessLink(data, e)}}/>
+                    <SuggestImg style={{opacity:"50%"}} src={suggestImg[idx]}/>
                   </>
                 }
                   
