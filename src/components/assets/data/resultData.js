@@ -23,7 +23,7 @@ const resultData = [
     {
         'mbti': "ESFP",
         'subject': "횡단자 캠프",
-        'hashtag' : "#지역문화활동가 #역량강화 #생각확장",
+        'hashtag' : "#지역문화활동가 #생각확장도구",
         'suggest': [11, 4],
         'content': `횡단자캠프는<br> <span ${underline}>지역 문화활동가들</span>을 위한 역량 강화 프로그램이야.<br><br> 기획 경험이 있는<br> <span ${underline}>다년 차 활동 경험 보유자</span>를 대상으로 하고 있지.<br><br> 지역 문화 활동가들의 <span ${underline}>생각 확장 도구</span>로서<br> 성장과 역량 강화에 도움을 줄 거야!`,
         'schedule':`5월 ~ 12월`
@@ -32,7 +32,7 @@ const resultData = [
     {
         'mbti': "ENTJ",
         'subject': "협력활동가 네트워크",
-        'hashtag' : "#나만의그룹을 #만들어봐 #네트워킹",
+        'hashtag' : "#나만의 #네트워크를 #만들어봐",
         'suggest': [10, 2],
         'content': `원하는 활동이 있는데 존재하지 않는다고?<br> <span ${underline}>그럼 직접 만들면 되지!</span><br><br> 협력활동가 네트워크는<br> <span ${underline}>나만의 네트워크를 만들고 싶은 사람들</span>을 위한 사업이야.<br><br> 의정부에서 내가 원하는 그룹을 직접 만들고,<br> 협업활동이나 역량강화 등 필요한 활동을 제안하고<br> <span ${underline}>직접 운영까지 할 수 있어!</span>`,
         'schedule':`5월 ~ 12월`
@@ -68,7 +68,7 @@ const resultData = [
     {
         'mbti': "ISTJ",
         'subject': "문화시민 동네연구",
-        'hashtag' : "#시민대상 #연구지원 #지역이슈발굴",
+        'hashtag' : "#시민 #연구지원 #지역이슈발굴",
         'suggest': [1, 16],
         'content': `문화시민 동네연구는<br> 의정부 시민이라면 <span ${underline}>누구나 참여</span> 가능해!<br><br> 시민이 직접 <span ${underline}>지역 이슈를 발굴하고 탐구</span>할 수 있도록<br> 교육과 모임을 지원하고 있어.<br><br> 연구 주제를 탐색하고 탐구하는 과정을 통해<br> 활동 분야의 전문성을 강화해 보는 거 어때?`,
         'schedule':`5월 ~ 12월`
