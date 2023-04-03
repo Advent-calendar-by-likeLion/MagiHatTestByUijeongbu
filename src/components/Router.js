@@ -13,6 +13,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import AdminLayout from "../routes/Admin.js";
 import Question from "routes/Question";
 import AllBusiness from "routes/AllBusiness";
+import AllBusiness2 from "routes/AllBusiness2";
 import Story from "routes/Story";
 import CharChoice from '../routes/CharChoice';
 
@@ -33,6 +34,9 @@ const AppRouter = () => {
         <Route component={Result} path='/result/:id'  />
         <Route exact path="/allbusiness">
           <AllBusiness />
+        </Route>
+        <Route exact path="/allbusiness2">
+          <AllBusiness2 />
         </Route>
         <Route exact path="/admin/dashboard">
           {/* <Admin /> */}
