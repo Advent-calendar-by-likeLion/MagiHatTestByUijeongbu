@@ -76,7 +76,6 @@ const mbtiMatch = {
 
 const resultImg = new Array(
     result01, //index 0
-    result01,
     result02,
     result03,
     result04,
@@ -116,9 +115,9 @@ const suggestImg = new Array(
 
 const ResultCard = ({ match }) => {
     const history = useHistory();
-    const result = mbtiMatch[match.params.id];
-    const firstSuggest = resultData[resultData[result].suggest[0]];
-    const secondSuggest = resultData[resultData[result].suggest[1]];
+    const result = mbtiMatch[match.params.id] - 1;
+    const firstSuggest = resultData[resultData[result].suggest[0] - 1];
+    const secondSuggest = resultData[resultData[result].suggest[1] - 1];
     console.log(firstSuggest);
     console.log(secondSuggest);
     const [char, setChar] = useRecoilState(userState);
@@ -248,15 +247,15 @@ const ResultCard = ({ match }) => {
             </SuggestWrapper>
               <SuggestBox>
                 <SuggestSubWrapper>
-                  <SuggestImg onClick={onBusinessLink} src={suggestImg[resultData[result].suggest[0]]}/>
+                  <SuggestImg onClick={onBusinessLink} src={suggestImg[resultData[result].suggest[0] - 1]}/>
                   <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: firstSuggest.subject}}></div>
-                  <div style={{fontSize:"12px", marginTop:"10px"}}>{resultData[resultData[result].suggest[0]].hashtag}</div>
+                  <div style={{fontSize:"12px", marginTop:"10px"}}>{firstSuggest.hashtag}</div>
                 </SuggestSubWrapper>
                 <Line/>
                 <SuggestSubWrapper>
-                  <SuggestImg onClick={onBusinessLink2} src={suggestImg[resultData[result].suggest[1]]}/>
+                  <SuggestImg onClick={onBusinessLink2} src={suggestImg[resultData[result].suggest[1] - 1]}/>
                   <div style={{fontSize:"22px", textAlign:"center"}} dangerouslySetInnerHTML={{__html: secondSuggest.subject}}></div>
-                  <div style={{fontSize:"12px",  marginTop:"10px"}}>{resultData[resultData[result].suggest[1]].hashtag}</div>
+                  <div style={{fontSize:"12px",  marginTop:"10px"}}>{secondSuggest.hashtag}</div>
                 </SuggestSubWrapper>
               </SuggestBox>
 
