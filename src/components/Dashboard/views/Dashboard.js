@@ -206,7 +206,7 @@ function Dashboard() {
                 </div>
               </Card.Body>
               <Card.Footer style={{marginTop: "20px"}}>
-                <p><BlodText>A: 문화도시 콜리키움</BlodText> ({INTJ}명)</p>
+                <p><BlodText>A: 문화도시 콜로키움</BlodText> ({INTJ}명)</p>
                 <p><BlodText>B: 333 문화살롱</BlodText> ({ESTJ}명)</p>
                 <p><BlodText>C: 횡단자 캠프</BlodText> ({ESFP}명)</p>
                 <p><BlodText>D: 협력활동가 네트워크</BlodText> ({ENTJ}명)</p>
