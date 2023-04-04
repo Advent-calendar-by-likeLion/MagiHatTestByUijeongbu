@@ -196,9 +196,9 @@ const ResultCard = ({ match }) => {
         kakao.Share.sendDefault({
           objectType: "feed",
           content: {
-            title: "마법모자 테스트",
+            title: "문화도시 의정부 마법모자 테스트",
             description: "2023 문화도시 의정부 사업 추천 성향 검사",
-            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/8b36da21e1bdd5fd056e2ad88d86d5a2b215ea4e/src/components/assets/img/share-test.png",
+            imageUrl: "https://raw.githubusercontent.com/Advent-calendar-by-likeLion/MagiHatTestByUijeongbu/dd7131110f3ad97f5b30b7ae4a720f7127f08a44/public/ujbMain.jpg",
             link: {
               mobileWebUrl: url,
               webUrl: url
