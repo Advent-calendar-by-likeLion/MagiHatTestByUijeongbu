@@ -238,6 +238,7 @@ const ResultCard = ({ match }) => {
               <br/>
               <u style={{fontWeight:"bold"}}>진행 일정</u>
               <Schedule dangerouslySetInnerHTML={{__html: resultData[result].schedule}}/>
+              <Schedule dangerouslySetInnerHTML={{__html: '※ 테스트를 통해 나온 결과는 추천사업입니다. <br>세부 지원자격은 공고안을 통해 확인해주세요.'}}/>
             </ResultWrapper>
 
             <SuggestWrapper>
