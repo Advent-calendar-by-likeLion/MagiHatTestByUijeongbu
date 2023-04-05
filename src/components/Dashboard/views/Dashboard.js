@@ -55,7 +55,7 @@ function Dashboard() {
           //보내고자 하는 데이터
           client_id: "343214386674-t80hrc5e84pe1h0d3ad3a7kstts5hd1h.apps.googleusercontent.com",
           client_secret: "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",
-          refresh_token: "1//04aUHTKIkDEMfCgYIARAAGAQSNwF-L9IrTM89LkPaRMP0h685gxkjhgRKSovlvTBAWgEivz1Bb0zNkhaaYQZZH0y4b3MhSCRqloo",
+          refresh_token: "1//04UY-IB4OTtAgCgYIARAAGAQSNwF-L9IrnAswsMctFlPL8u7ZJw2Hp4NHtk8hpujZ5RGAnCVxfLVWmX1Dkd0iBgsYewRLCclgO4Q",
           grant_type: "refresh_token",
         }
       );
@@ -63,7 +63,7 @@ function Dashboard() {
       const url =
         "https://www.googleapis.com/analytics/v3/data/ga?access_token=" +
         Access_Token +
-        "&ids=ga%3A287549146&dimensions=ga%3Adate&metrics=ga%3Ausers%2Cga%3AnewUsers%2Cga%3Asessions%2Cga%3Apageviews&start-date=2023-03-29&end-date=today";
+        "&ids=ga%3A287549146&dimensions=ga%3Adate&metrics=ga%3Ausers%2Cga%3AnewUsers%2Cga%3Asessions%2Cga%3Apageviews&start-date=2023-04-05&end-date=today";
       const res = await fetch(url);
       const DATA = await res.json();
       
