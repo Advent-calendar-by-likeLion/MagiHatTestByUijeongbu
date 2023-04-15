@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 import MainBg from '../assets/uijeongbu/mainBg.svg';
 import {useHistory} from 'react-router-dom';
+import { useEffect } from 'react';
+import { dbService } from 'fbase';
+
 
 const Home = () => {
     const history = useHistory();
     const toStory = () => {
+        plusVisitor();
         history.push("/Story");
     }
+
+    const plusVisitor = () => {
+      const doc = dbService.collection("admin-dashboard").doc("data");
+      doc.get().then((doc) => {
+        dbService.collection("admin-dashboard").doc("data").update({
+          "totalUser" : doc.data()["totalUser"] + 1
+        });
+      });
+    };
 
     return (
         <>

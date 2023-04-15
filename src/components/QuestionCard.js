@@ -129,6 +129,7 @@ const QuestionCard = ({match}) => {
   const [num, setNum] = useState(0);
 
   const nextSlideFir = () => {
+    plusPageViews();
     if (quiz[num].answer[0].name[0] === "YES11ESTP" || quiz[num].answer[0].name[0] === "YES12ENTP") {
     } else {
       setMbti(mbti + quiz[num].answer[0].name);
@@ -139,6 +140,7 @@ const QuestionCard = ({match}) => {
   };
   
   const nextSlideSec = () => {
+    plusPageViews();
     if (quiz[num].answer[1].name[0] === "NO11ESFP" ) {
       setFlagNO11ESFP(true)
     } else if (quiz[num].answer[1].name[0] === "NO12ENTJ" ) {
@@ -149,6 +151,15 @@ const QuestionCard = ({match}) => {
     setNum(num + 1);
     setQuiz(quiz[num + 1]);
     setCurrentSlide(currentSlide + 1);
+  };
+
+  const plusPageViews = () => {
+    const doc = dbService.collection("admin-dashboard").doc("data");
+    doc.get().then((doc) => {
+      dbService.collection("admin-dashboard").doc("data").update({
+         "pageViews" : doc.data()["pageViews"] + 1
+      });
+    });
   };
 
   return (

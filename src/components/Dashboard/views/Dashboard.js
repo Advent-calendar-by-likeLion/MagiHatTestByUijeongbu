@@ -46,42 +46,7 @@ function Dashboard() {
     "INTJ" : 0,
   };
 
-  async function Axios() {
-    try {
-      //응답 성공
-      const response = await axios.post(
-        "https://accounts.google.com/o/oauth2/token",
-        {
-          //보내고자 하는 데이터
-          client_id: "343214386674-t80hrc5e84pe1h0d3ad3a7kstts5hd1h.apps.googleusercontent.com",
-          client_secret: "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",
-          refresh_token: "1//04UY-IB4OTtAgCgYIARAAGAQSNwF-L9IrnAswsMctFlPL8u7ZJw2Hp4NHtk8hpujZ5RGAnCVxfLVWmX1Dkd0iBgsYewRLCclgO4Q",
-          grant_type: "refresh_token",
-        }
-      );
-      const Access_Token = response.data.access_token;
-      const url =
-        "https://www.googleapis.com/analytics/v3/data/ga?access_token=" +
-        Access_Token +
-        "&ids=ga%3A287549146&dimensions=ga%3Adate&metrics=ga%3Ausers%2Cga%3AnewUsers%2Cga%3Asessions%2Cga%3Apageviews&start-date=2023-04-05&end-date=today";
-      const res = await fetch(url);
-      const DATA = await res.json();
-      
-      return DATA;
-    } catch (error) {
-      //응답 실패
-      console.error(error);
-    }
-  };
-
   React.useEffect(() => {
-    const response = Axios();
-    response.then((result) => {
-      const analyticsData = result.totalsForAllResults;
-      setTotalUser(analyticsData['ga:users']);
-      setPageViews(analyticsData['ga:pageviews']);
-    })
-
     dbService.collection("admin-dashboard").doc("data").get().then((doc) => {
       const docObject = doc.data();
       setShareClick(docObject["share-count"]);
@@ -102,6 +67,8 @@ function Dashboard() {
       setISFJ(docObject["ISFJ"]);
       setESFJ(docObject["ESFJ"]);
       setINFJ(docObject["INFJ"]);
+      setTotalUser(docObject["totalUser"]);
+      setPageViews(docObject["pageViews"]);
     });
   }, []);
 
